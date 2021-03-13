@@ -45,14 +45,15 @@
     <div class="line2"></div>
     </div>
   </div>
+  <div class = "rootnode" id="rootnode">
   <div class = "content" id="wrap-content">
 
     <div class = "static"></div>
     <div class="project-link" id="plink">
-      <a href="common/main.html" class="link4" id="link4">View All Projects</a>
+      <a class="link4" id="link4">View All Projects</a>
       </div>
     <div class="project-link" id="rlink">
-      <a href="common/main.html" class="link4" id="link5">View My Resume</a>
+      <a class="link4" id="link5">View My Resume</a>
       </div>
     <div class = "canvas_container">
     <canvas id="canvas" ></canvas>
@@ -62,11 +63,42 @@
         I'm Patrick Ellis, a software developer from the U.K.
         </h1>
         </div>
+        </div>
+        </div>
   <script src="scripts.js"></script>
   <script>
-    $('#link4').on('click', function() {
-    if ($('#plink').css('opacity') == 1) $('#plink').css('opacity', 0);
-    else $('#plink').css('opacity', 1);
+
+function menu_relocate(){
+  var rootnode = document.getElementById("rootnode");
+  var globe = document.getElementById("canvas");
+  var projectlink = document.getElementById("link4");
+  var cvlink = document.getElementById("link5");
+  //rootnode.style.opacity=0;
+  rootnode.style.MozTransition = "0.5s";
+  rootnode.style.WebkitTransition  = "0.5s";
+  globe.style.opacity=0;
+  globe.style.MozTransition = "0.5s";
+  globe.style.WebkitTransition  = "0.5s";
+  projectlink.style.opacity=0;
+  projectlink.style.MozTransition = "0.5s";
+  projectlink.style.WebkitTransition  = "0.5s";
+  cvlink.style.opacity=0;
+  cvlink.style.MozTransition = "0.5s";
+  cvlink.style.WebkitTransition  = "0.5s";
+  setTimeout(function(){
+          window.location.replace("common/main.html");
+    }, 300);
+
+}
+$('#link4').on('click', function() {
+
+if ($('#plink').css('opacity') == 1) $('#plink').css('opacity', 0);
+else $('#plink').css('opacity', 1);
+menu_relocate();
 });
+
+    $("#link4").click(function(){
+      menu_relocate();
+    });
 </script>
 </body>
