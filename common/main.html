@@ -1,0 +1,837 @@
+<head>
+  <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+  <link rel="stylesheet" href="../css/stylemain.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+</head>
+<body onresize="resize()">
+  <div id="large-header" class="large-header">
+   <canvas id="animated-canvas"></canvas>
+   </div>
+  <div class="js-shell shell">
+    <div class="shell__button--drop shell__button"></div>
+    <div class="shell__button--menu shell__button" id="shell__button--menu__js">
+      <div class="button__hitarea" id="button__hitarea__js"></div>
+        <div class="button__icon" id="button__icon__id">
+          <svg>
+            <use xlink:href='#icon-temp-menu'>
+              <symbol id="icon-temp-menu" viewBox="0 0 20 16">
+                <g id="temp-menu-Page-2" fill-rule="evenodd">
+                  <g id="temp-menu-Artboard-Copy-3" transform="translate(-1390, -24)">
+                    <g id="temp-menu-noun_menu_93427" transform="translate(1390,24)">
+                      <rect id="temp-menu-Rectangle" x="0" y="0" width="22" height="2"></rect>
+                      <rect id="temp-menu-Rectangle" x="0" y="7" width="22" height="2"></rect>
+                      <rect id="temp-menu-Rectangle" x="0" y="14" width="22" height="2"></rect>
+                      </g>
+                    </g>
+                  </g>
+                </symbol>
+            </use>
+            </svg>
+            </div>
+            <span class="js-button__text button__text" id="button__text__js">Menu</span>
+        </div>
+
+      <div class="shell__button--project shell__button" id="shell__button__id">
+        <div class="button__text">
+          <span class="js-close-project">Close Project</span>
+          <span class="js-close-reel">Close Showreel</span>
+          <span class="js-close-overview">Close All Projects</span>
+          </div>
+          <span class="button__divider"></span>
+          </div>
+          <div class = "static" id="static"></div>
+  <div class="rootnode" id = "js-rootnode">
+    <div class="work-page">
+      <div class="work__quicknav" style="display:block;">
+        <div class="quicknav__arrow quicknav__arrow--up" id="quicknav--up" style="left: 12.8rem;">
+          <span class="button__icon">
+            <canvas id="arrow--up" width="19" height="85" style="width:19px; height:85px;"></canvas>
+            <span>
+        </div>
+
+        <div class="quicknav__arrow quicknav__arrow--down" id="quicknav--down">
+          <span class="button__icon">
+            <canvas id="arrow--down" width="19" height="85" style="width:19px; height:85px;" ></canvas>
+            <span>
+        </div>
+        </div>
+
+      <div class="work__overview"id="overview_id" >
+        <div class="overview_header">
+          <span class="overview__filterLabel">Filter</span>
+            <div class="overview__categoryList">
+                <div class="categoryItem is-selected">
+                    <span class="has-text-effect" id="project-header"> All Projects
+                      <div class="dropdown-arrow-wrapper">
+                        <div class="arrow">
+                          <div class="arrow-top"></div>
+                          <div class="arrow-bottom"></div>
+                          </div>
+                        </div>
+                    </span>
+
+                </div>
+                <div class="categoryItem secondary">
+                    <span class="has-text-effect" id="first-cat"> Python </span>
+                </div>
+                <div class="categoryItem secondary">
+                    <span class="has-text-effect" id="second-cat"> C++ </span>
+                </div>
+                <div class="categoryItem secondary">
+                    <span class="has-text-effect" id="third-cat"> Haskell </span>
+                </div>
+                <div class="categoryItem secondary">
+                    <span class="has-text-effect" id="fourth-cat"> Front End </span>
+                </div>
+            </div>
+        </div>
+        <div class="overview__projectList" id="js_work__overview">
+          <div class="overview__projectItem"id = "first">
+            <div class="overview__projectItem__inner" id="inner_one" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
+
+              <div class="overview__projectItem__poster" id="poster_one" data-tilt data-tilt-glare="true"></div>
+              <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
+                <h4>Project Item One</h4>
+                <p>Subscript text</p>
+                </div>
+              </div>
+            </div>
+            <div class="overview__projectItem" data-tilt id = "second" onmouseover="mouseStatus(true);" onmouseout="mouseStatus(false);">
+              <div class="overview__projectItem__inner" id="inner_two" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
+                <div class="overview__projectItem__poster" id="poster_two"></div>
+                <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
+                  <h4>Project Item Two</h4>
+                  <p>Subscript text</p>
+                  </div>
+                </div>
+              </div>
+              <div class="overview__projectItem" id = "third">
+                <div class="overview__projectItem__inner" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
+                  <div class="overview__projectItem__poster" id="poster_three"></div>
+                  <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
+                    <h4>Project Item Three</h4>
+                    <p>Subscript text</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="overview__projectItem" id = "fourth">
+                  <div class="overview__projectItem__inner" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
+                    <div class="overview__projectItem__poster"></div>
+                    <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
+                      <h4>Project Item Four</h4>
+                      <p>Subscript text</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="overview__projectItem" id = "fifth">
+                    <div class="overview__projectItem__inner" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
+                      <div class="overview__projectItem__poster"></div>
+                      <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
+                        <h4>Project Item Five</h4>
+                        <p>Subscript text</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="overview__projectItem" id = "sixth">
+                      <div class="overview__projectItem__inner" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
+                        <div class="overview__projectItem__poster"></div>
+                        <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
+                          <h4>Project Item Six</h4>
+                          <p>Subscript text</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="overview__projectItem" id = "seventh">
+                        <div class="overview__projectItem__inner" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
+                          <div class="overview__projectItem__poster"></div>
+                          <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
+                            <h4>Project Item Seven</h4>
+                            <p>Subscript text</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="overview__projectItem" id = "eighth">
+                          <div class="overview__projectItem__inner" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
+                            <div class="overview__projectItem__poster"></div>
+                            <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
+                              <h4>Project Item Eight</h4>
+                              <p>Subscript text</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="overview__projectItem" id = "ninth">
+                            <div class="overview__projectItem__inner" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
+                              <div class="overview__projectItem__poster"></div>
+                              <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
+                                <h4>Project Item Nine</h4>
+                                <p>Subscript text</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="overview__projectItem" id = "tenth">
+                              <div class="overview__projectItem__inner" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
+                                <div class="overview__projectItem__poster"></div>
+                                <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
+                                  <h4>Project Item Ten</h4>
+                                  <p>Subscript text</p>
+                                  </div>
+                                </div>
+                              </div>
+          </div>
+
+      </div>
+    </div>
+    <div class="clearspace"></div>
+    </div>
+  <script>
+    var scrolled=0;
+
+    $(document).ready(function(){
+
+        $("#arrow--down").on("click" ,function(){
+                    scrolled=scrolled+450;
+
+    				$(".rootnode").animate({
+    				        scrollTop:  scrolled
+    				   });
+    			});
+
+        $("#arrow--up").on("click" ,function(){
+    				scrolled=scrolled-450;
+    				$(".rootnode").animate({
+    				        scrollTop:  scrolled
+    				   });
+    			});
+    });
+
+
+
+
+
+    function drawArrow(fromx, fromy, tox, toy,id,color){
+                //variables to be used when creating the arrow
+                var c = document.getElementById(id);
+                var ctx = c.getContext("2d");
+                const width = 2;
+                var headlen = 6;
+                var angle = Math.atan2(toy-fromy,tox-fromx);
+                // This makes it so the end of the arrow head is located at tox, toy, don't ask where 1.15 comes from
+                tox -= Math.cos(angle) * ((width*1.15));
+                toy -= Math.sin(angle) * ((width*1.15));
+
+
+
+                //starting path of the arrow from the start square to the end square and drawing the stroke
+                ctx.beginPath();
+                ctx.moveTo(fromx, fromy);
+                ctx.lineTo(tox, toy);
+                ctx.strokeStyle = color;
+                ctx.lineWidth = width;
+                ctx.stroke();
+
+                //alert("v1: "+fromx+","+fromy);
+
+                //starting a new path from the head of the arrow to one of the sides of the point
+                ctx.beginPath();
+
+                ctx.moveTo(tox, toy);
+                //alert("v2: "+tox+","+toy);
+
+                ctx.lineTo(tox-headlen*Math.cos(angle-Math.PI/7),toy-headlen*Math.sin(angle-Math.PI/7));
+                //alert("v3: "+(tox-headlen*Math.cos(angle-Math.PI/7))+","+(toy-headlen*Math.sin(angle-Math.PI/7)));
+
+                //path from the side point of the arrow, to the other side point
+                //ctx.lineTo(tox-headlen*Math.cos(angle+Math.PI/7),toy-headlen*Math.sin(angle+Math.PI/7));
+
+                //path from the side point back to the tip of the arrow, and then again to the opposite side point
+                ctx.moveTo(tox-headlen*Math.cos(angle+Math.PI/7),toy-headlen*Math.sin(angle+Math.PI/7));
+                //alert("v4: "+(tox-headlen*Math.cos(angle+Math.PI/7))+","+(toy-headlen*Math.sin(angle+Math.PI/7)));
+                ctx.lineTo(tox, toy);
+                ctx.lineTo(tox-headlen*Math.cos(angle-Math.PI/7),toy-headlen*Math.sin(angle-Math.PI/7));
+
+                //draws the paths created above
+                ctx.strokeStyle =  color;
+                ctx.lineWidth = width;
+                ctx.stroke();
+            }
+
+    drawArrow(9,35,9,81,"arrow--down","#FFF");
+    drawArrow(9,50,9,4,"arrow--up","#FFF");
+
+    $("#button__text__js").hover(function(){
+      var project_close = document.getElementById("shell__button__id");
+      var menu_text = document.getElementById("button__text__js");
+      $(project_close).toggleClass('shiftleft');
+      $(menu_text).toggleClass('visible');
+    });
+    $("#button__icon__id").hover(function(){
+      var project_close = document.getElementById("shell__button__id");
+      var menu_text = document.getElementById("button__text__js");
+      $(project_close).toggleClass('shiftleft');
+      $(menu_text).toggleClass('visible');
+    });
+    var up = document.getElementById("quicknav--up");
+    $("#button__hitarea__js").hover(function(){
+      var project_close = document.getElementById("shell__button__id");
+      var menu_text = document.getElementById("button__text__js");
+      $(project_close).toggleClass('shiftleft');
+      $(menu_text).toggleClass('visible');
+    });
+
+    function menu_relocate(){
+      var header = document.getElementById("large-header");
+      header.style.top = "400px";
+      var rootnode = document.getElementById("js-rootnode");
+      var projects = document.getElementById("js_work__overview");
+      rootnode.style.opacity=0;
+      rootnode.style.MozTransition = "0.5s";
+      rootnode.style.WebkitTransition  = "0.5s";
+      projects.style.opacity=0;
+      projects.style.top="1000px";
+      projects.style.MozTransition = "0.5s";
+      projects.style.WebkitTransition  = "0.5s";
+      var project_close = document.getElementById("shell__button__id");
+      project_close.style.opacity=0;
+      var menu = document.getElementById("shell__button--menu__js");
+      menu.style.opacity = 1;
+      var menu_text = document.getElementById("button__text__js");
+
+      $(menu_text).toggleClass('visible');
+      setTimeout(function(){
+              window.location.replace("../common/menu.html");
+        }, 300);
+
+    }
+    $("#shell__button__id").hover(function(){
+    var body = document.body;
+    //body.classList.add("opacity");
+    var rootnode = document.getElementById("js-rootnode");
+    var header = document.getElementById("large-header");
+    var menu = document.getElementById("shell__button--menu__js");
+    $(rootnode).toggleClass('opacity');
+    $(header).toggleClass('opacity');
+    $(menu).toggleClass('opacity');
+    });
+    $("#shell__button__id").click(function(){
+      window.location.replace("../index.html");
+    });
+    $("#button__text__js").click(function(){
+      menu_relocate();
+    });
+    $("#button__icon__id").click(function(){
+      menu_relocate();
+    });
+    $("#button__hitarea__js").click(function(){
+      menu_relocate();
+    });
+    $("#shell__button__id").on("mouseleave", function(){
+      var body = document.body;
+      //$(body).toggleClass('opacity');
+      var rootnode = document.getElementById("js-rootnode");
+      //$(rootnode).toggleClass('opacity');
+    });
+
+    $("#quicknav--down").hover(function(){
+      var uparrow = document.getElementsByClassName("quicknav__arrow--down")[0];
+      var canvas = document.getElementById("arrow--down");
+      var ctx = canvas.getContext("2d");
+      ctx.lineWidth = 2;
+      ctx.clearRect(0,0,canvas.width, canvas.height);
+      //CHANGE THIS TO #828282 for GREY ARROW ON HOVER TO BE REDRAWN
+      drawArrow(9,35,9,81,"arrow--down","#FFF");
+      uparrow.style.transform="translate3d(0px,10px,0px)";
+    });
+
+    $("#quicknav--down").on("mouseleave", function(){
+      var uparrow = document.getElementsByClassName("quicknav__arrow--down")[0];
+      uparrow.style.transform="translate3d(0px,0px,0px)";
+    });
+
+    $("#quicknav--up").hover(function(){
+      var uparrow = document.getElementsByClassName("quicknav__arrow--up")[0];
+      var canvas = document.getElementById("arrow--up");
+      var ctx = canvas.getContext("2d");
+      ctx.lineWidth = 2;
+      ctx.clearRect(0,0,canvas.width, canvas.height);
+      //CHANGE THIS TO #828282 for GREY ARROW ON HOVER TO BE REDRAWN
+      drawArrow(9,50,9,4,"arrow--up","#FFF");
+      uparrow.style.transform="translate3d(0px,-10px,0px)";
+
+    });
+    $("#quicknav--up").on("mouseleave", function(){
+      var uparrow = document.getElementsByClassName("quicknav__arrow--up")[0];
+      uparrow.style.transform="translate3d(0px,0px,0px)";
+    });
+
+  </script>
+  <script>
+    jQuery.fn.arrowcenter = function(side,id) {
+      var width = $( window ).width();
+      var overview_width = $("#js_work__overview").width();
+      var diff = (width - overview_width) / 2;
+      var percent = (diff / width) * 100;
+      var s = '' + percent + '%';
+      var container = $(window);
+      var top = -this.height() / 2;
+      var left = -this.width() / 2;
+      //alert("s: "+s+", projectlist width: "+overview_width+", width: " +width);
+      if(side=="left"){
+        var uparrow = document.getElementsByClassName("quicknav__arrow--up")[0];
+        uparrow.style.left = (diff/2).toString() + "px";
+      }
+      if(side=="right"){
+        var downarrow = document.getElementsByClassName("quicknav__arrow--down")[0];
+        downarrow.style.right=(diff/2).toString() + "px";
+      }
+
+
+  }
+    jQuery.fn.center = function() {
+      var width = $( window ).width();
+      var overview_width = $("#js_work__overview").width();
+      var diff = (width - overview_width) / 2;
+      var percent = (diff / width) * 100;
+      var s = '' + percent + '%';
+      var container = $(window);
+      var top = -this.height() / 2;
+      var left = -this.width() / 2;
+      //alert("s: "+s+", projectlist width: "+overview_width+", width: " +width);
+      return $("#overview_id").css({ 'left': s});
+
+  }
+  window.onresize = function() {
+  $('#js_work__overview').center();
+  $('#quicknav--up').arrowcenter("left",'#quicknav--up');
+  $('#quicknav--down').arrowcenter("right",'#quicknav--down');
+}
+  </script>
+  <script>
+    $( document ).ready(function(){
+      var canvas = document.getElementById("large-header");
+      var projects = document.getElementById("shell__button__id");
+      var static = document.getElementById("static");
+      static.style.opacity=0;
+
+      canvas.style.opacity=1;
+      projects.style.opacity = 1;
+
+      var uparrow = document.getElementsByClassName("quicknav__arrow--up")[0];
+      var downarrow = document.getElementsByClassName("quicknav__arrow--down")[0];
+      $(uparrow).toggleClass('active-two');
+      $(downarrow).toggleClass('active-two');
+      setTimeout(function(){
+        $(uparrow).toggleClass('active-two');
+        $(downarrow).toggleClass('active-two');
+      },500);
+      $('#js_work__overview').center();
+      $('#quicknav--up').arrowcenter("left",'#quicknav--up');
+      $('#quicknav--down').arrowcenter("right",'#quicknav--down');
+      //var body = document.body;
+      //body.style.opacity=1;
+      var overview = document.getElementById("js_work__overview");
+      var header = document.getElementById("project-header");
+      header.style.top = "0px";
+      overview.style.top = "0px";
+      var rootnode = document.getElementById("js-rootnode");
+      rootnode.style.opacity = 1;
+      var elements = document.getElementsByClassName("secondary");
+      for (var i = 0, len = elements.length; i < len; i++) {
+        var id;
+        if(i==0){
+          id = "first-cat"
+        }
+        if(i==1){
+          id = "second-cat"
+        }
+        if(i==2){
+          id = "third-cat"
+        }
+        if(i==3){
+          id = "fourth-cat"
+        }
+        var el = document.getElementById(id);
+        var offset = 20 + (i * 20);
+        var o = offset.toString() + "px";
+        el.style.paddingBottom = o;
+
+      }
+    });
+    var canCall = true;
+    $('.is-selected .has-text-effect').on('click', function(){
+      //$(this).toggleClass('clicked');
+      var arrow = document.getElementById("arrow");
+      if(!canCall){
+        return;
+      }
+
+      //arrow.classList.add("active");
+      //arrow.css("transform","rotate(45deg)");
+      var elements = document.getElementsByClassName("secondary");
+      for (var i = 0, len = elements.length; i < len; i++) {
+        var id;
+        if(i==0){
+          id = "first-cat"
+        }
+        if(i==1){
+          id = "second-cat"
+        }
+        if(i==2){
+          id = "third-cat"
+        }
+        if(i==3){
+          id = "fourth-cat"
+        }
+        var el = document.getElementById(id);
+
+        if(elements[i].style.opacity == 0){
+            elements[i].style.opacity = 0.5;
+
+            el.style.paddingBottom = "0px";
+        }
+        else{
+          elements[i].style.opacity=0;
+          var offset = 20 + (i * 20);
+          var o = offset.toString() + "px";
+          el.style.paddingBottom = o;
+
+
+
+          //elements[i].style.bottom=o;
+        }
+        $(elements[i]).toggleClass('active');
+    // elements[i].style ...
+      }
+      var uparrow = document.getElementsByClassName("quicknav__arrow--up")[0];
+      var downarrow = document.getElementsByClassName("quicknav__arrow--down")[0];
+      if(uparrow.classList.contains('active-two')){
+          $(uparrow).toggleClass('active-two');
+          $(downarrow).toggleClass('active-two');
+      }
+      else{
+        $(uparrow).toggleClass('active');
+        $(downarrow).toggleClass('active');
+
+        if(uparrow.classList.contains('active')){
+          setTimeout(function(){
+            $(uparrow).toggleClass('active');
+            $(downarrow).toggleClass('active');
+            $(uparrow).toggleClass('active-two');
+            $(downarrow).toggleClass('active-two');
+          },500);
+        }
+
+      }
+
+      //$(uparrow).toggleClass('active-two');
+      var e =  document.getElementsByClassName("overview__projectItem");
+      var p = document.getElementsByClassName("overview__projectItem__poster");
+
+      for (var i = 0, len = e.length; i < len; i++) {
+
+
+        $(e[i]).toggleClass('active');
+        $(p[i]).toggleClass('active');
+
+      }
+      //var wo = document.getElementById("overview_id");
+      //$(wo).toggleClass('active');
+      canCall = false;
+      setTimeout(function(){
+            canCall = true;
+        }, 100);
+
+    });
+
+    document.getElementById('wrapper').onclick = function() {
+
+
+    var className = ' ' + wrapper.className + ' ';
+
+    this.className = ~className.indexOf(' active ') ?
+                         className.replace(' active ', ' ') :
+                         this.className + ' active';
+};
+
+</script>
+<script>
+  //Mousewheel plugin
+(function(d){"function"===typeof define&&define.amd?define(["jquery"],d):"object"===typeof exports?module.exports=d:d(jQuery)})(function(d){function l(a){var b=a||window.event,k=r.call(arguments,1),f=0,e=0,c=0,g=0,l=0,n=0;a=d.event.fix(b);a.type="mousewheel";"detail"in b&&(c=-1*b.detail);"wheelDelta"in b&&(c=b.wheelDelta);"wheelDeltaY"in b&&(c=b.wheelDeltaY);"wheelDeltaX"in b&&(e=-1*b.wheelDeltaX);"axis"in b&&b.axis===b.HORIZONTAL_AXIS&&(e=-1*c,c=0);f=0===c?e:c;"deltaY"in b&&(f=c=-1*b.deltaY);"deltaX"in
+b&&(e=b.deltaX,0===c&&(f=-1*e));if(0!==c||0!==e){1===b.deltaMode?(g=d.data(this,"mousewheel-line-height"),f*=g,c*=g,e*=g):2===b.deltaMode&&(g=d.data(this,"mousewheel-page-height"),f*=g,c*=g,e*=g);g=Math.max(Math.abs(c),Math.abs(e));if(!h||g<h)h=g,m.settings.adjustOldDeltas&&"mousewheel"===b.type&&0===g%120&&(h/=40);m.settings.adjustOldDeltas&&"mousewheel"===b.type&&0===g%120&&(f/=40,e/=40,c/=40);f=Math[1<=f?"floor":"ceil"](f/h);e=Math[1<=e?"floor":"ceil"](e/h);c=Math[1<=c?"floor":"ceil"](c/h);m.settings.normalizeOffset&&
+this.getBoundingClientRect&&(b=this.getBoundingClientRect(),l=a.clientX-b.left,n=a.clientY-b.top);a.deltaX=e;a.deltaY=c;a.deltaFactor=h;a.offsetX=l;a.offsetY=n;a.deltaMode=0;k.unshift(a,f,e,c);p&&clearTimeout(p);p=setTimeout(t,200);return(d.event.dispatch||d.event.handle).apply(this,k)}}function t(){h=null}var n=["wheel","mousewheel","DOMMouseScroll","MozMousePixelScroll"],k="onwheel"in document||9<=document.documentMode?["wheel"]:["mousewheel","DomMouseScroll","MozMousePixelScroll"],r=Array.prototype.slice,
+p,h;if(d.event.fixHooks)for(var q=n.length;q;)d.event.fixHooks[n[--q]]=d.event.mouseHooks;var m=d.event.special.mousewheel={version:"3.1.12",setup:function(){console.log("setup mousewheel");if(this.addEventListener)for(var a=k.length;a;)this.addEventListener(k[--a],l,!1);else this.onmousewheel=l;d.data(this,"mousewheel-line-height",m.getLineHeight(this));d.data(this,"mousewheel-page-height",m.getPageHeight(this))},teardown:function(){if(this.removeEventListener)for(var a=k.length;a;)this.removeEventListener(k[--a],
+l,!1);else this.onmousewheel=null;d.removeData(this,"mousewheel-line-height");d.removeData(this,"mousewheel-page-height")},getLineHeight:function(a){return 16},getPageHeight:function(a){return a.offsetHeight},settings:{adjustOldDeltas:!0,normalizeOffset:!0}};d.fn.extend({mousewheel:function(a){return a?this.bind("mousewheel",a):this.trigger("mousewheel")},unmousewheel:function(a){return this.unbind("mousewheel",a)}})});
+
+
+//Animation helper
+(function(r,a,t){var b=b||{};b.now=function(){return b.now||b.mozNow||b.msNow||b.oNow||b.webkitNow||function(){return(new Date).getTime()}}();a.EasyAnimationFrame=a.EAF=function(l,m,n){var c=n||0,g=0,e=!0,h,f,d;this.startAnimation=function(){e&&(d=b.now(),f=d+c,e=!1,k())};this.clearAnimation=function(){p(h);e=!0};this.updateFrameDelay=function(a){c=Number(a);f=b.now()+c};this.getFrameDelay=function(){return c};this.getFramerate=function(){return g};var k=function(){if(!e){var a=b.now();0>=f-a&&(f=
+a+c,d<a+1E3&&(g=Math.round(1E3/(a-d)),d=a,l()));h=q(k,m)}},q=function(){return a.requestAnimationFrame||a.webkitRequestAnimationFrame||a.mozRequestAnimationFrame||a.oRequestAnimationFrame||a.msRequestAnimationFrame||function(b,d){return a.setTimeout(b,1E3/60+c)}}(),p=a.cancelAnimationFrame||a.webkitCancelRequestAnimationFrame||clearTimeout;return this}})(document,window);
+
+
+//SETUP
+
+var scroller = document.getElementById('js-rootnode');
+var itemLength = 300;
+
+var frag = document.createDocumentFragment();
+
+
+scroller.appendChild(frag);
+
+
+var Inertial = function(){
+     var _this = this;
+
+     this.atStart = false;
+     this.atEnd = false;
+     this.running = false;
+     this.scrolldir = 0;
+     this.dir = 0
+     this.fricton = 0.90; // higher value for slower deceleration
+     this.vy = 0;
+     this.stepAmt = 10;
+     this.minMovement = 0.1;
+     this.ts = 0.1;
+     this.scrollerPos = 0;
+     this.prevScrollerPos = null;
+     this.currentY = 0;
+     this.targetY = 0;
+     this.oldY = 0;
+     this.wheelSpeed = 1;
+
+     this.contentHeight = scroller.scrollHeight;
+     this.scrollerHeight = scroller.offsetHeight;
+
+     this.animator = EasyAnimationFrame(function(){
+         _this.render();
+     }, scroller, 0);
+
+
+    this._Init();
+
+}
+
+
+Inertial.prototype._Init = function(){
+    var _this = this;
+
+    $(scroller).on('mousewheel', function(event, delta, deltaX, deltaY){
+          event.preventDefault();
+          _this.performScroll(event);
+    });
+}
+
+
+Inertial.prototype.performScroll = function(event, delta){
+
+     this.onWheel(delta || event.deltaY);
+
+    //if animation loop is not running and we are not
+    //scrolled to the top or the bottom. start the loop.
+     if(this.running ||
+        this.atStart && this.scrolldir > 0 ||
+        this.atEnd && this.scrolldir < 0
+     ){ return; }
+
+
+	//reset internal scroll pos when loop starts
+    this.scrollerPos = scroller.scrollTop;
+    this.running=true;
+    this.atEnd = false;
+    this.atStart = false
+    this.animator.startAnimation();
+
+
+}
+
+Inertial.prototype.onWheel = function(delta) {
+       //set the scroll direction
+       this.dir = ((delta * this.wheelSpeed) < 0 ? -1 : 1);
+       if (this.dir !== this.scrolldir) {
+           //reset accel
+           this.vy = 0;
+           this.scrolldir = this.dir;
+        }
+        //begin smoothing algorithm
+        this.smoothWheel(-(delta * this.wheelSpeed));
+}
+
+Inertial.prototype.smoothWheel = function(amt) {
+       this.targetY += amt;
+
+       //uncomment this line to see the decelleration almost work against the top edge of the container
+       //this.targetY = Math.max(0, this.targetY);
+
+       this.vy += (this.targetY - this.oldY) * this.stepAmt;
+       this.oldY = this.targetY;
+
+       this.boundVelocity();
+}
+
+Inertial.prototype.boundVelocity = function () {
+    var dist = 0;
+
+    if (this.dir == 1)
+        dist = this.scrollerPos;
+    else if (this.dir == -1)
+        dist = this.contentHeight - this.scrollerHeight - this.scrollerPos;
+
+    var maxv = dist * (1 - this.fricton) + 1;
+
+    if (Math.abs(this.vy) > maxv) {
+        console.log('reduce velocity ' + this.vy + ' to ' + (-maxv * this.dir) + ', dist: ' + dist);
+        this.vy = -maxv * this.dir;
+    }
+}
+
+Inertial.prototype.render = function() {
+
+    if(this.vy >= -(this.minMovement) && this.vy <= this.minMovement) { return; }
+
+     this.scrollerPos += this.vy;
+
+     if(this.scrollerPos <= 0){
+         this.reset(0);
+         this.atStart = true;
+     }
+     else if(this.scrollerPos >= this.contentHeight - this.scrollerHeight){
+         this.reset(this.contentHeight - this.scrollerHeight);
+         this.atEnd = true;
+     }
+     else {
+        this.atStart = false;
+        this.atEnd = false;
+     }
+
+     if(this.prevScrollerPos !== this.scrollerPos) {
+		//physically set the scroll position
+         scroller.scrollTop = this.scrollerPos;
+         this.prevScrollerPos = this.scrollerPos;
+     }
+
+//console.log(this);
+     this.vy *= this.fricton;
+     console.log('friction vy: ' + this.vy);
+     this.boundVelocity();
+
+    //Stop the animation loop if we are no longer scrolling
+     if(Math.abs(this.vy) < 0.1 || this.atStart || this.atEnd){
+         this.running = false;
+         this.animator.clearAnimation();
+         this.vy = 0;
+      }
+
+
+}
+
+
+Inertial.prototype.reset = function(y) {
+    this.scrolldir = 0;
+    this.dir = 0;
+    this.scrollerPos = y;
+    this.currentY = y;
+    this.targetY = y;
+    this.oldY = y;
+    this.vy = 0;
+}
+
+
+
+var smoothScroller = new Inertial();
+
+</script>
+<script>
+  ( function( $ ) {
+
+	"use strict";
+
+  $(".overview__projectItem__poster").tilt({
+    maxTilt: 15,
+    perspective: 1400,
+    easing: "cubic-bezier(.03,.98,.52,.99)",
+    speed: 1200,
+    glare: true,
+    maxGlare: 0.2,
+    scale: 0.95
+  });
+
+}( jQuery ) );
+</script>
+<script>
+
+(function() {
+    var width, height, largeHeader, canvas, ctx, circles, target, animateHeader = true;
+    initHeader();
+    addListeners();
+    function initHeader() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        target = {x: 0,y: height};
+        largeHeader = document.getElementById('large-header');
+        largeHeader.style.height = height + 'px';
+        canvas = document.getElementById('animated-canvas');
+        canvas.width = width;
+        canvas.height = height;
+        ctx = canvas.getContext('2d');
+        circles = [];
+        for (var x = 0; x < width * 0.5; x++) {
+            var c = new Circle();
+            circles.push(c);
+        }
+        animate();
+    }
+    function addListeners() {
+        window.addEventListener('scroll', scrollCheck);
+        window.addEventListener('resize', resize);
+    }
+    function scrollCheck() {
+        if (document.body.scrollTop > height)
+            animateHeader = false;
+        else
+            animateHeader = true;
+    }
+    function resize() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        largeHeader.style.height = height + 'px';
+        canvas.width = width;
+        canvas.height = height;
+    }
+    function animate() {
+        if (animateHeader) {
+            ctx.clearRect(0, 0, width, height);
+            for (var i in circles) {
+                circles[i].draw();
+            }
+        }
+        requestAnimationFrame(animate);
+    }
+    function Circle() {
+        var _this = this;
+        (function() {
+            _this.pos = {};
+            init();
+            console.log(_this);
+        })();
+        function init() {
+            _this.pos.x = Math.random() * width;
+            _this.pos.y = height + Math.random() * 100;
+            _this.alpha = 0.1 + Math.random() * 0.3;
+            _this.scale = 0.1 + Math.random() * 0.3;
+            _this.velocity = Math.random();
+        }
+        this.draw = function() {
+            if (_this.alpha <= 0) {
+                init();
+            }
+            _this.pos.y -= _this.velocity;
+            _this.alpha -= 0.0005;
+            ctx.beginPath();
+            ctx.arc(_this.pos.x, _this.pos.y, _this.scale * 10, 0, 2 * Math.PI, false);
+            ctx.fillStyle = 'rgba(255,255,255,' + _this.alpha + ')';
+            ctx.fill();
+        };
+    }
+})();
+</script>
+</body>
