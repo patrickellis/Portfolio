@@ -365,6 +365,9 @@ color: #ffffff;
   width:135.4rem;
   padding:200px 0;
   padding-bottom:200px;
+  transition:0.2s;
+  -webkit-transition:0.2s;
+  -o-transition:0.2s;
 }
 .overview__filterLabel{
   text-transform:uppercase;
