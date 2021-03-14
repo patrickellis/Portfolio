@@ -1,0 +1,183 @@
+<head>
+  <title>Portfolio - Patrick Ellis</title>
+  <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+  <link rel="stylesheet" href="../css/stylemain.css">
+  <script src="https://kit.fontawesome.com/cc216969ef.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+
+</head>
+<body onresize="resize()">
+  <div class="js-shell shell">
+    <div class="shell__button--drop shell__button"></div>
+    <div class="shell__button--menu shell__button" id="shell__button--menu__js">
+      <div class="button__hitarea" id="button__hitarea__js"></div>
+        <div class="button__icon" id="button__icon__id">
+          <svg>
+            <use xlink:href='#icon-temp-menu'>
+              <symbol id="icon-temp-menu" viewBox="0 0 20 16">
+                <g id="temp-menu-Page-2" fill-rule="evenodd">
+                  <g id="temp-menu-Artboard-Copy-3" transform="translate(-1390, -24)">
+                    <g id="temp-menu-noun_menu_93427" transform="translate(1390,24)">
+                      <rect id="temp-menu-Rectangle" x="0" y="0" width="22" height="2"></rect>
+                      <rect id="temp-menu-Rectangle" x="0" y="7" width="22" height="2"></rect>
+                      <rect id="temp-menu-Rectangle" x="0" y="14" width="22" height="2"></rect>
+                      </g>
+                    </g>
+                  </g>
+                </symbol>
+            </use>
+            </svg>
+            </div>
+            <span class="js-button__text button__text" id="button__text__js">Menu</span>
+        </div>
+
+
+          <div class = "static" id="static"></div>
+          <div id="rootnode" class="rootnode">
+            <div class="contact-page">
+              <div class="contact__inner">
+                <div class="contact__email">
+                  <div class="contact__email__hiring">
+                    <p class="hello">
+                      <span class="part2">Get in touch:</span>
+                      <a class="mailLink mailLink1" href="mailto:patrick.ellis.w@gmail.com">
+                        <span class="headingAll">patrick.ellis.w@gmail.com</span>
+                        <span class="underline animate"></span>
+                        <span class="underline fade"></span>
+                      </a>
+                    </p>
+                    <p class="newbiz">
+                      <span class="part2">Find me on LinkedIn:</span>
+                      <a class="mailLink mailLink2" href="">
+                        <span class="headingAll">ellisprojects</span>
+                        <span class="underline animate"></span>
+                        <span class="underline fade"></span>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+            <div class="contact__other">
+              <div class="contact__address has-text-effect" id="contactAddress">
+                <h3>NOTTINGHAM</h3>
+                <p class="contact__address-phone">+44 7835 072924</p>
+                <div>
+                  <p class="contact__address-street">
+                    Manor Court
+                    <br>
+                    Sutton Lane
+                    <br>
+                    Elton
+                    <br>
+                    Nottingham
+                    <br>
+                  </p>
+                </div>
+              </div>
+              <div class="contact__social has-text-effect" id="contactsocial">
+                <h3>SOCIAL</h3>
+                <p class="contact_link first">
+                  <a target="_blank" href="https://twitter.com">
+                    <img class="contact-image" src="../images/contact_line.png">
+                    Twitter
+                  </a>
+                </p>
+                <p class="contact_link">
+                  <a target="_blank" href="https://facebook.com">
+                    <img class="contact-image" src="../images/contact_line.png">
+                    Facebook
+                  </a>
+                </p>
+                <p class="contact_link">
+                  <a target="_blank" href="https://LinkedIn.com">
+                    <img class="contact-image" src="../images/contact_line.png">
+                    LinkedIn
+                  </a>
+                </p>
+              </div>
+
+
+
+
+
+    <script>
+      $("#shell__button--menu__js").hover(function(){
+        var project_close = document.getElementById("shell__button__id");
+        var menu_text = document.getElementById("button__text__js");
+        $(project_close).toggleClass('shiftleft');
+        $(menu_text).toggleClass('visible');
+      });
+      $("#button__hitarea__js").hover(function(){
+        //alert("hi");
+
+        var menu_text = document.getElementById("button__text__js");
+
+        //$(menu_text).toggleClass('visible');
+        menu_text.style.opacity = 1;
+      });
+      $("#button__hitarea__js").on("mouseleave", function(){
+        var project_close = document.getElementById("shell__button__id");
+        var menu_text = document.getElementById("button__text__js");
+        //$(menu_text).toggleClass('visible');
+        menu_text.style.opacity = 0;
+      });
+
+      function menu_relocate(){
+        var menu_text = document.getElementById("button__text__js");
+        $(menu_text).toggleClass('visible');
+        var rootnode = document.getElementById("rootnode");
+        rootnode.style.opacity=0;
+        rootnode.style.MozTransition = "0.5s";
+        rootnode.style.WebkitTransition  = "0.5s";
+        setTimeout(function(){
+                window.location.replace("menu");
+          }, 300);
+
+      }
+      $("#button__text__js").click(function(){
+        menu_relocate();
+      });
+      $("#button__icon__id").click(function(){
+        menu_relocate();
+      });
+      $("#button__hitarea__js").click(function(){
+        menu_relocate();
+      });
+      $("#shell__button__id").hover(function(){
+      var body = document.body;
+      //body.classList.add("opacity");
+      var rootnode = document.getElementById("js-rootnode");
+      var header = document.getElementById("large-header");
+      var menu = document.getElementById("shell__button--menu__js");
+      $(rootnode).toggleClass('opacity');
+      $(header).toggleClass('opacity');
+      $(menu).toggleClass('opacity');
+      });
+      $("#shell__button__id").click(function(){
+        window.location.replace("index");
+      });
+      $("#button__text__js").click(function(){
+        menu_relocate();
+      });
+      $("#button__icon__id").click(function(){
+        menu_relocate();
+      });
+      $("#button__hitarea__js").click(function(){
+        menu_relocate();
+      });
+      $("#shell__button__id").on("mouseleave", function(){
+        var body = document.body;
+        //$(body).toggleClass('opacity');
+        var rootnode = document.getElementById("js-rootnode");
+        //$(rootnode).toggleClass('opacity');
+      });
+      </script>
+    <script>
+
+        $( document ).ready(function(){
+          var rootnode = document.getElementById("rootnode");
+          rootnode.style.opacity = 1;
+
+      });
+      </script>
+  </body>
