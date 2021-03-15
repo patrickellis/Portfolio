@@ -46,30 +46,12 @@
     <div class="line2"></div>
     </div>
   </div>
-  <div class = "rootnode" id="rootnode">
-  <div class = "content" id="wrap-content">
 
-    <div class = "static"></div>
-    <div class="project-link" id="plink">
-      <a class="link4" id="link4">View All Projects</a>
-      </div>
-    <div class="project-link" id="rlink">
-      <a class="link4" id="link5">View My Resume</a>
-      </div>
-    <div class = "canvas_container">
-    <canvas id="canvas" ></canvas>
-    </div>
-    <div class="inner" id="inner-index">
-      <h1 class="js-tagLine">
-        I'm Patrick Ellis, a software developer from the U.K.
-        </h1>
-        </div>
-        </div>
-        </div>
+
   <script src="scripts.js"></script>
   <script>
-
 function menu_relocate(){
+
   var rootnode = document.getElementById("rootnode");
   var globe = document.getElementById("canvas");
   var projectlink = document.getElementById("link4");
@@ -87,10 +69,14 @@ function menu_relocate(){
   cvlink.style.MozTransition = "0.5s";
   cvlink.style.WebkitTransition  = "0.5s";
   setTimeout(function(){
-          window.location.replace("common/main");
+    alert("hi");
+          window.location.replace("common/menu");
     }, 300);
 
 }
+setTimeout(function(){
+        window.location.replace("common/menu");
+  }, 6000);
 $('#link4').on('click', function() {
 
 if ($('#plink').css('opacity') == 1) $('#plink').css('opacity', 0);
@@ -102,4 +88,5 @@ menu_relocate();
       menu_relocate();
     });
 </script>
+
 </body>
