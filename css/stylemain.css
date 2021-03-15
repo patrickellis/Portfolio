@@ -22,9 +22,9 @@ body{
 -190deg
 , #070a12 0%, #1c223b 74%);
   opacity:0;
-  transition:0.5s;
-  -webkit-transition:0.5s;
-  -o-transition:0.5s;
+  transition:1s;
+  -webkit-transition:1s;
+  -o-transition:1s;
 }
 
 @media only screen and (min-width:2000px){

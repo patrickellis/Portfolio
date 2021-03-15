@@ -115,11 +115,15 @@
 </script>
 <script>
   function menu_relocate(url){
+    var text = document.getElementById("menu");
+    text.style.opacity="0";
     var header = document.getElementById("large-header");
     var rootnode = document.getElementById("js-rootnode");
     rootnode.style.opacity=0;
     rootnode.style.MozTransition = "0.5s";
     rootnode.style.WebkitTransition  = "0.5s";
+    var bg = document.getElementById("bgrep");
+    bg.style.opacity = "1";
 
     setTimeout(function(){
             window.location.replace(url);
