@@ -1,75 +1,62 @@
 <head>
-  <title>Portfolio - Patrick Ellis</title>
-  <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-  <link rel="stylesheet" href="../css/stylemain.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
-</head>
-<body onresize="resize()">
-  <div class="ribbon-container"></div>
+    <link rel="stylesheet" href="../css/stylemenu.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
 
-  <div class="js-shell shell">
-    <div class="shell__button--drop shell__button"></div>
-    <div class="shell__button--menu shell__button" id="shell__button--menu__js">
-      <div class="button__hitarea" id="button__hitarea__js"></div>
-        <div class="button__icon">
-          <svg>
-            <use xlink:href='#icon-temp-menu'>
-              <symbol id="icon-temp-menu" viewBox="0 0 20 16">
-                <g id="temp-menu-Page-2" fill-rule="evenodd">
-                  <g id="temp-menu-Artboard-Copy-3" transform="translate(-1390, -24)">
-                    <g id="temp-menu-noun_menu_93427" transform="translate(1390,24)">
-                      <rect id="temp-menu-Rectangle" x="0" y="0" width="22" height="2"></rect>
-                      <rect id="temp-menu-Rectangle" x="0" y="7" width="22" height="2"></rect>
-                      <rect id="temp-menu-Rectangle" x="0" y="14" width="22" height="2"></rect>
-                      </g>
+<body>
+  <div class="wrapper">
+<div class="ribbon-container"></div>
+<div class="js-shell shell">
+  <div class="shell__button--drop shell__button"></div>
+  <div class="shell__button--menu shell__button" id="shell__button--menu__js">
+    <div class="button__hitarea" id="button__hitarea__js"></div>
+      <div class="button__icon">
+        <svg>
+          <use xlink:href='#icon-temp-menu'>
+            <symbol id="icon-temp-menu" viewBox="0 0 20 16">
+              <g id="temp-menu-Page-2" fill-rule="evenodd">
+                <g id="temp-menu-Artboard-Copy-3" transform="translate(-1390, -24)">
+                  <g id="temp-menu-noun_menu_93427" transform="translate(1390,24)">
+                    <rect id="temp-menu-Rectangle" x="0" y="0" width="22" height="2"></rect>
+                    <rect id="temp-menu-Rectangle" x="0" y="7" width="22" height="2"></rect>
+                    <rect id="temp-menu-Rectangle" x="0" y="14" width="22" height="2"></rect>
                     </g>
                   </g>
-                </symbol>
-            </use>
-            </svg>
-            </div>
-            <span class="js-button__text button__text" id="button__text__js">Menu</span>
-        </div>
+                </g>
+              </symbol>
+          </use>
+          </svg>
+          </div>
+      </div>
 
-      <div class="shell__button--project shell__button" id="shell__button__id">
-        <div class="button__text">
-          <span class="js-close-project">Close Project</span>
-          <span class="js-close-reel">Close Showreel</span>
-          <span class="js-close-overview">Close All Projects</span>
-          </div>
-          <span class="button__divider"></span>
-          </div>
 </div>
-  <div class="static" id="static"></div>
-  <div id="particles-background" class="vertical-centered-box"></div>
-<div id="particles-foreground" class="vertical-centered-box"></div>
 
 
 
-    <div id="js-rootnode" class="rootnode">
-      <div class="js-menu page menu-page">
-        <nav class="js-menu menu" id="menu">
-          <div class="js-menu-about menu-item has-text-effect" id="menu-about">
-            <a>
-              <span>About</span>
-              </a>
-              </div>
-              <div class="js-menu-work menu-item has-text-effect" id="menu-work">
-                <a>
-                  <span>My Work</span>
-                  </a>
-                  </div>
-                  <div class="js-menu-contact menu-item has-text-effect" id="menu-contact">
-                    <a>
-                      <span>Contact</span>
-                      </a>
-                      </div>
-                      </nav>
-                      </div>
-                      </div>
-          <script>
-            window.addEventListener('DOMContentLoaded', (event) =>
+  <div id="js-rootnode" class="rootnode">
+    <div class="js-menu page menu-page">
+      <nav class="js-menu menu" id="menu">
+        <div class="js-menu-about menu-item has-text-effect" id="menu-about">
+          <a>
+            <span>About</span>
+            </a>
+            </div>
+            <div class="js-menu-work menu-item has-text-effect" id="menu-work">
+              <a>
+                <span>My Work</span>
+                </a>
+                </div>
+                <div class="js-menu-contact menu-item has-text-effect" id="menu-contact">
+                  <a>
+                    <span>Contact</span>
+                    </a>
+                    </div>
+                    </nav>
+                    </div>
+                    </div>
+                    </div>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) =>
 {
 	const numOfRibbons = 12;
 	const animationDuration = 300; // in seconds
@@ -88,7 +75,7 @@
 		ribbon.style.top    = `${(0 - ribbonHeight / 2) + Math.random()*100}vmax`;
 
 		// 20% variance between different elements to help split up parallel lines
-		ribbon.style.animationDuration  = `${Math.random()*(animationDuration*0.4) + (animationDuration*0.6)}s`;
+		ribbon.style.animationDuration  = `${Math.random()*(animationDuration*0.1) + (animationDuration*0.5)}s`;
 
 		// Start the animation from any point in its duration
 		ribbon.style.animationDelay     = `-${Math.random()*animationDuration}s`;
@@ -100,122 +87,28 @@
 		ribbonContainer.appendChild(ribbon);
 	}
 });
-
 </script>
-          <script>
-            var menu_text = document.getElementById("button__text__js");
+<script>
+  function menu_relocate(url){
+    var header = document.getElementById("large-header");
+    var rootnode = document.getElementById("js-rootnode");
+    rootnode.style.opacity=0;
+    rootnode.style.MozTransition = "0.5s";
+    rootnode.style.WebkitTransition  = "0.5s";
 
-            //$(menu_text).toggleClass('visible');
-            var rootnode = document.getElementById("js-rootnode");
-            rootnode.style.opacity = 1;
-              $( document ).ready(function(){
-                var static = document.getElementById("static");
-                //var canvas = document.getElementById("large-header");
-                //canvas.style.opacity=1;
-                var menu = document.getElementById("menu");
+    setTimeout(function(){
+            window.location.replace(url);
+      }, 200);
 
-                menu.style.opacity=1;
-                static.style.opacity=0.4;
-
-            });
-
-            (function() {
-                var width, height, largeHeader, canvas, ctx, circles, target, animateHeader = true;
-                initHeader();
-                addListeners();
-                function initHeader() {
-                    width = window.innerWidth;
-                    height = window.innerHeight;
-                    target = {x: 0,y: height};
-                    largeHeader = document.getElementById('large-header');
-                    largeHeader.style.height = height + 'px';
-                    canvas = document.getElementById('animated-canvas');
-                    canvas.width = width;
-                    canvas.height = height;
-                    ctx = canvas.getContext('2d');
-                    circles = [];
-                    for (var x = 0; x < width * 0.5; x++) {
-                        var c = new Circle();
-                        circles.push(c);
-                    }
-                    animate();
-                }
-                function addListeners() {
-                    window.addEventListener('scroll', scrollCheck);
-                    window.addEventListener('resize', resize);
-                }
-                function scrollCheck() {
-                    if (document.body.scrollTop > height)
-                        animateHeader = false;
-                    else
-                        animateHeader = true;
-                }
-                function resize() {
-                    width = window.innerWidth;
-                    height = window.innerHeight;
-                    largeHeader.style.height = height + 'px';
-                    canvas.width = width;
-                    canvas.height = height;
-                }
-                function animate() {
-                    if (animateHeader) {
-                        ctx.clearRect(0, 0, width, height);
-                        for (var i in circles) {
-                            circles[i].draw();
-                        }
-                    }
-                    requestAnimationFrame(animate);
-                }
-                function Circle() {
-                    var _this = this;
-                    (function() {
-                        _this.pos = {};
-                        init();
-                        console.log(_this);
-                    })();
-                    function init() {
-                        _this.pos.x = Math.random() * width;
-                        _this.pos.y = height + Math.random() * 100;
-                        _this.alpha = 0.1 + Math.random() * 0.3;
-                        _this.scale = 0.1 + Math.random() * 0.3;
-                        _this.velocity = Math.random();
-                    }
-                    this.draw = function() {
-                        if (_this.alpha <= 0) {
-                            init();
-                        }
-                        _this.pos.y -= _this.velocity;
-                        _this.alpha -= 0.0005;
-                        ctx.beginPath();
-                        ctx.arc(_this.pos.x, _this.pos.y, _this.scale * 10, 0, 2 * Math.PI, false);
-                        ctx.fillStyle = 'rgba(255,255,255,' + _this.alpha + ')';
-                        ctx.fill();
-                    };
-                }
-            })();
-            </script>
-            <script>
-              function menu_relocate(url){
-                var header = document.getElementById("large-header");
-                var rootnode = document.getElementById("js-rootnode");
-                rootnode.style.opacity=0;
-                rootnode.style.MozTransition = "0.5s";
-                rootnode.style.WebkitTransition  = "0.5s";
-
-                setTimeout(function(){
-                        window.location.replace(url);
-                  }, 200);
-
-              }
-              $("#menu-work").click(function(){
-                menu_relocate("../common/main");
-              });
-              $("#menu-about").click(function(){
-                menu_relocate("../common/about");
-              });
-              $("#menu-contact").click(function(){
-                menu_relocate("../common/contact");
-              });
-              </script>
-
-          </body>
+  }
+  $("#menu-work").click(function(){
+    menu_relocate("../common/main");
+  });
+  $("#menu-about").click(function(){
+    menu_relocate("../common/about");
+  });
+  $("#menu-contact").click(function(){
+    menu_relocate("../common/contact");
+  });
+  </script>
+</body>

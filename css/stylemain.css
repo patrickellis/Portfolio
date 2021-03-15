@@ -1491,7 +1491,7 @@ h3 {
 .ribbon
 {
 	position: absolute;
-	background-color: rgba(10, 10, 10,0.3);
+	background-color: rgba(30, 30, 30,0.3);
 	/*
 		Multiply looks slightly better but has a performance hit
 		Will need to be tested on multiple devices. Powerful to weak, large viewports to small viewports.
