@@ -123,6 +123,7 @@
       });
 
       function menu_relocate(){
+        document.body.style.opacity ="0";
         var menu_text = document.getElementById("button__text__js");
         $(menu_text).toggleClass('visible');
         var rootnode = document.getElementById("rootnode");
@@ -175,6 +176,7 @@
     <script>
 
         $( document ).ready(function(){
+          document.body.style.opacity="1";
           var rootnode = document.getElementById("rootnode");
           rootnode.style.opacity = 1;
 

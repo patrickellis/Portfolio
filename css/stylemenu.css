@@ -336,6 +336,8 @@ html, body
 	-moz-transition: 0.5s;
 	-o-transition: 0.5s;
 	-webkit-transition: 0.5s;
-  transition-delay: 0.1s;
 	transition-timing-function: ease-in;
+}
+#menu{
+  opacity:0;
 }
