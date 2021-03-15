@@ -1478,3 +1478,45 @@ h3 {
     height: 9px;
     left: -20px;
 }
+
+.ribbon-container
+{
+	overflow: hidden;
+	outline: 3px solid red;
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+
+.ribbon
+{
+	position: absolute;
+	background-color: rgba(10, 10, 10,0.3);
+	/*
+		Multiply looks slightly better but has a performance hit
+		Will need to be tested on multiple devices. Powerful to weak, large viewports to small viewports.
+
+		It may be better to go without multiply and have a gradient on the container itself to add some *depth* to it.
+
+		Either that or try a single large element with a gradient on it in front of all the other rects and put multiply on that one element
+
+		Making sure we have good performance on our background means we have that budget to spare to spend on other effects.
+	*/
+/* 	mix-blend-mode: multiply; */
+	animation: 60s spin linear infinite;
+
+}
+
+@keyframes spin
+{
+	from
+	{
+/* 		background-color: red; */
+		transform: rotate(0deg);
+	}
+	to
+	{
+/* 		background-color: green; */
+		transform: rotate(360deg);
+	}
+}

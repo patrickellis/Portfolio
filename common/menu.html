@@ -6,10 +6,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
 </head>
 <body onresize="resize()">
+  <div class="ribbon-container"></div>
 
-  <div id="large-header" class="large-header">
-   <canvas id="animated-canvas"></canvas>
-   </div>
   <div class="js-shell shell">
     <div class="shell__button--drop shell__button"></div>
     <div class="shell__button--menu shell__button" id="shell__button--menu__js">
@@ -44,6 +42,11 @@
           </div>
 </div>
   <div class="static" id="static"></div>
+  <div id="particles-background" class="vertical-centered-box"></div>
+<div id="particles-foreground" class="vertical-centered-box"></div>
+
+
+
     <div id="js-rootnode" class="rootnode">
       <div class="js-menu page menu-page">
         <nav class="js-menu menu" id="menu">
@@ -65,6 +68,40 @@
                       </nav>
                       </div>
                       </div>
+          <script>
+            window.addEventListener('DOMContentLoaded', (event) =>
+{
+	const numOfRibbons = 12;
+	const animationDuration = 300; // in seconds
+
+	const ribbonContainer = document.querySelector('.ribbon-container');
+	for(let i = 0; i < numOfRibbons; i++)
+	{
+		let ribbon = document.createElement('div');
+		let ribbonWidth = 1000;
+		let ribbonHeight = ribbonWidth/10;
+
+		ribbon.className    = 'ribbon';
+		ribbon.style.width  = `${ribbonWidth}vmax`;
+		ribbon.style.height = `${ribbonHeight}vmax`;
+		ribbon.style.left   = `${(0 - ribbonWidth  / 2) + Math.random()*100}vmax`;
+		ribbon.style.top    = `${(0 - ribbonHeight / 2) + Math.random()*100}vmax`;
+
+		// 20% variance between different elements to help split up parallel lines
+		ribbon.style.animationDuration  = `${Math.random()*(animationDuration*0.4) + (animationDuration*0.6)}s`;
+
+		// Start the animation from any point in its duration
+		ribbon.style.animationDelay     = `-${Math.random()*animationDuration}s`;
+
+		// Half the elements go one way, the other half the other way
+		ribbon.style.animationDirection = `${i%2 ? 'normal' : 'reverse'}`;
+
+		// Add the new ribbon to
+		ribbonContainer.appendChild(ribbon);
+	}
+});
+
+</script>
           <script>
             var menu_text = document.getElementById("button__text__js");
 
@@ -180,4 +217,5 @@
                 menu_relocate("../common/contact");
               });
               </script>
+
           </body>
