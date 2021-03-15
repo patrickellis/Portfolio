@@ -4,7 +4,9 @@
   </head>
 
 <body>
-  <div class="wrapper">
+  <div class="cont">
+  <div class="bgrep" id="bgrep"></div>
+  <div class="wrapper" id="wrapper">
 <div class="ribbon-container"></div>
 <div class="js-shell shell">
   <div class="shell__button--drop shell__button"></div>
@@ -55,10 +57,31 @@
                     </div>
                     </div>
                     </div>
+                    </div>
 <script>
+  var menu_text = document.getElementById("button__text__js");
+
+  //$(menu_text).toggleClass('visible');
+  var rootnode = document.getElementById("js-rootnode");
+
+  rootnode.style.opacity = 1;
+    $( document ).ready(function(){
+      var all = document.getElementsByClassName('ribbon');
+      for (var i = 0; i < all.length; i++) {
+        all[i].style.bottom = "0px";
+      }
+      //var static = document.getElementById("static");
+      //var canvas = document.getElementById("large-header");
+      //canvas.style.opacity=1;
+      var bg = document.getElementById("bgrep");
+      bg.style.opacity = "0";
+      var content = document.getElementById("wrapper");
+
+      content.style.opacity="1";
+  });
   window.addEventListener('DOMContentLoaded', (event) =>
 {
-	const numOfRibbons = 12;
+	const numOfRibbons = 9;
 	const animationDuration = 300; // in seconds
 
 	const ribbonContainer = document.querySelector('.ribbon-container');
@@ -72,10 +95,10 @@
 		ribbon.style.width  = `${ribbonWidth}vmax`;
 		ribbon.style.height = `${ribbonHeight}vmax`;
 		ribbon.style.left   = `${(0 - ribbonWidth  / 2) + Math.random()*100}vmax`;
-		ribbon.style.top    = `${(0 - ribbonHeight / 2) + Math.random()*100}vmax`;
+		//ribbon.style.top    = `${(0 - ribbonHeight / 2) + Math.random()*100}vmax`;
 
 		// 20% variance between different elements to help split up parallel lines
-		ribbon.style.animationDuration  = `${Math.random()*(animationDuration*0.1) + (animationDuration*0.5)}s`;
+		ribbon.style.animationDuration  = `${Math.random()*(animationDuration) +(animationDuration*0.1)}s`;
 
 		// Start the animation from any point in its duration
 		ribbon.style.animationDelay     = `-${Math.random()*animationDuration}s`;

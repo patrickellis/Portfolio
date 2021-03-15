@@ -189,7 +189,7 @@
     var scrolled=0;
 
     $(document).ready(function(){
-
+      document.body.style.opacity="1";
         $("#arrow--down").on("click" ,function(){
                     scrolled=scrolled+450;
 
@@ -281,6 +281,7 @@
     });
 
     function menu_relocate(){
+      document.body.style.opacity="0";
       var header = document.getElementById("large-header");
       header.style.top = "400px";
       var rootnode = document.getElementById("js-rootnode");
@@ -296,10 +297,11 @@
       menu.style.opacity = 1;
       var menu_text = document.getElementById("button__text__js");
 
+
       $(menu_text).toggleClass('visible');
       setTimeout(function(){
               window.location.replace("../common/menu");
-        }, 300);
+        }, 400);
 
     }
     $("#shell__button__id").hover(function(){
