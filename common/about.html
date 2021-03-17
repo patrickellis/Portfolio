@@ -8,6 +8,7 @@
 
 </head>
 <body onresize="resize()">
+  <div class="large-header" id="header"></div>
   <div class="js-shell shell">
     <div class="shell__button--drop shell__button"></div>
     <div class="shell__button--menu shell__button" id="shell__button--menu__js">
@@ -167,6 +168,7 @@
 
 
     <script>
+      document.getElementById("header").style.opacity="1";
       $("#shell__button--menu__js").hover(function(){
         var project_close = document.getElementById("shell__button__id");
         var menu_text = document.getElementById("button__text__js");
