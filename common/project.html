@@ -291,23 +291,19 @@
       var header = document.getElementById("large-header");
       header.style.top = "400px";
       var rootnode = document.getElementById("js-rootnode");
-      var projects = document.getElementById("js_work__overview");
+
       rootnode.style.opacity=0;
       rootnode.style.MozTransition = "0.5s";
       rootnode.style.WebkitTransition  = "0.5s";
-      projects.style.opacity=0;
-      projects.style.top="1000px";
       var project_close = document.getElementById("shell__button__id");
       project_close.style.opacity=0;
       var menu = document.getElementById("shell__button--menu__js");
       menu.style.opacity = 1;
       var menu_text = document.getElementById("button__text__js");
-
-
       $(menu_text).toggleClass('visible');
       setTimeout(function(){
-              window.location.replace("../common/menu");
-        }, 400);
+              window.location.replace(target);
+        }, 200);
 
     }
     $("#shell__button__id").hover(function(){
@@ -321,16 +317,16 @@
     $(menu).toggleClass('opacity');
     });
     $("#shell__button__id").click(function(){
-      window.location.replace("../common/main");
+      menu_relocate("main");
     });
     $("#button__text__js").click(function(){
-      menu_relocate();
+      menu_relocate("menu");
     });
     $("#button__icon__id").click(function(){
-      menu_relocate();
+      menu_relocate("menu");
     });
     $("#button__hitarea__js").click(function(){
-      menu_relocate();
+      menu_relocate("menu");
     });
     $("#shell__button__id").on("mouseleave", function(){
       var body = document.body;
