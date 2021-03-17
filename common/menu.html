@@ -63,12 +63,7 @@
 
   //$(menu_text).toggleClass('visible');
   var rootnode = document.getElementById("js-rootnode");
-  var bg = document.getElementById("bgrep");
-  bg.style.opacity = "0";
-  var content = document.getElementById("wrapper");
 
-  content.style.opacity="1";
-  rootnode.style.opacity = 1;
     $( document ).ready(function(){
       var text = document.getElementById("menu");
       text.style.opacity="1";
@@ -76,6 +71,12 @@
       for (var i = 0; i < all.length; i++) {
         all[i].style.bottom = "0px";
       }
+      var bg = document.getElementById("bgrep");
+      bg.style.opacity = "0";
+      var content = document.getElementById("wrapper");
+
+      content.style.opacity="1";
+      rootnode.style.opacity = 1;
       //var static = document.getElementById("static");
       //var canvas = document.getElementById("large-header");
       //canvas.style.opacity=1;
