@@ -556,7 +556,6 @@ letter-spacing: inherit;
 	position: fixed;
 	width: 100%;
 	background: #333;
-	background: url(http://templateocean.com/images/bg.jpg);
 	background-size: cover;
 	background-position: center bottom;
 	z-index: 1;
@@ -926,7 +925,7 @@ svg:not(:root) {
   bottom: -50%;
   width: 200%;
   height: 200vh;
-  background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+  background: transparent url('../images/noise-transparent.png') repeat 0 0;
   background-repeat: repeat;
   animation: bg-animation .2s infinite;
   visibility: visible;
