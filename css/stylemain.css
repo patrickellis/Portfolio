@@ -1370,6 +1370,12 @@ letter-spacing: 0.04rem;
     width: 100%;
     margin-bottom: 2rem;
 }
+.contact__address h3{
+  font-size:11px;
+}
+.contact__social h3{
+  font-size:11px;
+}
 .contact-page .contact__email .contact__email__hiring {
     width: 75%;
     display: inline-block;

@@ -63,7 +63,11 @@
 
   //$(menu_text).toggleClass('visible');
   var rootnode = document.getElementById("js-rootnode");
+  var bg = document.getElementById("bgrep");
+  bg.style.opacity = "0";
+  var content = document.getElementById("wrapper");
 
+  content.style.opacity="1";
   rootnode.style.opacity = 1;
     $( document ).ready(function(){
       var text = document.getElementById("menu");
@@ -75,11 +79,7 @@
       //var static = document.getElementById("static");
       //var canvas = document.getElementById("large-header");
       //canvas.style.opacity=1;
-      var bg = document.getElementById("bgrep");
-      bg.style.opacity = "0";
-      var content = document.getElementById("wrapper");
 
-      content.style.opacity="1";
   });
   window.addEventListener('DOMContentLoaded', (event) =>
 {
