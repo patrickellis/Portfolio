@@ -4,8 +4,10 @@
   <link rel="stylesheet" href="../css/stylemain.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+
 </head>
 <body onresize="resize()">
+
   <div id="large-header" class="large-header">
    <canvas id="animated-canvas"></canvas>
    </div>
@@ -169,10 +171,10 @@
             </div>
 
         </div>
-        <div class="project__footer">
+        <div class="project__footer" id = "trigger1">
           <div class="js-project__awards project__awards"></div>
           <div class="js-project__launch project__launch">
-            <div class="project__scroll no-url">
+            <div class="project__scroll no-url" id = "reveal1">
               <p>
                 <span class="text">SCROLL FOR MENU</span>
                 <span class="line"</span>
@@ -189,6 +191,60 @@
 
 
 
+    <script>
+      $(function() {
+      $('#js-rootnode').on("mousewheel", function() {
+          //alert($('#js-rootnode').scrollTop());
+          var menu_notif = document.getElementById("reveal1");
+          var scrollval = $('#js-rootnode').scrollTop();
+          if(document.body.clientWidth>2000){
+            x = 5440;
+          }
+          else if(document.body.clientWidth>1450){
+            x = 4340;
+          }
+          else if(document.body.clientWidth>1305){
+            x = 3940;
+          }
+          else if(document.body.clientWidth>1150){
+            x = 3300;
+          }
+          else if(document.body.clientWidth>980){
+            x = 2750;
+          }
+          else if(document.body.clientWidth>599){
+            x = 2100;
+          }
+          else if(document.body.clientWidth<600){
+            x = 1000;
+          }
+
+          if(scrollval >= x+500){
+            menu_relocate('main.html');
+          }
+          else if(scrollval >= x+380){
+            menu_notif.style.opacity = "1";
+          }
+          else if(scrollval >= x+280){
+            menu_notif.style.opacity = "0.6";
+          }
+          else if(scrollval >= x+180){
+            menu_notif.style.opacity = "0.6";
+          }
+          else if(scrollval >= x+100){
+
+            menu_notif.style.opacity = "0.3";
+          }
+          else if(scrollval >= x){
+
+            menu_notif.style.opacity = "0.1";
+          }
+
+
+
+      });
+  });
+</script>
   <script>
     var scrolled=0;
     var root = document.getElementById("js-rootnode");
