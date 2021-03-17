@@ -286,10 +286,8 @@
       $(menu_text).toggleClass('visible');
     });
 
-    function menu_relocate(){
+    function menu_relocate(target){
       document.body.style.opacity="0";
-      var header = document.getElementById("large-header");
-      header.style.top = "400px";
       var rootnode = document.getElementById("js-rootnode");
 
       rootnode.style.opacity=0;
@@ -299,6 +297,7 @@
       project_close.style.opacity=0;
       var menu = document.getElementById("shell__button--menu__js");
       menu.style.opacity = 1;
+
       var menu_text = document.getElementById("button__text__js");
       $(menu_text).toggleClass('visible');
       setTimeout(function(){
