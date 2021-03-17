@@ -447,6 +447,7 @@ transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 }
 .work-page{
   height:100%;
+  width:100%;
 }
 .work__overview .overview__projectItem__poster{
   width:100%;
@@ -1455,7 +1456,6 @@ element {
 }
 h3 {
     display: block;
-    font-size:0.3em;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
@@ -1522,4 +1522,307 @@ h3 {
 /* 		background-color: green; */
 		transform: rotate(360deg);
 	}
+}
+
+/* PROJECT PAGE ONE */
+.projects.is-enabled {
+    visibility: visible;
+}
+.work__menu {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    perspective: 500px;
+    cursor: -webkit-grab;
+}
+
+.work-page .project {
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  left: 214px;
+  display: block;
+  opacity: 1;
+    position: absolute;
+    width: 102.4rem;
+    padding-bottom: 600px;
+    padding-bottom: 65vh;
+    opacity: 1;
+}
+.project__header, .project__infos, .project__archiveproject {
+    position: relative;
+    padding-top: 200px;
+    margin-bottom: 10rem;
+    transform: translate3d(0,0,0);
+}
+.project__header .project__title, .project__infos .project__title, .project__archiveproject .project__title, .project__header .project__globaltitle, .project__infos .project__globaltitle, .project__archiveproject .project__globaltitle {
+    margin-bottom: 5.5rem;
+}
+.project__title{
+  opacity: 1;
+}
+.project__header .project__title .inner, .project__infos .project__title .inner, .project__archiveproject .project__title .inner, .project__header .project__globaltitle .inner, .project__infos .project__globaltitle .inner, .project__archiveproject .project__globaltitle .inner {
+    display: inline-block;
+    text-align: center;
+    font-size: 6rem;
+    line-height: 9.2rem;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+}
+.project__header .project__title .inner h2, .project__infos .project__title .inner h2, .project__archiveproject .project__title .inner h2, .project__header .project__globaltitle .inner h2, .project__infos .project__globaltitle .inner h2, .project__archiveproject .project__globaltitle .inner h2, .project__header .project__title .inner span, .project__infos  {
+    font-family: "Work-Sans-Light","Arial",sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    opacity: 1;
+}
+.inner span, .project__header .project__globaltitle .inner span, .project__infos .project__globaltitle .inner span, .project__archiveproject .project__globaltitle .inner span .project__title .inner span, .project__archiveproject .project__title{
+  font-family: "Work-Sans-Light","Arial",sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  opacity: 1;
+}
+.project__header .project__description, .project__infos .project__description, .project__archiveproject .project__description {
+    margin-bottom: 7.5rem;
+    font-size: 34px;
+    font-size: 3.4rem;
+    line-height: 46px;
+    line-height: 4.6rem;
+    font-family: "Work-Sans-Light","Arial",sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0.03rem;
+}
+.project__header .project__information, .project__infos .project__information, .project__archiveproject .project__information {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: "Work-Sans-Light","Arial",sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.project__header .project__information .information__item:first-of-type, .project__infos .project__information .information__item:first-of-type, .project__archiveproject .project__information .information__item:first-of-type {
+    margin-left: 0;
+}
+.project__header .project__information .information__item, .project__infos .project__information .information__item, .project__archiveproject .project__information .information__item {
+    opacity: 1;
+    width: 20%;
+    margin-right: -0.25em;
+}
+.project__header .project__information .information__item, .project__infos .project__information .information__item, .project__archiveproject .project__information .information__item, .project__header .project__information .information__launch, .project__infos .project__information .information__launch, .project__archiveproject .project__information .information__launch {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5%;
+}
+.project__header .project__information h4, .project__infos .project__information h4, .project__archiveproject .project__information h4 {
+    margin-bottom: 1rem;
+    letter-spacing: 0.04rem;
+    color: #ffffff;
+    font-family: "Work-Sans-Light","Arial",sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.project__header .project__information p, .project__infos .project__information p, .project__archiveproject .project__information p {
+    color: #898989;
+    margin: 0;
+    font-size: 13px;
+}
+.project__headline{
+  top: 1800px;
+transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.09978, 0, 1);
+width: 100%;
+will-change: transform;
+}
+.work-page .project__image, .work-page .project__mobile, .work-page .project__text, .work-page .project__headline, .work-page .project__video, .work-page .project__infos, .work-page .project__infosawards, .work-page .project__videoloop, .work-page .project__carousel, .work-page .project__mask, .work-page .project__sequence, .work-page .project__list {
+    position: absolute;
+}
+.headline__divider {
+    height: 1px;
+    margin-bottom: 15rem;
+    background-color: #333333;
+}
+.headline__title {
+    font-size: 50px;
+    font-size: 5rem;
+    line-height: 44px;
+    line-height: 4.4rem;
+    font-family:"Work-Sans-Light","Arial",sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-bottom: 4rem;
+}
+.headline__body {
+    font-size: 32px;
+    font-size: 3.2rem;
+    line-height: 46px;
+    line-height: 4.6rem;
+    font-family: "Work-Sans-Light","Arial",sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.project__videoloop .video__player {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.project__videoloop .video__player {
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.2);
+
+}
+.video__player {
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+.video--project{
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.09984, 0, 1);
+  position: relative;
+}
+.video--reel, .video--project {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.project__text .text__title, .project__text .text__body {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -0.25em;
+}
+.project__text .text__title {
+    width: 20%;
+    margin-top: 0.4rem;
+    font-size: 13px;
+    font-size: 1.3rem;
+    line-height: 15px;
+    line-height: 1.5rem;
+    font-family: "Work-Sans-Light","Arial",sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.project__text .text__title h3 {
+    line-height: 1.7;
+    letter-spacing: 0.05rem;
+}
+.project__text .text__body {
+    width: 70%;
+    margin-left: 10%;
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 38px;
+    line-height: 3.8rem;
+    font-family: "Work-Sans-Light","Arial",sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #e0e0e0;
+    letter-spacing: 0.02rem;
+}
+.project__text .text__body p:last-of-type {
+    margin-bottom: 0;
+}
+.project__text .text__body p:first-of-type {
+    margin-top: 0;
+}
+.project__text .text__title {
+    font-size: 1.3rem !important;
+    line-height: 15px;
+    line-height: 1.5rem;
+    font-family: "Work-Sans-Light","Arial",sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+.project__videoloop{
+z-index: 1;
+left: 0px;
+width: 1024px;
+height: 605px;
+transform: translate3d(0px, 0px, 0px);
+}
+.project__image .project__image-el {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+#image-one-inner{
+  background-image: url("https://www.teahub.io/photos/full/7-74931_download-nature-wallpaper-in-hd-for-mobile.jpg");
+}
+
+#image-two-inner{
+  background-image: url("https://www.wallpapers13.com/wp-content/uploads/2018/05/Natural-Landscape-River-Valley-Flowers-Sky-Mountain-Picture-For-Desktop-HD-Wallpaper-PC-Tablet-Mobile-1920x1080-915x515.jpg");
+}
+.project__videoloop .video__player video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.project__body{
+  height: 8803px;
+}
+#video-one{
+  top:1100px;
+}
+#video-two{
+  top:2450px;
+}
+#headline-two{
+  top:3100px;
+}
+#text-one{
+  top:3800px;
+}
+#image-one{
+  top: 4202px;
+  left: 300px;
+}
+#image-two{
+  top: 4552px;
+  left: 130px;
+}
+.project__image{
+    z-index: 1;
+  width: 691px;
+height: 389px;
+transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.09997, 0, 1);
 }
