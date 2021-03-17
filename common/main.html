@@ -280,7 +280,7 @@
       $(menu_text).toggleClass('visible');
     });
 
-    function menu_relocate(){
+    function menu_relocate(target){
       document.body.style.opacity="0";
       var header = document.getElementById("large-header");
       header.style.top = "400px";
@@ -300,8 +300,8 @@
 
       $(menu_text).toggleClass('visible');
       setTimeout(function(){
-              window.location.replace("../common/menu");
-        }, 400);
+              window.location.replace(target);
+        }, 200);
 
     }
     $("#shell__button__id").hover(function(){
@@ -314,17 +314,20 @@
     $(header).toggleClass('opacity');
     $(menu).toggleClass('opacity');
     });
+    $("#first").click(function(){
+      menu_relocate("../common/project");
+    });
     $("#shell__button__id").click(function(){
-      window.location.replace("../common/menu");
+      menu_relocate("../common/menu");
     });
     $("#button__text__js").click(function(){
-      menu_relocate();
+      menu_relocate("../common/menu");
     });
     $("#button__icon__id").click(function(){
-      menu_relocate();
+      menu_relocate("../common/menu");
     });
     $("#button__hitarea__js").click(function(){
-      menu_relocate();
+      menu_relocate("../common/menu");
     });
     $("#shell__button__id").on("mouseleave", function(){
       var body = document.body;

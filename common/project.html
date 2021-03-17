@@ -85,8 +85,8 @@
                         </div>
                       </div>
                     </div>
-                    <div class="js-project__body project__body">
-                      <div class="js-project__videoloop project__videoloop">
+                    <div class="js-project__body project__body" id="project__body">
+                      <div class="js-project__videoloop project__videoloop" id="video-one">
                         <div class="js-video video video--project">
                           <div class="js-video__player video__player">
                             <video loop autoplay muted id="vid">
@@ -138,12 +138,47 @@
                     </p>
                 </div>
                 </div>
+
               <div class="project__image" id="image-one">
                 <div class="project__image-el" id="image-one-inner"></div>
               </div>
               <div class="project__image" id="image-two">
                 <div class="project__image-el" id="image-two-inner"></div>
               </div>
+              <div class="js-project__text project__text" id="text-two">
+                <div class="text__title">
+                  <h3>Choose-Your-Own Video</h3>
+                  </div>
+                  <div class="js-text__body text__body">
+                    <p>
+                      Brandcast Delivered began with invitations for guests to visit a private link. Here, invitees could enter their names and select both pizza and video options from an à la carte menu. Video options included five content categories, including Food & Recipes and Sports, four YouTube creator hosts, such as Gordon Ramsay and Lilly Singh, and three musical tracks, from Tones And I, Dua Lipa, and Lizzo.
+                    </p>
+                </div>
+                </div>
+                <div class="project__headline" id="headline-three">
+                  <div class="headline__divider"></div>
+                  <div class="headline__title">
+                    <span>Personalised, with Pizza</span>
+                    </div>
+                  <div class="js-body headline__body">
+                    <p>
+                      When COVID-19 hit, YouTube needed to reimagine Brandcast for the age of quarantine. They envisioned a watch-from-home Brandcast video, delivered with pizza, where invitees could personalize their Brandcast story as easily as their pizza toppings. To turn the innovative concept into a reality, YouTube came to Resn and its dynamic video-creation platform, Cake.
+                    </p>
+                  </div>
+
+            </div>
+
+        </div>
+        <div class="project__footer">
+          <div class="js-project__awards project__awards"></div>
+          <div class="js-project__launch project__launch">
+            <div class="project__scroll no-url">
+              <p>
+                <span class="text">SCROLL FOR MENU</span>
+                <span class="line"</span>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       </div>
@@ -360,7 +395,7 @@
 
   }
   //project_one
-    jQuery.fn.center = function() {
+    jQuery.fn.center = function(id,container) {
       var width = $( window ).width();
       var overview_width = $("#project_one").width();
       var diff = (width - overview_width) / 2;
@@ -373,9 +408,10 @@
 
   }
   window.onresize = function() {
-  $('#project_one').center();
-  $('#quicknav--up').arrowcenter("left",'#quicknav--up');
-  $('#quicknav--down').arrowcenter("right",'#quicknav--down');
+  $('#project_one').center("#project_one",window);
+  //$('#video-one').center("#video_one","#project__body");
+  //$('#quicknav--up').arrowcenter("left",'#quicknav--up');
+  //$('#quicknav--down').arrowcenter("right",'#quicknav--down');
 }
   </script>
   <script>
