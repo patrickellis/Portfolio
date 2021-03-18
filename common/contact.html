@@ -37,6 +37,29 @@
           <div class = "static" id="static"></div>
           <div id="rootnode" class="rootnode">
             <div class="contact-page">
+              <div class="form__wrapper">
+                <div id="wrapper">
+                  <form class="form" action = "../contact-form-handler.php"
+                  method="POST" name="contact_form">
+                    <p class="field required half">
+                      <label class="label required" for="name">Name</label>
+                      <input class="text-input" id="name" name="name" required="<%= true %>" type="text"></input>
+                    </p>
+                    <p class="field required half">
+                      <label class="label" for="email">E-mail</label>
+                      <input class="text-input" id="email" name="email" required="<%= true %>" type="email"></input>
+                    </p>
+                    <p class="field">
+                      <label class="label" for="message">Message</label>
+                      <textarea class="textarea" cols="50" id="message" name="message" required="<%= true %>" rows="4"></textarea>
+                    </p>
+                    <p class="field">
+                      <input class="button" id = "submit__button" type="submit" value="Send message"></input>
+                    </p>
+                  </form>
+                </div>
+                </div>
+
               <div class="contact__inner">
                 <div class="contact__email">
                   <div class="contact__email__hiring">
@@ -93,7 +116,13 @@
 
 
 
-
+          <script language="JavaScript">
+      var frmvalidator  = new Validator("contactform");
+      frmvalidator.addValidation("name","req","Please provide your name");
+      frmvalidator.addValidation("email","req","Please provide your email");
+      frmvalidator.addValidation("email","email",
+        "Please enter a valid email address");
+      </script>
     <script>
       document.getElementById("header").style.opacity="1";
       $("#shell__button--menu__js").hover(function(){
