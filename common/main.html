@@ -37,7 +37,7 @@
         <div class="button__text">
           <span class="js-close-project">Close Project</span>
           <span class="js-close-reel">Close Showreel</span>
-          <span class="js-close-overview">Close All Projects</span>
+          <span class="js-close-overview" id="close_text">Close All Projects</span>
           </div>
           <span class="button__divider"></span>
           </div>
@@ -320,24 +320,38 @@
     });
 
     // MENU CLICK links
+    function dim_nav_text_and_bg(){
+      document.getElementById("large-header").style.opacity = "0";
+      document.getElementById("close_text").style.opacity = "0";
+    }
     $("#first-cat").click(function(){
       if(document.getElementsByClassName("secondary")[0].classList.contains("active")){
-        window.location.replace("../common/mainpython");
+        setTimeout(function(){
+                window.location.replace("../common/mainpython");
+          }, 250);
+
       }
     });
     $("#second-cat").click(function(){
       if(document.getElementsByClassName("secondary")[0].classList.contains("active")){
-        window.location.replace("../common/maincpp");
+        setTimeout(function(){
+                window.location.replace("../common/maincpp");
+          }, 250);
       }
     });
     $("#third-cat").click(function(){
       if(document.getElementsByClassName("secondary")[0].classList.contains("active")){
-        window.location.replace("../common/mainmisc");
+        setTimeout(function(){
+                window.location.replace("../common/mainmisc");
+          }, 250);
       }
     });
     $("#fourth-cat").click(function(){
       if(document.getElementsByClassName("secondary")[0].classList.contains("active")){
-        window.location.replace("../common/mainfrontend");
+
+        setTimeout(function(){
+                window.location.replace("../common/mainfrontend");
+          }, 250);
       }
     });
 
