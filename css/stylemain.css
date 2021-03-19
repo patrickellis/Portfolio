@@ -939,7 +939,14 @@ svg:not(:root) {
   transition:1s;
   -webkit-transition:1s;
   transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-
+}
+.project-header-prev{
+  top:0px;
+  -moz-transition:1s;
+  -o-transition:1s;
+  transition:1s;
+  -webkit-transition:1s;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 #js_work__overview{
   top:300px;

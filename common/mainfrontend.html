@@ -37,7 +37,7 @@
         <div class="button__text">
           <span class="js-close-project">Close Project</span>
           <span class="js-close-reel">Close Showreel</span>
-          <span class="js-close-overview">Close All Projects</span>
+          <span class="js-close-overview">Close Category</span>
           </div>
           <span class="button__divider"></span>
           </div>
@@ -62,9 +62,31 @@
         <div class="overview_header">
           <span class="overview__filterLabel">Filter</span>
             <div class="overview__categoryList">
-                <div class="categoryItem is-selected">
-                    <span class="has-text-effect" id="project-header"> All Projects
-                      <div class="dropdown-arrow-wrapper">
+              <div class="categoryItem">
+                <span class="has-text-effect transition project-header-prev" id="project-header-prev"> All Projects
+                  <div class="dropdown-arrow-wrapper">
+                    <div class="arrow">
+                      <div class="arrow-top"></div>
+                      <div class="arrow-bottom"></div>
+                      </div>
+                    </div>
+                </span>
+                </div>
+                <div class="categoryItem secondary">
+                  <span class="has-text-effect transition project-header-prev" > Python
+                  </span>
+                  </div>
+                  <div class="categoryItem secondary">
+                    <span class="has-text-effect transition project-header-prev" > C++
+                    </span>
+                    </div>
+                    <div class="categoryItem secondary">
+                      <span class="has-text-effect transition project-header-prev" > Misc
+                      </span>
+                      </div>
+                <div class="categoryItem is-selected" id="project-header-python">
+                    <span class="has-text-effect transition" > Front End
+                      <div class="dropdown-arrow-wrapper" id="new-header-arrow">
                         <div class="arrow">
                           <div class="arrow-top"></div>
                           <div class="arrow-bottom"></div>
@@ -74,16 +96,16 @@
 
                 </div>
                 <div class="categoryItem secondary">
-                    <span class="has-text-effect" id="first-cat"> Python </span>
+                    <span class="has-text-effect transition" id="first-cat"> Python </span>
                 </div>
                 <div class="categoryItem secondary">
-                    <span class="has-text-effect" id="second-cat"> C++ </span>
+                    <span class="has-text-effect transition" id="second-cat"> C++ </span>
                 </div>
                 <div class="categoryItem secondary">
-                    <span class="has-text-effect" id="third-cat"> Misc </span>
+                    <span class="has-text-effect transition" id="third-cat"> Misc </span>
                 </div>
                 <div class="categoryItem secondary">
-                    <span class="has-text-effect" id="fourth-cat"> Front End </span>
+                    <span class="has-text-effect transition" id="fourth-cat"> All Projects </span>
                 </div>
             </div>
         </div>
@@ -185,25 +207,125 @@
     </div>
     <div class="clearspace"></div>
     </div>
+
+    <script>
+      document.getElementById("first-cat").style.opacity="0";
+      document.getElementById("second-cat").style.opacity="0";
+      document.getElementById("third-cat").style.opacity="0";
+      document.getElementById("fourth-cat").style.opacity="0";
+      setTimeout(function(){
+          document.getElementById("first-cat").style.opacity="1";
+              document.getElementById("second-cat").style.opacity="1";
+              document.getElementById("third-cat").style.opacity="1";
+              document.getElementById("fourth-cat").style.opacity="1";
+        }, 1000);
+      var category_items = document.getElementsByClassName("overview__projectItem");
+      for (var i = 0, len = category_items.length; i < len; i++) {
+        category_items[i].style.top = "0px";
+      }
+      var rootnode = document.getElementById("js-rootnode");
+      rootnode.style.transition="0s";
+      rootnode.style.opacity = 1;
+      document.body.style.opacity="1";
+      var arrow = document.getElementById("arrow");
+      //var header = document.getElementById("project-header");
+      //header.style.top = "0px";
+
+      //arrow.classList.add("active");
+      //arrow.css("transform","rotate(45deg)");
+      var elements = document.getElementsByClassName("secondary");
+      for (var i = 0, len = elements.length; i < len; i++) {
+        var id;
+        if(i==0){
+          id = "first-cat"
+        }
+        if(i==1){
+          id = "second-cat"
+        }
+        if(i==2){
+          id = "third-cat"
+        }
+        if(i==3){
+          id = "fourth-cat"
+        }
+        var el = document.getElementById(id);
+
+        elements[i].style.paddingBottom= "0px";
+        el.style.paddingBottom= "0px";
+        elements[i].style.opacity="0.5";
+
+        $(elements[i]).toggleClass('active');
+    // elements[i].style ...
+      }
+      var uparrow = document.getElementsByClassName("quicknav__arrow--up")[0];
+      var downarrow = document.getElementsByClassName("quicknav__arrow--down")[0];
+      if(uparrow.classList.contains('active-two')){
+          $(uparrow).toggleClass('active-two');
+          $(downarrow).toggleClass('active-two');
+      }
+      else{
+        $(uparrow).toggleClass('active');
+        $(downarrow).toggleClass('active');
+
+        if(uparrow.classList.contains('active')){
+          setTimeout(function(){
+            $(uparrow).toggleClass('active');
+            $(downarrow).toggleClass('active');
+            $(uparrow).toggleClass('active-two');
+            $(downarrow).toggleClass('active-two');
+          },500);
+        }
+
+      }
+
+      //$(uparrow).toggleClass('active-two');
+      var e =  document.getElementsByClassName("overview__projectItem");
+      var p = document.getElementsByClassName("overview__projectItem__poster");
+
+      for (var i = 0, len = e.length; i < len; i++) {
+
+
+        $(e[i]).toggleClass('active');
+        $(p[i]).toggleClass('active');
+
+      }
+      //var wo = document.getElementById("overview_id");
+      //$(wo).toggleClass('active');
+
+</script>
   <script>
+    function eventFire(el, etype){
+      if (el.fireEvent) {
+        el.fireEvent('on' + etype);
+      } else {
+        var evObj = document.createEvent('Events');
+        evObj.initEvent(etype, true, false);
+        el.dispatchEvent(evObj);
+      }
+    }
     var scrolled=0;
 
     $(document).ready(function(){
-      document.body.style.opacity="1";
-        $("#arrow--down").on("click" ,function(){
-                    scrolled=scrolled+450;
+      //document.getElementById("project-header-prev").style.top="-80px";
+      //document.getElementById("project-header-prev").style.opacity="0";
+      var upperList = document.getElementsByClassName('project-header-prev');
+      for(var i=0,len=upperList.length; i<len; i++){
+        upperList[i].style.top="-320px";
+        upperList[i].style.opacity="0";
+      }
+      categories = document.getElementsByClassName("categoryItem");
+      for (var i = 0, len = categories.length; i < len; i++) {
+        if(i>3){
+          categories[i].style.top="-320px";
+        }
 
-    				$(".rootnode").animate({
-    				        scrollTop:  scrolled
-    				   });
-    			});
 
-        $("#arrow--up").on("click" ,function(){
-    				scrolled=scrolled-450;
-    				$(".rootnode").animate({
-    				        scrollTop:  scrolled
-    				   });
-    			});
+      }
+      //document.getElementById("project-header-python").style.top = "0px";
+      //document.getElementById("project-header-prev").style.top = "0px";
+      //document.getElementById("project-header-prev").style.opacity = "0";
+      document.getElementById("new-header-arrow").style.opacity="1";
+
     });
 
 
@@ -314,34 +436,9 @@
     $(header).toggleClass('opacity');
     $(menu).toggleClass('opacity');
     });
-    // PROJECT ITEM LINKS
     $("#first").click(function(){
       menu_relocate("../common/project");
     });
-
-    // MENU CLICK links
-    $("#first-cat").click(function(){
-      if(document.getElementsByClassName("secondary")[0].classList.contains("active")){
-        window.location.replace("../common/mainpython");
-      }
-    });
-    $("#second-cat").click(function(){
-      if(document.getElementsByClassName("secondary")[0].classList.contains("active")){
-        window.location.replace("../common/maincpp");
-      }
-    });
-    $("#third-cat").click(function(){
-      if(document.getElementsByClassName("secondary")[0].classList.contains("active")){
-        window.location.replace("../common/mainmisc");
-      }
-    });
-    $("#fourth-cat").click(function(){
-      if(document.getElementsByClassName("secondary")[0].classList.contains("active")){
-        window.location.replace("../common/mainfrontend");
-      }
-    });
-
-    //NAV LINKS
     $("#shell__button__id").click(function(){
       menu_relocate("../common/menu");
     });
@@ -459,13 +556,14 @@
       //var body = document.body;
       //body.style.opacity=1;
       var overview = document.getElementById("js_work__overview");
-      var header = document.getElementById("project-header");
-      header.style.top = "0px";
+
       overview.style.top = "0px";
-      var rootnode = document.getElementById("js-rootnode");
-      rootnode.style.opacity = 1;
+
       var elements = document.getElementsByClassName("secondary");
-      for (var i = 0, len = elements.length; i < len; i++) {
+      setTimeout(function(){
+        $('.is-selected .has-text-effect').click();
+      },200);
+      /*for (var i = 0, len = elements.length; i < len; i++) {
         var id;
         if(i==0){
           id = "first-cat"
@@ -484,7 +582,7 @@
         var o = offset.toString() + "px";
         el.style.paddingBottom = o;
 
-      }
+      }*/
     });
     var canCall = true;
     $('.is-selected .has-text-effect').on('click', function(){
@@ -571,7 +669,20 @@
         }, 100);
 
     });
+    $("#arrow--down").on("click" ,function(){
+                scrolled=scrolled+450;
 
+        $(".rootnode").animate({
+                scrollTop:  scrolled
+           });
+      });
+
+    $("#arrow--up").on("click" ,function(){
+        scrolled=scrolled-450;
+        $(".rootnode").animate({
+                scrollTop:  scrolled
+           });
+      });
     document.getElementById('wrapper').onclick = function() {
 
 
