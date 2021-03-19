@@ -196,6 +196,10 @@
     </div>
 
     <script>
+      document.getElementById("fourth-cat").style.opacity="0";
+      setTimeout(function(){
+              document.getElementById("fourth-cat").style.opacity="1";
+        }, 1000);
       var category_items = document.getElementsByClassName("overview__projectItem");
       for (var i = 0, len = category_items.length; i < len; i++) {
         category_items[i].style.top = "80px";
