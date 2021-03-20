@@ -200,6 +200,8 @@
       setTimeout(function(){
               document.getElementById("fourth-cat").style.opacity="1";
         }, 1000);
+
+      //fixes project poster positions
       var category_items = document.getElementsByClassName("overview__projectItem");
       for (var i = 0, len = category_items.length; i < len; i++) {
         category_items[i].style.top = "80px";
@@ -286,23 +288,48 @@
     }
     var scrolled=0;
 
-    $(document).ready(function(){
-      document.getElementById("project-header-python").style.top="-80px";
-        document.getElementById("project-header-prev").style.top="-80px";
-        document.getElementById("project-header-prev").style.opacity="0";
+    var style;
+
+    function adjust_categories(){
+      var cat_height = 56;
+      var width = window.innerWidth;
+      if(width > 2000){
+        cat_height = 97;
+      }
+      else if(width>1450){
+        cat_height=80;
+      }
+      else if(width>1305){
+        cat_height=72;
+      }
+      else if(width>1150){
+        cat_height=64;
+      }
+      else if(width>980){
+        cat_height=56;
+      }
+      else if(width<980){
+        cat_height=48;
+      }
+
+      var num_header = 1;
+      var movement_amount = cat_height * num_header;
+      style = "-"+movement_amount+"px";
+      document.getElementById("project-header-python").style.top=style;
       categories = document.getElementsByClassName("categoryItem");
       for (var i = 0, len = categories.length; i < len; i++) {
         if(i>1){
-          categories[i].style.top="-80px";
+          categories[i].style.top=style;
         }
-
-
       }
-      //document.getElementById("project-header-python").style.top = "0px";
-      //document.getElementById("project-header-prev").style.top = "0px";
-      //document.getElementById("project-header-prev").style.opacity = "0";
-      document.getElementById("new-header-arrow").style.opacity="1";
+    }
 
+
+    $(document).ready(function(){
+      adjust_categories();
+      document.getElementById("project-header-prev").style.top=style;
+      document.getElementById("project-header-prev").style.opacity="0";
+      document.getElementById("new-header-arrow").style.opacity="1";
     });
 
 
@@ -504,6 +531,7 @@
 
   }
   window.onresize = function() {
+  adjust_categories();
   $('#js_work__overview').center();
   $('#quicknav--up').arrowcenter("left",'#quicknav--up');
   $('#quicknav--down').arrowcenter("right",'#quicknav--down');

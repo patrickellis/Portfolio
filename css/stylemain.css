@@ -344,7 +344,7 @@ body{
 }
 .rootnode{
   overflow-y: scroll;
-  transition:0s ;
+  transition:1s ;
   -webkit-transition:1s;
   opacity:0;
   font-size: 1.6rem;
