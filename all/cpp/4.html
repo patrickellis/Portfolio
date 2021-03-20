@@ -63,7 +63,7 @@
           <span class="overview__filterLabel">Filter</span>
             <div class="overview__categoryList">
               <div class="categoryItem">
-                <span class="has-text-effect transition project-header-prev" id="project-header-prev"> All Projects
+                <span class="has-text-effect transition project-header-prev" id="project-header-prev"> Front End
                   <div class="dropdown-arrow-wrapper">
                     <div class="arrow">
                       <div class="arrow-top"></div>
@@ -91,7 +91,7 @@
                     <span class="has-text-effect transition" id="first-cat"> Misc </span>
                 </div>
                 <div class="categoryItem secondary">
-                    <span class="has-text-effect transition" id="second-cat"> Front End </span>
+                    <span class="has-text-effect transition" id="second-cat"> All Projects </span>
                 </div>
                 <div class="categoryItem secondary">
                     <span class="has-text-effect transition" id="third-cat"> Python </span>
@@ -291,7 +291,14 @@
     }
     var scrolled=0;
     var style;
-
+    function rename_categories(){
+      setTimeout(function(){
+              document.getElementById('first-cat').innerHTML = "Misc";
+              document.getElementById('second-cat').innerHTML = "Front End";
+              document.getElementById('third-cat').innerHTML = "Python";
+              document.getElementById('fourth-cat').innerHTML = "All Projects";
+        }, 1000);
+    }
     function adjust_categories(){
       var cat_height = 56;
       var width = window.innerWidth;
@@ -328,6 +335,7 @@
 
 
     $(document).ready(function(){
+      rename_categories();
       adjust_categories();
       document.getElementById("project-header-prev").style.top=style;
       //document.getElementById("project-header-prev").style.opacity="0";
@@ -341,7 +349,18 @@
 
 
 
-
+    $("#first-cat").click(function(){
+      menu_relocate("../misc/3");
+    });
+    $("#second-cat").click(function(){
+      menu_relocate("../frontend/4");
+    });
+    $("#third-cat").click(function(){
+      menu_relocate("../python/2");
+    });
+    $("#fourth-cat").click(function(){
+      menu_relocate("../work/1");
+    });
 
 
     function drawArrow(fromx, fromy, tox, toy,id,color){
@@ -451,20 +470,9 @@
     $("#first").click(function(){
       menu_relocate("../project");
     });
-
-    $("#first-cat").click(function(){
-      menu_relocate("../misc/3");
-    });
-    $("#second-cat").click(function(){
-      menu_relocate("../frontend/4");
-    });
     $("#third-cat").click(function(){
       menu_relocate("../python/2");
     });
-    $("#fourth-cat").click(function(){
-      menu_relocate("../work/1");
-    });
-
     $("#shell__button__id").click(function(){
       menu_relocate("../work");
     });

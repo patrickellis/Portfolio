@@ -63,7 +63,7 @@
           <span class="overview__filterLabel">Filter</span>
             <div class="overview__categoryList">
               <div class="categoryItem">
-                <span class="has-text-effect transition project-header-prev" id="project-header-prev"> All Projects
+                <span class="has-text-effect transition project-header-prev" id="project-header-prev"> C++
                   <div class="dropdown-arrow-wrapper">
                     <div class="arrow">
                       <div class="arrow-top"></div>
@@ -73,11 +73,19 @@
                 </span>
                 </div>
                 <div class="categoryItem secondary">
-                  <span class="has-text-effect transition project-header-prev" > Python
+                  <span class="has-text-effect transition project-header-prev" > Misc
                   </span>
                   </div>
+                  <div class="categoryItem secondary">
+                    <span class="has-text-effect transition project-header-prev" > Front End
+                    </span>
+                    </div>
+                    <div class="categoryItem secondary">
+                      <span class="has-text-effect transition project-header-prev" > Python
+                      </span>
+                      </div>
                 <div class="categoryItem is-selected" id="project-header-python">
-                    <span class="has-text-effect transition" > C++
+                    <span class="has-text-effect transition" > All Projects
                       <div class="dropdown-arrow-wrapper" id="new-header-arrow">
                         <div class="arrow">
                           <div class="arrow-top"></div>
@@ -88,16 +96,16 @@
 
                 </div>
                 <div class="categoryItem secondary">
-                    <span class="has-text-effect transition" id="first-cat"> Misc </span>
+                    <span class="has-text-effect transition" id="first-cat"> Python </span>
                 </div>
                 <div class="categoryItem secondary">
-                    <span class="has-text-effect transition" id="second-cat"> Front End </span>
+                    <span class="has-text-effect transition" id="second-cat"> C++ </span>
                 </div>
                 <div class="categoryItem secondary">
-                    <span class="has-text-effect transition" id="third-cat"> Python </span>
+                    <span class="has-text-effect transition" id="third-cat"> Misc </span>
                 </div>
                 <div class="categoryItem secondary">
-                    <span class="has-text-effect transition" id="fourth-cat"> All Projects </span>
+                    <span class="has-text-effect transition" id="fourth-cat"> Front End </span>
                 </div>
             </div>
         </div>
@@ -201,8 +209,14 @@
     </div>
 
     <script>
+      document.getElementById("first-cat").style.opacity="0";
+      document.getElementById("second-cat").style.opacity="0";
+      document.getElementById("third-cat").style.opacity="0";
       document.getElementById("fourth-cat").style.opacity="0";
       setTimeout(function(){
+          document.getElementById("first-cat").style.opacity="1";
+              document.getElementById("second-cat").style.opacity="1";
+              document.getElementById("third-cat").style.opacity="1";
               document.getElementById("fourth-cat").style.opacity="1";
         }, 1000);
       var category_items = document.getElementsByClassName("overview__projectItem");
@@ -314,33 +328,46 @@
         cat_height=48;
       }
 
-      var num_header = 2;
+      var num_header = 4;
       var movement_amount = cat_height * num_header;
       style = "-"+movement_amount+"px";
-      document.getElementById("project-header-python").style.top=style;
+      //document.getElementById("project-header-python").style.top=style;
       categories = document.getElementsByClassName("categoryItem");
       for (var i = 0, len = categories.length; i < len; i++) {
-        if(i>1){
+        if(i>num_header-1){
           categories[i].style.top=style;
         }
       }
+
+
     }
 
 
     $(document).ready(function(){
       adjust_categories();
-      document.getElementById("project-header-prev").style.top=style;
+
       //document.getElementById("project-header-prev").style.opacity="0";
       document.getElementById("new-header-arrow").style.opacity="1";
       var upperList = document.getElementsByClassName('project-header-prev');
       for(var i=0,len=upperList.length; i<len; i++){
-        upperList[i].style.top="-160px";
         upperList[i].style.opacity="0";
+        upperList[i].style.top=style;
       }
     });
 
 
-
+    $("#first-cat").click(function(){
+      menu_relocate("../python/1");
+    });
+    $("#second-cat").click(function(){
+      menu_relocate("../cpp/1");
+    });
+    $("#third-cat").click(function(){
+      menu_relocate("../misc/1");
+    });
+    $("#fourth-cat").click(function(){
+      menu_relocate("../frontend/1");
+    });
 
 
 
@@ -451,20 +478,9 @@
     $("#first").click(function(){
       menu_relocate("../project");
     });
-
     $("#first-cat").click(function(){
-      menu_relocate("../misc/3");
+      menu_relocate("../python/4");
     });
-    $("#second-cat").click(function(){
-      menu_relocate("../frontend/4");
-    });
-    $("#third-cat").click(function(){
-      menu_relocate("../python/2");
-    });
-    $("#fourth-cat").click(function(){
-      menu_relocate("../work/1");
-    });
-
     $("#shell__button__id").click(function(){
       menu_relocate("../work");
     });
