@@ -80,8 +80,12 @@
                     <span class="has-text-effect transition project-header-prev" > C++
                     </span>
                     </div>
+                    <div class="categoryItem secondary">
+                      <span class="has-text-effect transition project-header-prev" > Misc
+                      </span>
+                      </div>
                 <div class="categoryItem is-selected" id="project-header-python">
-                    <span class="has-text-effect transition" > Misc
+                    <span class="has-text-effect transition" > Front End
                       <div class="dropdown-arrow-wrapper" id="new-header-arrow">
                         <div class="arrow">
                           <div class="arrow-top"></div>
@@ -92,13 +96,13 @@
 
                 </div>
                 <div class="categoryItem secondary">
-                    <span class="has-text-effect transition" id="first-cat"> Front End </span>
+                    <span class="has-text-effect transition" id="first-cat"> Python </span>
                 </div>
                 <div class="categoryItem secondary">
-                    <span class="has-text-effect transition" id="second-cat"> Python </span>
+                    <span class="has-text-effect transition" id="second-cat"> C++ </span>
                 </div>
                 <div class="categoryItem secondary">
-                    <span class="has-text-effect transition" id="third-cat"> C++ </span>
+                    <span class="has-text-effect transition" id="third-cat"> Misc </span>
                 </div>
                 <div class="categoryItem secondary">
                     <span class="has-text-effect transition" id="fourth-cat"> All Projects </span>
@@ -205,10 +209,12 @@
     </div>
 
     <script>
+      document.getElementById("first-cat").style.opacity="0";
       document.getElementById("second-cat").style.opacity="0";
       document.getElementById("third-cat").style.opacity="0";
       document.getElementById("fourth-cat").style.opacity="0";
       setTimeout(function(){
+          document.getElementById("first-cat").style.opacity="1";
               document.getElementById("second-cat").style.opacity="1";
               document.getElementById("third-cat").style.opacity="1";
               document.getElementById("fourth-cat").style.opacity="1";
@@ -322,13 +328,13 @@
         cat_height=48;
       }
 
-      var num_header = 3;
+      var num_header = 4;
       var movement_amount = cat_height * num_header;
       style = "-"+movement_amount+"px";
       //document.getElementById("project-header-python").style.top=style;
       categories = document.getElementsByClassName("categoryItem");
       for (var i = 0, len = categories.length; i < len; i++) {
-        if(i>2){
+        if(i>num_header-1){
           categories[i].style.top=style;
         }
       }
@@ -459,19 +465,19 @@
     $(menu).toggleClass('opacity');
     });
     $("#first").click(function(){
-      menu_relocate("../#!/project");
+      menu_relocate("../all/project");
     });
     $("#shell__button__id").click(function(){
-      menu_relocate("../#!/main");
+      menu_relocate("../all/work");
     });
     $("#button__text__js").click(function(){
-      menu_relocate("../#!/menu");
+      menu_relocate("../all/menu");
     });
     $("#button__icon__id").click(function(){
-      menu_relocate("../#!/menu");
+      menu_relocate("../all/menu");
     });
     $("#button__hitarea__js").click(function(){
-      menu_relocate("../#!/menu");
+      menu_relocate("../all/menu");
     });
     $("#shell__button__id").on("mouseleave", function(){
       var body = document.body;
