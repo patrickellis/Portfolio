@@ -467,11 +467,17 @@
     $(header).toggleClass('opacity');
     $(menu).toggleClass('opacity');
     });
-    $("#first").click(function(){
-      menu_relocate("../project");
+    $("#first-cat").click(function(){
+      window.location.replace("../misc/3");
+    });
+    $("#second-cat").click(function(){
+      window.location.replace("../frontend/4");
     });
     $("#third-cat").click(function(){
-      menu_relocate("../python/2");
+      window.location.replace("../python/2");
+    });
+    $("#fourth-cat").click(function(){
+      window.location.replace("../work/1");
     });
     $("#shell__button__id").click(function(){
       menu_relocate("../work");
