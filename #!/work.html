@@ -316,7 +316,7 @@
     });
     // PROJECT ITEM LINKS
     $("#first").click(function(){
-      menu_relocate("../common/project");
+      menu_relocate("../#!/project");
     });
 
     // MENU CLICK links
@@ -327,7 +327,7 @@
     $("#first-cat").click(function(){
       if(document.getElementsByClassName("secondary")[0].classList.contains("active")){
         setTimeout(function(){
-                window.location.replace("../common/mainpython");
+                window.location.replace("../#!/python/1");
           }, 250);
 
       }
@@ -335,14 +335,14 @@
     $("#second-cat").click(function(){
       if(document.getElementsByClassName("secondary")[0].classList.contains("active")){
         setTimeout(function(){
-                window.location.replace("../common/maincpp");
+                window.location.replace("../#!/cpp/1");
           }, 250);
       }
     });
     $("#third-cat").click(function(){
       if(document.getElementsByClassName("secondary")[0].classList.contains("active")){
         setTimeout(function(){
-                window.location.replace("../common/mainmisc");
+                window.location.replace("../#!/misc/1");
           }, 250);
       }
     });
@@ -350,23 +350,23 @@
       if(document.getElementsByClassName("secondary")[0].classList.contains("active")){
 
         setTimeout(function(){
-                window.location.replace("../common/mainfrontend");
+                window.location.replace("../#!/frontend/1");
           }, 250);
       }
     });
 
     //NAV LINKS
     $("#shell__button__id").click(function(){
-      menu_relocate("../common/menu");
+      menu_relocate("../#!/menu");
     });
     $("#button__text__js").click(function(){
-      menu_relocate("../common/menu");
+      menu_relocate("../#!/menu");
     });
     $("#button__icon__id").click(function(){
-      menu_relocate("../common/menu");
+      menu_relocate("../#!/menu");
     });
     $("#button__hitarea__js").click(function(){
-      menu_relocate("../common/menu");
+      menu_relocate("../#!/menu");
     });
     $("#shell__button__id").on("mouseleave", function(){
       var body = document.body;
