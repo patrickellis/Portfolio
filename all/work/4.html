@@ -477,7 +477,7 @@
       window.location.replace("../misc/1");
     });
     $("#fourth-cat").click(function(){
-      window.location.replace("../frontend/1");
+      window.location.replace("../work/1");
     });
     $("#shell__button__id").click(function(){
       menu_relocate("../work");
@@ -756,46 +756,6 @@
               canCall = true;
           }, 500);
       });
-      var uparrow = document.getElementsByClassName("quicknav__arrow--up")[0];
-      var downarrow = document.getElementsByClassName("quicknav__arrow--down")[0];
-      if(uparrow.classList.contains('active-two')){
-          $(uparrow).toggleClass('active-two');
-          $(downarrow).toggleClass('active-two');
-      }
-      else{
-        $(uparrow).toggleClass('active');
-        $(downarrow).toggleClass('active');
-
-        if(uparrow.classList.contains('active')){
-          setTimeout(function(){
-            $(uparrow).toggleClass('active');
-            $(downarrow).toggleClass('active');
-            $(uparrow).toggleClass('active-two');
-            $(downarrow).toggleClass('active-two');
-          },500);
-        }
-
-      }
-
-      //$(uparrow).toggleClass('active-two');
-      var e =  document.getElementsByClassName("overview__projectItem");
-      var p = document.getElementsByClassName("overview__projectItem__poster");
-
-      for (var i = 0, len = e.length; i < len; i++) {
-
-
-        $(e[i]).toggleClass('active');
-        $(p[i]).toggleClass('active');
-
-      }
-      //var wo = document.getElementById("overview_id");
-      //$(wo).toggleClass('active');
-      canCall = false;
-      setTimeout(function(){
-            canCall = true;
-        }, 100);
-
-    });
     $("#arrow--down").on("click" ,function(){
                 scrolled=scrolled+450;
 

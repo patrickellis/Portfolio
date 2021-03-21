@@ -96,7 +96,7 @@
                 <div class="categoryItem secondary">
                     <span class="has-text-effect transition" id="third-cat"> Python </span>
                 </div>
-                <div class="categoryItem secondary">
+                <div class="categoryItem secondary" id="fourth_cat_sec">
                     <span class="has-text-effect transition" id="fourth-cat"> All Projects </span>
                 </div>
             </div>
@@ -201,8 +201,10 @@
     </div>
 
     <script>
+      document.getElementById("third-cat").style.opacity="0";
       document.getElementById("fourth-cat").style.opacity="0";
       setTimeout(function(){
+        document.getElementById("third-cat").style.opacity="1";
               document.getElementById("fourth-cat").style.opacity="1";
         }, 1000);
       var category_items = document.getElementsByClassName("overview__projectItem");
@@ -328,9 +330,10 @@
 
 
     $(document).ready(function(){
+
       adjust_categories();
       document.getElementById("project-header-prev").style.top=style;
-      //document.getElementById("project-header-prev").style.opacity="0";
+
       document.getElementById("new-header-arrow").style.opacity="1";
       var upperList = document.getElementsByClassName('project-header-prev');
       for(var i=0,len=upperList.length; i<len; i++){
