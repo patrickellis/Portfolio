@@ -439,11 +439,21 @@ color: #ffffff;
 
 }
 .secondary{
-
   opacity:0;
   transition:1s;
   -webkit-transition:1s;
   transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.overview__projectList.active{
+  top:600px !important;
+}
+.overview__categoryList{
+  height:120px;
+  overflow: visible;
+}
+.overview__categoryList.active{
+  height:800px !important;
 }
 #new-header-arrow{
   opacity:0;

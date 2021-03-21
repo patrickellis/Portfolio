@@ -186,9 +186,14 @@
     <div class="clearspace"></div>
     </div>
   <script>
+    var proj = document.getElementsByClassName("overview__categoryList")[0];
+
+
     var scrolled=0;
 
     $(document).ready(function(){
+
+
       document.body.style.opacity="1";
         $("#arrow--down").on("click" ,function(){
                     scrolled=scrolled+450;
@@ -437,7 +442,7 @@
       var percent = (diff / width) * 100;
       var s = '' + percent + '%';
       var container = $(window);
-      var top = -this.height() / 2;
+      //var top = -this.height() / 2;
       var left = -this.width() / 2;
       //alert("s: "+s+", projectlist width: "+overview_width+", width: " +width);
       return $("#overview_id").css({ 'left': s});
@@ -473,9 +478,10 @@
       //var body = document.body;
       //body.style.opacity=1;
       var overview = document.getElementById("js_work__overview");
+      overview.style.top = "0px";
       var header = document.getElementById("project-header");
       header.style.top = "0px";
-      overview.style.top = "0px";
+
       var rootnode = document.getElementById("js-rootnode");
       rootnode.style.opacity = 1;
       var elements = document.getElementsByClassName("secondary");
@@ -500,16 +506,32 @@
 
       }
     });
-    var canCall = true;
+    var canCall = false;
+
+
+    proj.style.height="20000px";
+    setTimeout(function(){
+            proj.style.height="80px";
+            canCall = true;
+      }, 1000);
+
     $('.is-selected .has-text-effect').on('click', function(){
-      //$(this).toggleClass('clicked');
-      var arrow = document.getElementById("arrow");
       if(!canCall){
         return;
       }
+      var proj = document.getElementsByClassName("overview__categoryList")[0];
+      var work_overview = document.getElementsByClassName("overview__projectList")[0];
+      $(work_overview).toggleClass('active');
+      if(proj.classList.contains("active")){
+        setTimeout(function(){
+          $(proj).toggleClass('active');
+        },500);
+      }
+      else{
+        $(proj).toggleClass('active');
+      }
 
-      //arrow.classList.add("active");
-      //arrow.css("transform","rotate(45deg)");
+      var arrow = document.getElementById("arrow");
       var elements = document.getElementsByClassName("secondary");
       for (var i = 0, len = elements.length; i < len; i++) {
         var id;
@@ -537,13 +559,8 @@
           var offset = 20 + (i * 20);
           var o = offset.toString() + "px";
           el.style.paddingBottom = o;
-
-
-
-          //elements[i].style.bottom=o;
         }
         $(elements[i]).toggleClass('active');
-    // elements[i].style ...
       }
       var uparrow = document.getElementsByClassName("quicknav__arrow--up")[0];
       var downarrow = document.getElementsByClassName("quicknav__arrow--down")[0];
@@ -563,27 +580,18 @@
             $(downarrow).toggleClass('active-two');
           },500);
         }
-
       }
-
-      //$(uparrow).toggleClass('active-two');
       var e =  document.getElementsByClassName("overview__projectItem");
       var p = document.getElementsByClassName("overview__projectItem__poster");
 
       for (var i = 0, len = e.length; i < len; i++) {
-
-
         $(e[i]).toggleClass('active');
         $(p[i]).toggleClass('active');
-
       }
-      //var wo = document.getElementById("overview_id");
-      //$(wo).toggleClass('active');
       canCall = false;
       setTimeout(function(){
             canCall = true;
-        }, 100);
-
+        }, 500);
     });
 
     document.getElementById('wrapper').onclick = function() {
@@ -786,7 +794,7 @@ var smoothScroller = new Inertial();
 <script>
   ( function( $ ) {
 
-	"use strict";
+
 
   $(".overview__projectItem__poster").tilt({
     maxTilt: 15,
