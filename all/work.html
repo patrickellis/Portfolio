@@ -456,6 +456,9 @@
   </script>
   <script>
     $( document ).ready(function(){
+      setTimeout(function(){
+        document.getElementsByClassName("overview__categoryList")[0].style.overflow = "hidden";
+      },1000);
       var canvas = document.getElementById("large-header");
       var projects = document.getElementById("shell__button__id");
       var static = document.getElementById("static");
@@ -519,6 +522,7 @@
       if(!canCall){
         return;
       }
+
       var proj = document.getElementsByClassName("overview__categoryList")[0];
       var work_overview = document.getElementsByClassName("overview__projectList")[0];
       $(work_overview).toggleClass('active');
