@@ -5,7 +5,14 @@
     var urlsToCache = [
       '/css/stylemain.css',
       '/css/stylemenu.css',
-      '/css/style.css'
+      '/css/style.css',
+      '/images/jane_street.png',
+      '/images/neural_network.png',
+      '/all/about.html',
+      '/all/contact.html',
+      '/all/menu.html',
+      '/all/project.html',
+      '/all/work.html'
     ];
 
     // Perform install steps
