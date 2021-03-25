@@ -1,12 +1,13 @@
 
-  var CACHE_NAME = 'my-site-cache-v1';
-  var urlsToCache = [
-    '/css/stylemain.css',
-    '/css/stylemenu.js',
-    '/css/style.css'
-  ];
 
   self.addEventListener('install', function(event) {
+    var CACHE_NAME = 'my-site-cache-v1';
+    var urlsToCache = [
+      '/css/stylemain.css',
+      '/css/stylemenu.js',
+      '/css/style.css'
+    ];
+
     // Perform install steps
     event.waitUntil(
       caches.open(CACHE_NAME)
