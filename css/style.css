@@ -295,7 +295,7 @@ a{
   z-index:0;
   width:100%;
   height:100%;
-  animation-delay:5s;
+  animation-delay:5.2s;
   animation-name: opfade;
   animation-iteration-count: 1;
   animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
