@@ -71,6 +71,7 @@ self.addEventListener('fetch', function(event) {
 
             caches.open(CACHE_NAME)
               .then(function(cache) {
+                if (!/^https?:$/i.test(new URL(request.url).protocol)) return;
                 cache.put(event.request, responseToCache);
               });
 
