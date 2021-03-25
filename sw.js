@@ -8,6 +8,7 @@
       '/css/style.css',
       '/images/jane_street.png',
       '/images/neural_network.png',
+      '/all/menu.html',
       '/all/about.html',
       '/all/contact.html',
       '/all/project.html',
@@ -45,38 +46,34 @@
   });
 
 
-self.addEventListener('fetch', function(event) {
-  var CACHE_NAME = 'my-site-cache-v1';
-  event.respondWith(
-    caches.match(event.request)
-      .then(function(response) {
-        // Cache hit - return response
-        if (response) {
-          return response;
-        }
+self.addEventListener('fetch', event => {
+  if (event.request.mode === 'navigate') {
+    // See /web/fundamentals/getting-started/primers/async-functions
+    // for an async/await primer.
+    event.respondWith(async function() {
+      // Optional: Normalize the incoming URL by removing query parameters.
+      // Instead of https://example.com/page?key=value,
+      // use https://example.com/page when reading and writing to the cache.
+      // For static HTML documents, it's unlikely your query parameters will
+      // affect the HTML returned. But if you do use query parameters that
+      // uniquely determine your HTML, modify this code to retain them.
+      const normalizedUrl = new URL(event.request.url);
+      normalizedUrl.search = '';
 
-        return fetch(event.request).then(
-          function(response) {
-            // Check if we received a valid response
-            if(!response || response.status !== 200 || response.type !== 'basic') {
-              return response;
-            }
+      // Create promises for both the network response,
+      // and a copy of the response that can be used in the cache.
+      const fetchResponseP = fetch(normalizedUrl);
+      const fetchResponseCloneP = fetchResponseP.then(r => r.clone());
 
-            // IMPORTANT: Clone the response. A response is a stream
-            // and because we want the browser to consume the response
-            // as well as the cache consuming the response, we need
-            // to clone it so we have two streams.
-            var responseToCache = response.clone();
+      // event.waitUntil() ensures that the service worker is kept alive
+      // long enough to complete the cache update.
+      event.waitUntil(async function() {
+        const cache = await caches.open('my-cache-name');
+        await cache.put(normalizedUrl, await fetchResponseCloneP);
+      }());
 
-            caches.open(CACHE_NAME)
-              .then(function(cache) {
-                if (!/^https?:$/i.test(new URL(request.url).protocol)) return;
-                cache.put(event.request, responseToCache);
-              });
-
-            return response;
-          }
-        );
-      })
-    );
+      // Prefer the cached response, falling back to the fetch response.
+      return (await caches.match(normalizedUrl)) || fetchResponseP;
+    }());
+  }
 });
