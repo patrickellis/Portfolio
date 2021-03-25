@@ -12,7 +12,27 @@
       '/all/contact.html',
       '/all/menu.html',
       '/all/project.html',
-      '/all/work.html'
+      '/all/work.html',
+      '/all/cpp/1.html',
+      '/all/cpp/2.html',
+      '/all/cpp/3.html',
+      '/all/cpp/4.html',
+      '/all/python/1.html',
+      '/all/python/2.html',
+      '/all/python/3.html',
+      '/all/python/4.html',
+      '/all/work/1.html',
+      '/all/work/2.html',
+      '/all/work/3.html',
+      '/all/work/4.html',
+      '/all/misc/1.html',
+      '/all/misc/2.html',
+      '/all/misc/3.html',
+      '/all/misc/4.html',
+      '/all/frontend/1.html',
+      '/all/frontend/2.html',
+      '/all/frontend/3.html',
+      '/all/frontend/4.html'
     ];
 
     // Perform install steps
