@@ -47,6 +47,7 @@
 
 
 self.addEventListener('fetch', event => {
+  var CACHE_NAME = 'my-site-cache-v1';
   if (event.request.mode === 'navigate') {
     // See /web/fundamentals/getting-started/primers/async-functions
     // for an async/await primer.
@@ -68,7 +69,7 @@ self.addEventListener('fetch', event => {
       // event.waitUntil() ensures that the service worker is kept alive
       // long enough to complete the cache update.
       event.waitUntil(async function() {
-        const cache = await caches.open('my-cache-name');
+        const cache = await caches.open(CACHE_NAME);
         await cache.put(normalizedUrl, await fetchResponseCloneP);
       }());
 
