@@ -43,26 +43,57 @@
   </div>
 
 
-
   <script>
-    setTimeout(function(){
-        console.log("hi");
-        window.location.replace("/all/menu");
-      }, 5500);
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('sw.js').then(function(registration) {
-            // Registration was successful
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-          }, function(err) {
-            // registration failed :(
-            console.log('ServiceWorker registration failed: ', err);
-          });
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
         });
-      }
+      });
+    }
+    </script>
+  <script>
+function menu_relocate(){
 
+  var rootnode = document.getElementById("rootnode");
+  var globe = document.getElementById("canvas");
+  var projectlink = document.getElementById("link4");
+  var cvlink = document.getElementById("link5");
+  //rootnode.style.opacity=0;
+  rootnode.style.MozTransition = "0.5s";
+  rootnode.style.WebkitTransition  = "0.5s";
+  globe.style.opacity=0;
+  globe.style.MozTransition = "0.5s";
+  globe.style.WebkitTransition  = "0.5s";
+  projectlink.style.opacity=0;
+  projectlink.style.MozTransition = "0.5s";
+  projectlink.style.WebkitTransition  = "0.5s";
+  cvlink.style.opacity=0;
+  cvlink.style.MozTransition = "0.5s";
+  cvlink.style.WebkitTransition  = "0.5s";
+  setTimeout(function(){
+    alert("hi");
+          window.location.replace("all/menu");
+    }, 300);
 
+}
+setTimeout(function(){
+        window.location.replace("all/menu");
+  }, 5700);
+$('#link4').on('click', function() {
 
+if ($('#plink').css('opacity') == 1) $('#plink').css('opacity', 0);
+else $('#plink').css('opacity', 1);
+menu_relocate();
+});
+
+    $("#link4").click(function(){
+      menu_relocate();
+    });
 </script>
 
 </body>
