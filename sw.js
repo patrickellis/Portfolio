@@ -10,7 +10,6 @@
       '/images/neural_network.png',
       '/all/about.html',
       '/all/contact.html',
-      '/all/menu.html',
       '/all/project.html',
       '/all/work.html',
       '/all/cpp/1.html',
