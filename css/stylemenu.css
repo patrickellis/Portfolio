@@ -5,7 +5,45 @@
   src:url("../fonts/Work-Sans-Light.ttf.eot");
   src:url("../fonts/Work-Sans-Light.ttf.woff") format("woff"),url();
 }
-
+/* work-sans-200 - latin */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/work-sans-v9-latin-200.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/work-sans-v9-latin-200.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/work-sans-v9-latin-200.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/work-sans-v9-latin-200.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/work-sans-v9-latin-200.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/work-sans-v9-latin-200.svg#WorkSans') format('svg'); /* Legacy iOS */
+}
+/* work-sans-500 - latin */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/work-sans-v9-latin-500.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/work-sans-v9-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/work-sans-v9-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/work-sans-v9-latin-500.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/work-sans-v9-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/work-sans-v9-latin-500.svg#WorkSans') format('svg'); /* Legacy iOS */
+}
+/* work-sans-600 - latin */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/work-sans-v9-latin-600.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/work-sans-v9-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/work-sans-v9-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/work-sans-v9-latin-600.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/work-sans-v9-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/work-sans-v9-latin-600.svg#WorkSans') format('svg'); /* Legacy iOS */
+}
 html, body
 {
 	  font-size:10px;
@@ -45,7 +83,10 @@ html, body
     font-size:6px;
   }
 }
-
+.work_light{
+  font-family:'Work Sans' !important;
+  font-weight:200 !important;
+}
 .ribbon-container
 {
 	position:absolute;
