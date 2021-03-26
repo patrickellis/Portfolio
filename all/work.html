@@ -9,6 +9,27 @@
   <div id="large-header" class="large-header">
    <canvas id="animated-canvas"></canvas>
    </div>
+   <div class="shell2">
+   <div class="shell__button--menu2 shell__button2">
+       <div class="button__icon">
+         <svg>
+           <use xlink:href='#icon-temp-menu'>
+             <symbol id="icon-temp-menu" viewBox="0 0 20 16">
+               <g id="temp-menu-Page-2" fill-rule="evenodd">
+                 <g id="temp-menu-Artboard-Copy-3" transform="translate(-1390, -24)">
+                   <g id="temp-menu-noun_menu_93427" transform="translate(1390,24)">
+                     <rect id="temp-menu-Rectangle" x="0" y="0" width="22" height="2"></rect>
+                     <rect id="temp-menu-Rectangle" x="0" y="7" width="22" height="2"></rect>
+                     <rect id="temp-menu-Rectangle" x="0" y="14" width="22" height="2"></rect>
+                     </g>
+                   </g>
+                 </g>
+               </symbol>
+           </use>
+           </svg>
+           </div>
+       </div>
+       </div>
   <div class="js-shell shell">
     <div class="shell__button--drop shell__button"></div>
     <div class="shell__button--menu shell__button" id="shell__button--menu__js">
@@ -186,6 +207,7 @@
     <div class="clearspace"></div>
     </div>
   <script>
+    
     var proj = document.getElementsByClassName("overview__categoryList")[0];
 
 
@@ -193,7 +215,7 @@
 
     $(document).ready(function(){
 
-
+      //largeHeader.style.opacity="1";
       document.body.style.opacity="1";
         $("#arrow--down").on("click" ,function(){
                     scrolled=scrolled+450;

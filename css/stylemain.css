@@ -57,7 +57,6 @@ html, body {
   width:100%;
   position:relative;
   height: 100%;
-
 }
 body{
   background-color: #070a12;
@@ -66,7 +65,15 @@ body{
   -webkit-transition:1s;
   -o-transition:1s;
 }
-
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
 @media only screen and (min-width:2000px){
   html,body{
     font-size:12px;
@@ -2489,6 +2496,31 @@ transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.09997, 0, 1);
   position: relative;
   top: 1px;
   left: 1px;
+}
+.shell2 .shell__button2 {
+    position: fixed;
+    display: none;
+    width: 22px;
+    height: 22px;
+    z-index: 1000;
+    cursor: pointer;
+}
+.shell2 .shell__button--menu2 {
+    display: block;
+    opacity: 1;
+    right: 23px;
+    top: 20px;
+    width: 18px;
+    height: 18px;
+}
+.shell2 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 0px;
+    height: 0px;
+    font-size: 16px;
+    line-height: 1;
 }
 
 .form {
