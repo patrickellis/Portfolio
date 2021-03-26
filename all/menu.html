@@ -79,9 +79,10 @@
 
   //$(menu_text).toggleClass('visible');
   var rootnode = document.getElementById("js-rootnode");
-
+var menu_text = document.getElementById("button__text__js");
+menu_text.style.opacity = "0.7";
     $( document ).ready(function(){
-      var menu_text = document.getElementById("button__text__js");
+
       setTimeout(function(){
               menu_text.style.opacity = "0";
         }, 300);
