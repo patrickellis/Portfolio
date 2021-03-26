@@ -76,8 +76,8 @@
                   <p>
                     Formidable analytical skills in mathematics, and extensive knowledge of mathematical modelling techniques including statistical and numerical analysis, stochastic calculus and linear regression. Good knowledge of Capital Markets, Credit, Market & P&L risk.</p>
               </div>
-                <div class="col2 inner_col">
-                  <h4>Language Competencies</h4>
+                <div class="col2 inner_col" >
+                  <h4 id="about_headers">Language Competencies</h4>
                   <ul>
                     <li>
                       <span>Python</span>
@@ -101,7 +101,7 @@
               </div>
 
               <div class="col2 inner_col">
-                <h4>Developer Tools and Methodologies</h4>
+                <h4 id="about_headers">Developer Tools and Methodologies</h4>
                 <ul>
                   <li>
                     <span>Git</span>
@@ -166,7 +166,19 @@
 
 
 
-
+            <script>
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                    // Registration was successful
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                  }, function(err) {
+                    // registration failed :(
+                    console.log('ServiceWorker registration failed: ', err);
+                  });
+                });
+              }
+              </script>
     <script>
       document.getElementById("header").style.opacity="1";
       $("#shell__button--menu__js").hover(function(){
@@ -222,7 +234,7 @@
       $(header).toggleClass('opacity');
       $(menu).toggleClass('opacity');
       });
-      
+
       $("#button__text__js").click(function(){
         menu_relocate();
       });

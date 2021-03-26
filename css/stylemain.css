@@ -4,6 +4,49 @@
   src:url("../fonts/Work-Sans-Light.ttf.eot");
   src:url("../fonts/Work-Sans-Light.ttf.woff") format("woff"),url();
 }
+/* work-sans-200 - latin */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/work-sans-v9-latin-200.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/work-sans-v9-latin-200.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/work-sans-v9-latin-200.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/work-sans-v9-latin-200.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/work-sans-v9-latin-200.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/work-sans-v9-latin-200.svg#WorkSans') format('svg'); /* Legacy iOS */
+}
+/* work-sans-500 - latin */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/work-sans-v9-latin-500.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/work-sans-v9-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/work-sans-v9-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/work-sans-v9-latin-500.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/work-sans-v9-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/work-sans-v9-latin-500.svg#WorkSans') format('svg'); /* Legacy iOS */
+}
+/* work-sans-600 - latin */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/work-sans-v9-latin-600.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/work-sans-v9-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/work-sans-v9-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/work-sans-v9-latin-600.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/work-sans-v9-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/work-sans-v9-latin-600.svg#WorkSans') format('svg'); /* Legacy iOS */
+}
+#button__text__js{
+  font-size:16px;
+
+}
 html{
   background-color: #000;
 }
@@ -927,12 +970,42 @@ svg:not(:root) {
   right:15%;
 }
 #project-header{
+  font-family:'Work Sans';
+  font-weight:200;
   top:100px;
   -moz-transition:1s;
   -o-transition:1s;
   transition:1s;
   -webkit-transition:1s;
   transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+#project-header-prev{
+  font-family:'Work Sans';
+  font-weight:200;
+}
+#project-header-python .has-text-effect{
+  font-family:'Work Sans';
+  font-weight:200;
+}
+#first-cat,#second-cat,#third-cat, #fourth-cat{
+  font-family:'Work Sans';
+  font-weight:200;
+}
+#close_text{
+  font-family:'Work Sans';
+  font-weight:500;
+}
+#whoweare{
+  font-family:'Work Sans';
+  font-weight:500;
+}
+#about_headers{
+  font-family:'Work Sans';
+  font-weight:500;
+}
+#whatwedo h4{
+  font-family:'Work Sans';
+  font-weight:500;
 }
 #project-header-python{
   top:0px;
@@ -1559,7 +1632,7 @@ h3 {
 
 		Making sure we have good performance on our background means we have that budget to spare to spend on other effects.
 	*/
-/* 	mix-blend-mode: multiply; */
+ mix-blend-mode: multiply;
 	animation: 60s spin linear infinite;
 
 }
@@ -2514,7 +2587,4 @@ svg path {
     left: 20%;
     top:600px;
   }
-}
-#button__text__js{
-  font-size:16px;
 }

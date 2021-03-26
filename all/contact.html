@@ -83,7 +83,7 @@
                 </div>
             <div class="contact__other">
               <div class="contact__address has-text-effect" id="contactAddress">
-                <h3>NOTTINGHAM</h3>
+                <h3 id= "about_headers">NOTTINGHAM</h3>
                 <p class="contact__address-phone">+44 7835 072924</p>
                 <div>
                   <p class="contact__address-street">
@@ -92,21 +92,21 @@
                 </div>
               </div>
               <div class="contact__social has-text-effect" id="contactsocial">
-                <h3>SOCIAL</h3>
+                <h3  id= "about_headers">SOCIAL</h3>
                 <p class="contact_link first">
-                  <a target="_blank" href="https://twitter.com">
+                  <a target="_blank" id= "about_headers" href="https://twitter.com">
                     <img class="contact-image" src="../images/contact_line.png">
                     Twitter
                   </a>
                 </p>
                 <p class="contact_link">
-                  <a target="_blank" href="https://facebook.com">
+                  <a target="_blank" id= "about_headers" href="https://facebook.com">
                     <img class="contact-image" src="../images/contact_line.png">
                     Facebook
                   </a>
                 </p>
                 <p class="contact_link">
-                  <a target="_blank" href="https://LinkedIn.com">
+                  <a target="_blank" id= "about_headers" href="https://LinkedIn.com">
                     <img class="contact-image" src="../images/contact_line.png">
                     LinkedIn
                   </a>
@@ -114,7 +114,19 @@
               </div>
 
 
-
+              <script>
+                if ('serviceWorker' in navigator) {
+                  window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                      // Registration was successful
+                      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    }, function(err) {
+                      // registration failed :(
+                      console.log('ServiceWorker registration failed: ', err);
+                    });
+                  });
+                }
+                </script>
 
           <script language="JavaScript">
       var frmvalidator  = new Validator("contactform");
@@ -178,7 +190,7 @@
       $(header).toggleClass('opacity');
       $(menu).toggleClass('opacity');
       });
-      
+
       $("#button__text__js").click(function(){
         menu_relocate();
       });
