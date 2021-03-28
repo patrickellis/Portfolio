@@ -2155,6 +2155,9 @@ transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.09997, 0, 1);
   }
 }
 @media (min-width: 970px){
+  .headline__links{
+    bottom:25px;
+  }
   .project__image{
     width: 581px;
     height: 326px;
@@ -2199,6 +2202,9 @@ transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.09997, 0, 1);
   }
 }
 @media (min-width: 981px){
+  .headline__links{
+    bottom:65px;
+  }
   .project__image{
     width: 581px;
     height: 326px;
@@ -2243,6 +2249,9 @@ transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.09997, 0, 1);
   }
 }
 @media (min-width: 1151px){
+  .headline__links{
+    bottom:15px;
+  }
   .project__image{
     width: 581px;
     height: 326px;
@@ -2287,6 +2296,9 @@ transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.09997, 0, 1);
   }
 }
 @media (min-width: 1306px){
+  .headline__links{
+    bottom:75px;
+  }
   .project__image{
     width: 581px;
     height: 326px;
@@ -2331,6 +2343,9 @@ transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.09997, 0, 1);
   }
 }
 @media (min-width: 1451px){
+  .headline__links{
+    bottom:55px;
+  }
   .project__image{
     width: 696px;
     height: 391px;
@@ -2375,6 +2390,9 @@ transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.09997, 0, 1);
   }
 }
 @media (min-width: 2001px){
+  .headline__links{
+    bottom:115px;
+  }
   .project__image{
     width: 835px;
     height: 469px;
