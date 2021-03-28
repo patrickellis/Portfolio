@@ -1804,6 +1804,49 @@ will-change: transform;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+.underline .fade{
+  cursor:pointer;
+  opacity:0.24;
+  color:#fff;
+  width:100% !important;
+  height:5px !important;
+}
+.headline__links{
+  font-size:14px !important;
+  position:relative;
+left:calc(50% - 41px)
+}
+.work__menu-list-btn .underline {
+    position: absolute;
+
+    bottom: -5px;
+    width: 100%;
+    height: 1px;
+    background: white;
+    left: 0;
+    opacity: 0.5;
+    transition:0.5s;
+}
+.work__menu-list-btn:hover .underline {
+    transition:0.5s;
+    opacity:1;
+}
+.work__menu-list-btn {
+    cursor: pointer;
+    color: #fff;
+    font-size: 11px;
+    line-height: 2.2rem;
+    font-family: "Fort-Medium","Arial",sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    position: relative;
+    top: 8rem;
+    pointer-events: auto;
+}
 .project__videoloop .video__player {
     position: absolute;
     left: 0;

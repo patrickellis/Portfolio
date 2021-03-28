@@ -1,36 +1,16 @@
 <head>
   <title>Portfolio - Patrick Ellis</title>
   <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-  <link rel="stylesheet" href="../css/stylemain.css">
+  <link rel="stylesheet" href="../../css/stylemain.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
-  <script src="../js/project_click_event.js"></script>
+
 </head>
 <body onresize="resize()">
+
   <div id="large-header" class="large-header">
    <canvas id="animated-canvas"></canvas>
    </div>
-   <div class="shell2">
-   <div class="shell__button--menu2 shell__button2">
-       <div class="button__icon">
-         <svg>
-           <use xlink:href='#icon-temp-menu'>
-             <symbol id="icon-temp-menu" viewBox="0 0 20 16">
-               <g id="temp-menu-Page-2" fill-rule="evenodd">
-                 <g id="temp-menu-Artboard-Copy-3" transform="translate(-1390, -24)">
-                   <g id="temp-menu-noun_menu_93427" transform="translate(1390,24)">
-                     <rect id="temp-menu-Rectangle" x="0" y="0" width="22" height="2"></rect>
-                     <rect id="temp-menu-Rectangle" x="0" y="7" width="22" height="2"></rect>
-                     <rect id="temp-menu-Rectangle" x="0" y="14" width="22" height="2"></rect>
-                     </g>
-                   </g>
-                 </g>
-               </symbol>
-           </use>
-           </svg>
-           </div>
-       </div>
-       </div>
   <div class="js-shell shell">
     <div class="shell__button--drop shell__button"></div>
     <div class="shell__button--menu shell__button" id="shell__button--menu__js">
@@ -59,7 +39,7 @@
         <div class="button__text">
           <span class="js-close-project">Close Project</span>
           <span class="js-close-reel">Close Showreel</span>
-          <span class="js-close-overview" id="close_text">Close All Projects</span>
+          <span class="js-close-overview" id="close_text">Close Project</span>
           </div>
           <span class="button__divider"></span>
           </div>
@@ -79,144 +59,209 @@
             <span>
         </div>
         </div>
-
-      <div class="work__overview"id="overview_id" >
-        <div class="overview_header">
-          <span class="overview__filterLabel">Filter</span>
-            <div class="overview__categoryList">
-                <div class="categoryItem is-selected">
-                    <span class="has-text-effect" id="project-header"> All Projects
-                      <div class="dropdown-arrow-wrapper">
-                        <div class="arrow">
-                          <div class="arrow-top"></div>
-                          <div class="arrow-bottom"></div>
-                          </div>
-                        </div>
-                    </span>
-
-                </div>
-                <div class="categoryItem secondary">
-                    <span class="has-text-effect" id="first-cat"> Python </span>
-                </div>
-                <div class="categoryItem secondary">
-                    <span class="has-text-effect" id="second-cat"> C++ </span>
-                </div>
-                <div class="categoryItem secondary">
-                    <span class="has-text-effect" id="third-cat"> Misc </span>
-                </div>
-                <div class="categoryItem secondary">
-                    <span class="has-text-effect" id="fourth-cat"> Front End </span>
-                </div>
-            </div>
-        </div>
-        <div class="overview__projectList" id="js_work__overview">
-          <div class="overview__projectItem"id = "first">
-            <div class="overview__projectItem__inner" id="inner_one" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
-
-              <div class="overview__projectItem__poster" id="poster_one" data-tilt data-tilt-glare="true"></div>
-              <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
-                <h4>Project Item One</h4>
-                <p>Subscript text</p>
-                </div>
-              </div>
-            </div>
-            <div class="overview__projectItem" data-tilt id = "second" onmouseover="mouseStatus(true);" onmouseout="mouseStatus(false);">
-              <div class="overview__projectItem__inner" id="inner_two" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
-                <div class="overview__projectItem__poster" id="poster_two"></div>
-                <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
-                  <h4>Project Item Two</h4>
-                  <p>Subscript text</p>
+        <div class = "projects js-projects is-enabled">
+          <div class="project" id="project_one">
+            <div class="js-project__header project__header">
+              <div class="js-project__title project__title has-text-effect">
+                <div class="inner">
+                  <span>Jane Street Puzzle Algorithms</span>
                   </div>
                 </div>
-              </div>
-              <div class="overview__projectItem" id = "third">
-                <div class="overview__projectItem__inner" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
-                  <div class="overview__projectItem__poster" id="poster_three"></div>
-                  <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
-                    <h4>Project Item Three</h4>
-                    <p>Subscript text</p>
+                <div class="js-project__description project__description has-text-effect" id="project-description-one">
+                  <p>
+                    For several months now, I have been coding algorithmic solutions to many of the puzzles hosted by Jane Street.
+                    I have a passion for problem solving and thinking through challenging puzzles - where possible I have not only
+                    coded algorithms to crack these puzzles but also derived the answers mathematically.
+                        </p>
+                  </div>
+                <div class="js-project__information project__information">
+                  <div class="information__item">
+                    <h4>SOURCE</h4>
+                    <p> Jane Street</p>
                     </div>
-                  </div>
-                </div>
-                <div class="overview__projectItem" id = "fourth">
-                  <div class="overview__projectItem__inner" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
-                    <div class="overview__projectItem__poster"></div>
-                    <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
-                      <h4>Project Item Four</h4>
-                      <p>Subscript text</p>
+                    <div class="information__item">
+                      <h4>Technologies</h4>
+                      <p> C++, Python GUI wrappers, PHP</p>
                       </div>
-                    </div>
-                  </div>
-                  <div class="overview__projectItem" id = "fifth">
-                    <div class="overview__projectItem__inner" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
-                      <div class="overview__projectItem__poster"></div>
-                      <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
-                        <h4>Project Item Five</h4>
-                        <p>Subscript text</p>
+                      <div class="information__item">
+                        <h4>DATE</h4>
+                        <p> March 2021 -</p>
                         </div>
                       </div>
                     </div>
-                    <div class="overview__projectItem" id = "sixth">
-                      <div class="overview__projectItem__inner" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
-                        <div class="overview__projectItem__poster"></div>
-                        <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
-                          <h4>Project Item Six</h4>
-                          <p>Subscript text</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="overview__projectItem" id = "seventh">
-                        <div class="overview__projectItem__inner" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
-                          <div class="overview__projectItem__poster"></div>
-                          <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
-                            <h4>Project Item Seven</h4>
-                            <p>Subscript text</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="overview__projectItem" id = "eighth">
-                          <div class="overview__projectItem__inner" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
-                            <div class="overview__projectItem__poster"></div>
-                            <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
-                              <h4>Project Item Eight</h4>
-                              <p>Subscript text</p>
+                    <div class="js-project__body project__body" id="project__body">
+                      <div class="js-project__videoloop project__videoloop" id="video-one">
+                        <div class="js-video video video--project">
+                          <div class="js-video__player video__player">
+                            <video loop autoplay muted id="vid">
+                              <source type="video/mp4" src="https://player.vimeo.com/external/529711103.hd.mp4?s=6636cfa3cdc6fd05a18b46bd1c62cd83264aa733&profile_id=174">
+                                </video>
                               </div>
                             </div>
                           </div>
-                          <div class="overview__projectItem" id = "ninth">
-                            <div class="overview__projectItem__inner" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
-                              <div class="overview__projectItem__poster"></div>
-                              <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
-                                <h4>Project Item Nine</h4>
-                                <p>Subscript text</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="overview__projectItem" id = "tenth">
-                              <div class="overview__projectItem__inner" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
-                                <div class="overview__projectItem__poster"></div>
-                                <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
-                                  <h4>Project Item Ten</h4>
-                                  <p>Subscript text</p>
+                          <div class="js-project__videoloop project__videoloop" id="video-two">
+                            <div class="js-video video video--project">
+                              <div class="js-video__player video__player">
+                                <video loop autoplay muted id="vid">
+                                  <source type="video/mp4" src="https://player.vimeo.com/external/529711103.hd.mp4?s=6636cfa3cdc6fd05a18b46bd1c62cd83264aa733&profile_id=174">
+                                    </video>
                                   </div>
                                 </div>
                               </div>
+                      <div class="project__headline" id="headline-one">
+                        <div class="headline__divider"></div>
+                        <div class="headline__title">
+                          <span>Circle Time</span>
+                          </div>
+                        <div class="js-body headline__body">
+                          <p>
+                              Circle Time references a ring of circles whose centers lie on the vertices of a regular hexagon with side length 2r.
+                              Given a circle C, we need to find the maximum proportion of the area of that circle that we can cover with rings of circles that
+                              do not overlap!
+                              <br><br>
+                              Answer: 0.783464
+                          </p>
+                        </div>
+                        <div class = "headline__links">
+                          <a href = "https://github.com/patrickellis/JaneStreetPuzzles/blob/main/June_2020/June_2020.cpp" target="_blank" class="js-work__menu--list-btn work__menu-list-btn">
+                            <span> View The Code </span>
+                            <span class="underline fade"></span>
+                          </a>
+                          </div>
+                  </div>
+                  <div class="project__headline" id="headline-two">
+                    <div class="headline__divider"></div>
+                    <div class="headline__title">
+                      <span>Personalised, with Pizza</span>
+                      </div>
+                    <div class="js-body headline__body">
+                      <p>
+                        When COVID-19 hit, YouTube needed to reimagine Brandcast for the age of quarantine. They envisioned a watch-from-home Brandcast video, delivered with pizza, where invitees could personalize their Brandcast story as easily as their pizza toppings. To turn the innovative concept into a reality, YouTube came to Resn and its dynamic video-creation platform, Cake.
+                      </p>
+                    </div>
+
+              </div>
+              <div class="js-project__text project__text" id="text-one">
+                <div class="text__title">
+                  <h3>Choose-Your-Own Video</h3>
+                  </div>
+                  <div class="js-text__body text__body">
+                    <p>
+                      Brandcast Delivered began with invitations for guests to visit a private link. Here, invitees could enter their names and select both pizza and video options from an à la carte menu. Video options included five content categories, including Food & Recipes and Sports, four YouTube creator hosts, such as Gordon Ramsay and Lilly Singh, and three musical tracks, from Tones And I, Dua Lipa, and Lizzo.
+                    </p>
+                </div>
+                </div>
+
+              <div class="project__image" id="image-one">
+                <div class="project__image-el" id="image-one-inner"></div>
+              </div>
+              <div class="project__image" id="image-two">
+                <div class="project__image-el" id="image-two-inner"></div>
+              </div>
+              <div class="js-project__text project__text" id="text-two">
+                <div class="text__title">
+                  <h3>Choose-Your-Own Video</h3>
+                  </div>
+                  <div class="js-text__body text__body">
+                    <p>
+                      Brandcast Delivered began with invitations for guests to visit a private link. Here, invitees could enter their names and select both pizza and video options from an à la carte menu. Video options included five content categories, including Food & Recipes and Sports, four YouTube creator hosts, such as Gordon Ramsay and Lilly Singh, and three musical tracks, from Tones And I, Dua Lipa, and Lizzo.
+                    </p>
+                </div>
+                </div>
+                <div class="project__headline" id="headline-three">
+                  <div class="headline__divider"></div>
+                  <div class="headline__title">
+                    <span>Personalised, with Pizza</span>
+                    </div>
+                  <div class="js-body headline__body">
+                    <p>
+                      When COVID-19 hit, YouTube needed to reimagine Brandcast for the age of quarantine. They envisioned a watch-from-home Brandcast video, delivered with pizza, where invitees could personalize their Brandcast story as easily as their pizza toppings. To turn the innovative concept into a reality, YouTube came to Resn and its dynamic video-creation platform, Cake.
+                    </p>
+                  </div>
+
+            </div>
+
+        </div>
+        <div class="project__footer" id = "trigger1">
+          <div class="js-project__awards project__awards"></div>
+          <div class="js-project__launch project__launch">
+            <div class="project__scroll no-url" id = "reveal1">
+              <p>
+                <span class="text">SCROLL FOR MENU</span>
+                <span class="line"</span>
+              </p>
+            </div>
           </div>
-
+        </div>
       </div>
-    </div>
-    <div class="clearspace"></div>
-    </div>
+      </div>
+      </div>
+
+
+
+
+
+
+    <script>
+      $(function() {
+      $('#js-rootnode').on("mousewheel", function() {
+          //alert($('#js-rootnode').scrollTop());
+          var menu_notif = document.getElementById("reveal1");
+          var scrollval = $('#js-rootnode').scrollTop();
+          if(document.body.clientWidth>2000){
+            x = 5440;
+          }
+          else if(document.body.clientWidth>1450){
+            x = 4140;
+          }
+          else if(document.body.clientWidth>1305){
+            x = 3740;
+          }
+          else if(document.body.clientWidth>1150){
+            x = 3300;
+          }
+          else if(document.body.clientWidth>980){
+            x = 2750;
+          }
+          else if(document.body.clientWidth>599){
+            x = 2100;
+          }
+          else if(document.body.clientWidth>0){
+            x = 1200;
+          }
+          //alert(document.body.clientWidth);
+          if(scrollval >= x+500){
+            menu_relocate('work');
+          }
+          else if(scrollval >= x+380){
+            menu_notif.style.opacity = "1";
+          }
+          else if(scrollval >= x+280){
+            menu_notif.style.opacity = "0.6";
+          }
+          else if(scrollval >= x+180){
+            menu_notif.style.opacity = "0.6";
+          }
+          else if(scrollval >= x+100){
+
+            menu_notif.style.opacity = "0.3";
+          }
+          else if(scrollval >= x){
+
+            menu_notif.style.opacity = "0.1";
+          }
+
+
+
+      });
+  });
+</script>
   <script>
-
-    var proj = document.getElementsByClassName("overview__categoryList")[0];
-
-
     var scrolled=0;
-
+    var root = document.getElementById("js-rootnode");
+    root.style.opacity = "1";
     $(document).ready(function(){
 
-      //largeHeader.style.opacity="1";
       document.body.style.opacity="1";
         $("#arrow--down").on("click" ,function(){
                     scrolled=scrolled+450;
@@ -310,23 +355,18 @@
 
     function menu_relocate(target){
       document.body.style.opacity="0";
-      var header = document.getElementById("large-header");
-      header.style.top = "400px";
       var rootnode = document.getElementById("js-rootnode");
-      var projects = document.getElementById("js_work__overview");
+
       rootnode.style.opacity=0;
       rootnode.style.MozTransition = "0.5s";
       rootnode.style.WebkitTransition  = "0.5s";
-      projects.style.opacity=0;
-      projects.style.top="1000px";
       var project_close = document.getElementById("shell__button__id");
       project_close.style.opacity=0;
       var menu = document.getElementById("shell__button--menu__js");
       menu.style.opacity = 1;
+
       var menu_text = document.getElementById("button__text__js");
 
-
-      //$(menu_text).toggleClass('visible');
       setTimeout(function(){
               window.location.replace(target);
         }, 150);
@@ -342,56 +382,17 @@
     $(header).toggleClass('opacity');
     $(menu).toggleClass('opacity');
     });
-
-
-    // MENU CLICK links
-    function dim_nav_text_and_bg(){
-      document.getElementById("large-header").style.opacity = "0";
-      document.getElementById("close_text").style.opacity = "0";
-    }
-    $("#first-cat").click(function(){
-      if(document.getElementsByClassName("secondary")[0].classList.contains("active")){
-        setTimeout(function(){
-                window.location.replace("../all/python/1");
-          }, 250);
-
-      }
-    });
-    $("#second-cat").click(function(){
-      if(document.getElementsByClassName("secondary")[0].classList.contains("active")){
-        setTimeout(function(){
-                window.location.replace("../all/cpp/1");
-          }, 250);
-      }
-    });
-    $("#third-cat").click(function(){
-      if(document.getElementsByClassName("secondary")[0].classList.contains("active")){
-        setTimeout(function(){
-                window.location.replace("../all/misc/1");
-          }, 250);
-      }
-    });
-    $("#fourth-cat").click(function(){
-      if(document.getElementsByClassName("secondary")[0].classList.contains("active")){
-
-        setTimeout(function(){
-                window.location.replace("../all/frontend/1");
-          }, 250);
-      }
-    });
-
-    //NAV LINKS
     $("#shell__button__id").click(function(){
-      menu_relocate("../all/menu");
+      menu_relocate("work");
     });
     $("#button__text__js").click(function(){
-      menu_relocate("../all/menu");
+      menu_relocate("menu");
     });
     $("#button__icon__id").click(function(){
-      menu_relocate("../all/menu");
+      menu_relocate("menu");
     });
     $("#button__hitarea__js").click(function(){
-      menu_relocate("../all/menu");
+      menu_relocate("menu");
     });
     $("#shell__button__id").on("mouseleave", function(){
       var body = document.body;
@@ -455,30 +456,28 @@
 
 
   }
-    jQuery.fn.center = function() {
+  //project_one
+    jQuery.fn.center = function(id,container) {
       var width = $( window ).width();
-      var overview_width = $("#js_work__overview").width();
+      var overview_width = $("#project_one").width();
       var diff = (width - overview_width) / 2;
       var percent = (diff / width) * 100;
       var s = '' + percent + '%';
-      var container = $(window);
-      //var top = -this.height() / 2;
+      var top = -this.height() / 2;
       var left = -this.width() / 2;
       //alert("s: "+s+", projectlist width: "+overview_width+", width: " +width);
-      return $("#overview_id").css({ 'left': s});
+      return $("#project_one").css({ 'left': s});
 
   }
   window.onresize = function() {
-  $('#js_work__overview').center();
-  $('#quicknav--up').arrowcenter("left",'#quicknav--up');
-  $('#quicknav--down').arrowcenter("right",'#quicknav--down');
+  $('#project_one').center("#project_one",window);
+  //$('#video-one').center("#video_one","#project__body");
+  //$('#quicknav--up').arrowcenter("left",'#quicknav--up');
+  //$('#quicknav--down').arrowcenter("right",'#quicknav--down');
 }
   </script>
   <script>
     $( document ).ready(function(){
-      setTimeout(function(){
-        document.getElementsByClassName("overview__categoryList")[0].style.overflow = "hidden";
-      },1000);
       var canvas = document.getElementById("large-header");
       var projects = document.getElementById("shell__button__id");
       var static = document.getElementById("static");
@@ -501,10 +500,9 @@
       //var body = document.body;
       //body.style.opacity=1;
       var overview = document.getElementById("js_work__overview");
-      overview.style.top = "0px";
       var header = document.getElementById("project-header");
       header.style.top = "0px";
-
+      overview.style.top = "0px";
       var rootnode = document.getElementById("js-rootnode");
       rootnode.style.opacity = 1;
       var elements = document.getElementsByClassName("secondary");
@@ -529,33 +527,16 @@
 
       }
     });
-    var canCall = false;
-
-
-    proj.style.height="20000px";
-    setTimeout(function(){
-            proj.style.height="80px";
-            canCall = true;
-      }, 1000);
-
+    var canCall = true;
     $('.is-selected .has-text-effect').on('click', function(){
+      //$(this).toggleClass('clicked');
+      var arrow = document.getElementById("arrow");
       if(!canCall){
         return;
       }
 
-      var proj = document.getElementsByClassName("overview__categoryList")[0];
-      var work_overview = document.getElementsByClassName("overview__projectList")[0];
-      $(work_overview).toggleClass('active');
-      if(proj.classList.contains("active")){
-        setTimeout(function(){
-          $(proj).toggleClass('active');
-        },500);
-      }
-      else{
-        $(proj).toggleClass('active');
-      }
-
-      var arrow = document.getElementById("arrow");
+      //arrow.classList.add("active");
+      //arrow.css("transform","rotate(45deg)");
       var elements = document.getElementsByClassName("secondary");
       for (var i = 0, len = elements.length; i < len; i++) {
         var id;
@@ -583,8 +564,13 @@
           var offset = 20 + (i * 20);
           var o = offset.toString() + "px";
           el.style.paddingBottom = o;
+
+
+
+          //elements[i].style.bottom=o;
         }
         $(elements[i]).toggleClass('active');
+    // elements[i].style ...
       }
       var uparrow = document.getElementsByClassName("quicknav__arrow--up")[0];
       var downarrow = document.getElementsByClassName("quicknav__arrow--down")[0];
@@ -604,18 +590,27 @@
             $(downarrow).toggleClass('active-two');
           },500);
         }
+
       }
+
+      //$(uparrow).toggleClass('active-two');
       var e =  document.getElementsByClassName("overview__projectItem");
       var p = document.getElementsByClassName("overview__projectItem__poster");
 
       for (var i = 0, len = e.length; i < len; i++) {
+
+
         $(e[i]).toggleClass('active');
         $(p[i]).toggleClass('active');
+
       }
+      //var wo = document.getElementById("overview_id");
+      //$(wo).toggleClass('active');
       canCall = false;
       setTimeout(function(){
             canCall = true;
-        }, 500);
+        }, 100);
+
     });
 
 
@@ -823,7 +818,7 @@ var smoothScroller = new Inertial();
 <script>
   ( function( $ ) {
 
-
+	"use strict";
 
   $(".overview__projectItem__poster").tilt({
     maxTilt: 15,
