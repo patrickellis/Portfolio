@@ -63,7 +63,7 @@
           <span class="overview__filterLabel">Filter</span>
             <div class="overview__categoryList">
               <div class="categoryItem">
-                <span class="has-text-effect transition" id="project-header-prev"> C++
+                <span class="has-text-effect transition project-header-prev" id="project-header-prev"> Front End
                   <div class="dropdown-arrow-wrapper">
                     <div class="arrow">
                       <div class="arrow-top"></div>
@@ -71,6 +71,15 @@
                       </div>
                     </div>
                 </span>
+                </div>
+                <div class="categoryItem secondary">
+                  <span class="has-text-effect transition project-header-prev" > Python
+                  </span>
+                  </div>
+                  <div class="categoryItem secondary">
+                    <span class="has-text-effect transition project-header-prev" > C++
+                    </span>
+                    </div>
                 <div class="categoryItem is-selected" id="project-header-python">
                     <span class="has-text-effect transition" > Misc
                       <div class="dropdown-arrow-wrapper" id="new-header-arrow">
@@ -89,7 +98,7 @@
                     <span class="has-text-effect transition" id="second-cat"> Python </span>
                 </div>
                 <div class="categoryItem secondary">
-                    <span class="has-text-effect transition" id="third-cat"> All Projects </span>
+                    <span class="has-text-effect transition" id="third-cat"> C++ </span>
                 </div>
                 <div class="categoryItem secondary">
                     <span class="has-text-effect transition" id="fourth-cat"> All Projects </span>
@@ -196,15 +205,17 @@
     </div>
 
     <script>
+      document.getElementById("second-cat").style.opacity="0";
+      document.getElementById("third-cat").style.opacity="0";
       document.getElementById("fourth-cat").style.opacity="0";
       setTimeout(function(){
+              document.getElementById("second-cat").style.opacity="1";
+              document.getElementById("third-cat").style.opacity="1";
               document.getElementById("fourth-cat").style.opacity="1";
         }, 1000);
-
-      //fixes project poster positions
       var category_items = document.getElementsByClassName("overview__projectItem");
       for (var i = 0, len = category_items.length; i < len; i++) {
-        category_items[i].style.top = "80px";
+        category_items[i].style.top = "0px";
       }
       var rootnode = document.getElementById("js-rootnode");
       rootnode.style.transition="0s";
@@ -287,7 +298,6 @@
       }
     }
     var scrolled=0;
-
     var style;
 
     function adjust_categories(){
@@ -312,47 +322,36 @@
         cat_height=48;
       }
 
-      var num_header = 1;
+      var num_header = 3;
       var movement_amount = cat_height * num_header;
       style = "-"+movement_amount+"px";
-      document.getElementById("project-header-python").style.top=style;
+      //document.getElementById("project-header-python").style.top=style;
       categories = document.getElementsByClassName("categoryItem");
       for (var i = 0, len = categories.length; i < len; i++) {
-        if(i>1){
+        if(i>2){
           categories[i].style.top=style;
         }
       }
+
+
     }
-    function rename_categories(){
-      setTimeout(function(){
-              document.getElementById('first-cat').innerHTML = "Front End";
-              document.getElementById('second-cat').innerHTML = "Python";
-              document.getElementById('third-cat').innerHTML = "C++";
-              document.getElementById('fourth-cat').innerHTML = "All Projects";
-        }, 1000);
-    }
+
 
     $(document).ready(function(){
-      rename_categories();
       adjust_categories();
-      document.getElementById("project-header-prev").style.top=style;
-      document.getElementById("project-header-prev").style.opacity="0";
+
+      //document.getElementById("project-header-prev").style.opacity="0";
       document.getElementById("new-header-arrow").style.opacity="1";
+      var upperList = document.getElementsByClassName('project-header-prev');
+      for(var i=0,len=upperList.length; i<len; i++){
+        upperList[i].style.opacity="0";
+        upperList[i].style.top=style;
+      }
     });
 
 
-    $("#first-cat").click(function(){
-      window.location.replace("../frontend/3");
-    });
-    $("#second-cat").click(function(){
-      window.location.replace("../python/3");
-    });
-    $("#third-cat").click(function(){
-      window.location.replace("../cpp/3");
-    });
-    $("#fourth-cat").click(function(){
-      window.location.replace("../work/3");
-    });
+
+
 
 
     function drawArrow(fromx, fromy, tox, toy,id,color){
@@ -462,6 +461,20 @@
     $("#first").click(function(){
       menu_relocate("../project");
     });
+
+    $("#first-cat").click(function(){
+      window.location.replace("../frontend/3");
+    });
+    $("#second-cat").click(function(){
+      window.location.replace("../python/3");
+    });
+    $("#third-cat").click(function(){
+      window.location.replace("../cpp/3");
+    });
+    $("#fourth-cat").click(function(){
+      window.location.replace("../work/3");
+    });
+
     $("#shell__button__id").click(function(){
       menu_relocate("../work");
     });
@@ -550,7 +563,7 @@
 
   }
   window.onresize = function() {
-  adjust_categories();
+    adjust_categories();
   $('#js_work__overview').center();
   $('#quicknav--up').arrowcenter("left",'#quicknav--up');
   $('#quicknav--down').arrowcenter("right",'#quicknav--down');
@@ -753,7 +766,7 @@
                 scrollTop:  scrolled
            });
       });
-    
+
 
 </script>
 <script>
