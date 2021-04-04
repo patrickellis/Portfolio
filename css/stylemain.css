@@ -2437,10 +2437,10 @@ transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.09997, 0, 1);
   }
 }
 #first .overview__projectItem__poster{
-    background-image:url("../images/neural_network.png");
+    background-image:url("../images/neural_network_webp.webp");
 }
 #second .overview__projectItem__poster{
-    background-image:url("../images/jane_street.png");
+    background-image:url("../images/jane_street_webp.webp");
 }
 #reveal1{
   opacity:0;

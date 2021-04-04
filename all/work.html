@@ -2,8 +2,7 @@
   <title>Portfolio - Patrick Ellis</title>
   <?xml version="1.0" encoding="UTF-8" standalone="no"?>
   <link rel="stylesheet" href="../css/stylemain.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
 
 </head>
 <body onresize="resize()">
@@ -214,7 +213,7 @@
 
     var scrolled=0;
 
-    $(document).ready(function(){
+    setTimeout(function(){
 
       //largeHeader.style.opacity="1";
       document.body.style.opacity="1";
@@ -232,7 +231,7 @@
     				        scrollTop:  scrolled
     				   });
     			});
-    });
+    }, 1);
 
 
 
@@ -476,7 +475,7 @@
   </script>
   <script src="../js/project_click_events.js"></script>
   <script>
-    $( document ).ready(function(){
+    setTimeout(function(){
       setTimeout(function(){
         document.getElementsByClassName("overview__categoryList")[0].style.overflow = "hidden";
       },1000);
@@ -529,7 +528,7 @@
         el.style.paddingBottom = o;
 
       }
-    });
+    }, 1);
     var canCall = false;
 
 
