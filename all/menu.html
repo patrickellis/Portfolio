@@ -154,6 +154,18 @@ menu_text.style.opacity = "0";
       }, 150);
 
   }
+  var menu_work = document.getElementById('menu-work');
+  var menu_about = document.getElementById('menu-about');
+  var menu_contact = document.getElementById('menu-contact');
+  menu_work.onclick = function(){
+    menu_relocate('../all/work');
+  };
+  menu_about.onclick = function(){
+    menu_relocate('../all/about');
+  };
+  menu_contact.onclick = function(){
+    menu_relocate('../all/contact');
+  };
   /*
   $("#menu-work").click(function(){
     menu_relocate("../all/work");
