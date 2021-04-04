@@ -1,6 +1,5 @@
 <head>
     <link rel="stylesheet" href="../css/stylemenu.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
 
 <body>
@@ -81,8 +80,9 @@
   var rootnode = document.getElementById("js-rootnode");
 var menu_text = document.getElementById("button__text__js");
 menu_text.style.opacity = "0";
-    $( document ).ready(function(){
 
+    //$( document ).ready(function(){
+    setTimeout(function(){
 
       var text = document.getElementById("menu");
       text.style.opacity="1";
@@ -99,8 +99,8 @@ menu_text.style.opacity = "0";
       //var static = document.getElementById("static");
       //var canvas = document.getElementById("large-header");
       //canvas.style.opacity=1;
-
-  });
+}, 1);
+  //});
   window.addEventListener('DOMContentLoaded', (event) =>
 {
 	const numOfRibbons = 9;
@@ -113,22 +113,26 @@ menu_text.style.opacity = "0";
 		let ribbonWidth = 1000;
 		let ribbonHeight = ribbonWidth/10;
 
-		ribbon.className    = 'ribbon';
-		ribbon.style.width  = `${ribbonWidth}vmax`;
-		ribbon.style.height = `${ribbonHeight}vmax`;
-		ribbon.style.left   = `${(0 - ribbonWidth  / 2) + Math.random()*100}vmax`;
-		//ribbon.style.top    = `${(0 - ribbonHeight / 2) + Math.random()*100}vmax`;
+		ribbon.classList.add('ribbon');
+		ribbon.style.width  = '1000vmax';//`${ribbonWidth}vmax`;
+		ribbon.style.height = '100vmax';//`${ribbonHeight}vmax`;
+		ribbon.style.left   = ((0-ribbonWidth/2)+Math.random()*100).toString() + 'vmax';//`${(0 - ribbonWidth  / 2) + Math.random()*100}vmax`;
 
-		// 20% variance between different elements to help split up parallel lines
-		ribbon.style.animationDuration  = `${Math.random()*(animationDuration) +(animationDuration*0.1)}s`;
+		////ribbon.style.top    = `${(0 - ribbonHeight / 2) + Math.random()*100}vmax`;
 
-		// Start the animation from any point in its duration
-		ribbon.style.animationDelay     = `-${Math.random()*animationDuration}s`;
+		//// 20% variance between different elements to help split up parallel lines
+		ribbon.style.animationDuration  = (Math.random()*(animationDuration) +(animationDuration*0.1)).toString() + 's';
+  //  ribbon.style.animationDuration  = (Math.random()*(animationDuration) +(animationDuration*0.1)).toString() + 's';
 
-		// Half the elements go one way, the other half the other way
-		ribbon.style.animationDirection = `${i%2 ? 'normal' : 'reverse'}`;
+		//// Start the animation from any point in its duration
+		//ribbon.style.animationDelay     = (-1 *Math.random()*animationDuration}).toString()+'s';
+		//// Start the animation from any point in its duration
+		ribbon.style.animationDelay     = (Math.random()*animationDuration * -1).toString() + 's';
 
-		// Add the new ribbon to
+		//// Half the elements go one way, the other half the other way
+		ribbon.style.animationDirection = i%2 ? 'normal' : 'reverse';
+
+		//// Add the new ribbon to
 		ribbonContainer.appendChild(ribbon);
 	}
 });
@@ -150,6 +154,7 @@ menu_text.style.opacity = "0";
       }, 150);
 
   }
+  /*
   $("#menu-work").click(function(){
     menu_relocate("../all/work");
   });
@@ -159,5 +164,6 @@ menu_text.style.opacity = "0";
   $("#menu-contact").click(function(){
     menu_relocate("../all/contact");
   });
+  */
   </script>
 </body>
