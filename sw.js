@@ -3,15 +3,14 @@
   self.addEventListener('install', function(event) {
     var CACHE_NAME = 'my-site-cache-v1';
     var urlsToCache = [
-      '/css/stylemain.css',
       '/css/stylemenu.css',
+      '/css/stylemain.css',
       '/css/style.css',
-      '/images/jane_street.png',
-      '/images/neural_network.png',
+      '/images/jane_street_webp.webp',
+      '/images/neural_network_webp.webp',
       '/all/menu.html',
       '/all/about.html',
       '/all/contact.html',
-      '/all/project.html',
       '/all/work.html',
       '/all/cpp/1.html',
       '/all/cpp/2.html',
@@ -32,7 +31,9 @@
       '/all/frontend/1.html',
       '/all/frontend/2.html',
       '/all/frontend/3.html',
-      '/all/frontend/4.html'
+      '/all/frontend/4.html',
+      '/all/projects/janestreet-puzzles.html',
+      '/all/projects/project.html'
     ];
 
     // Perform install steps
