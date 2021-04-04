@@ -6,6 +6,7 @@
       '/css/stylemenu.css',
       '/css/stylemain.css',
       '/css/style.css',
+      '/js/project_click_events.js',
       '/images/jane_street_webp.webp',
       '/images/neural_network_webp.webp',
       '/all/menu.html',
