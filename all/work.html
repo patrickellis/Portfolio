@@ -539,7 +539,8 @@
 
     proj.style.height="20000px";
     setTimeout(function(){
-            proj.style.height="80px";
+            var height = document.getElementsByClassName('secondary')[0].style.height;
+            proj.style.height=height;
             canCall = true;
       }, 1000);
 

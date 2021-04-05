@@ -668,8 +668,10 @@
         }
       }
       setTimeout(function(){
-        document.getElementsByClassName("overview__categoryList")[0].style.overflow = "hidden";
-      },1000);
+              var height = document.getElementsByClassName('secondary')[0].style.height;
+              proj.style.height=height;
+              canCall = true;
+        }, 1000);
     });
     var canCall = false;
     var callCount = 0;
