@@ -269,6 +269,7 @@ html, body
     position: fixed;
     display: block;
     width: 20%;
+    min-width:145px;
     font-family: "Work-Sans-Light","Arial",sans-serif;
     font-weight: normal;
     font-style: normal;
@@ -285,11 +286,25 @@ html, body
 }
 .js-menu-about {
     position: fixed;
-    left: 15%;
 }
 .js-menu-contact {
     position: fixed;
-    right: 15%;
+}
+@media only screen and (min-width: 700px) {
+  .js-menu-about{
+    left:15%;
+  }
+  .js-menu-contact {
+      right: 15%;
+  }
+}
+@media only screen and (max-width: 700px) {
+    .js-menu-about{
+      top:32%;
+    }
+    .js-menu-contact {
+        bottom:32%;
+    }
 }
 .has-text-effect {
     cursor: pointer;
