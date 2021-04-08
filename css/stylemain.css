@@ -1094,7 +1094,7 @@ svg:not(:root) {
     cursor: pointer;
 }
 .about-page .about__inner {
-    width: 118.4rem;
+    width: 80%;/*118.4rem;*/
     margin: 12rem auto 30rem;
     padding: 3rem 8rem 5rem;
     position: relative;
@@ -2680,5 +2680,63 @@ svg path {
   .contact__inner{
     left: 20%;
     top:600px;
+  }
+}
+.about-page .about__title_inner h2{
+  word-wrap: break-word;
+}
+.rootnode{
+  overflow-x:hidden;
+}
+@media (max-width:700px){
+  .about-page .about__inner .col2 .inner .inner_col{
+    display:block;
+    margin-left:calc(50% - 32.25%);
+  }
+  .about-page .about__inner .about__title h2{
+    font-size:16px;
+  }
+  .logo{
+    width:15px;
+    height:15px;
+  }
+  .fa-github, .fa-linkedin, .fa-address-card{
+    position:relative;
+    right:14px;
+    bottom:13px;
+  }
+  .fa-linkedin{
+    right:12px;
+  }
+  .fa-address-card{
+    right:16px;
+  }
+}
+@media (max-width:500px){
+  .logo{
+    width:0px;
+    height:0px;
+  }
+  .fa-github, .fa-linkedin, .fa-address-card{
+    position:relative;
+    right:22px;
+    bottom:20px;
+  }
+  .fa-linkedin{
+    right:19px;
+  }
+  .fa-address-card{
+    right:25px;
+    bottom:20px;
+  }
+  .logo{
+    margin-right:10px;
+  }
+  .stats__block{
+    width:25%;
+  }
+  .github{
+    position:relative;
+    left:10px;
   }
 }
