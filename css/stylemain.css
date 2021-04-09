@@ -1507,6 +1507,7 @@ letter-spacing: 0.04rem;
 }
 .contact-page .contact__email .contact__email__hiring {
     width: 75%;
+    min-width:260px;
     display: inline-block;
     font-family: "Work-Sans-Light","Arial",sans-serif;
     font-weight: normal;
@@ -1558,6 +1559,7 @@ letter-spacing: 0.04rem;
     display: inline-block;
     vertical-align: top;
     width: 25%;
+    min-width:65px;
 }
 
 element {
@@ -2619,6 +2621,7 @@ svg path {
 }
 .form__wrapper{
   width:50%;
+  min-width:280px;
   height:40%;
   left:25%;
   position:absolute;
@@ -2738,5 +2741,27 @@ svg path {
   .github{
     position:relative;
     left:10px;
+  }
+}
+
+.contact__social{
+  left:10%;
+}
+
+@media (max-width:630px){
+  .contact__inner{
+    top:420px;
+  }
+  .contact-page .contact__inner{
+    padding:1rem;
+  }
+  .contact__social{
+    left:0%;
+  }
+}
+
+@media(max-width:570px){
+  .form__wrapper{
+    left:calc(50% - 140px);
   }
 }
