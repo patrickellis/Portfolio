@@ -40,10 +40,10 @@
                   </g>
                 </symbol>
             </use>
-            </svg>
-            </div>
-            <span class="js-button__text button__text" id="button__text__js">Menu</span>
+          </svg>
         </div>
+        <span class="js-button__text button__text" id="button__text__js">Menu</span>
+      </div>
 
       <div class="shell__button--project shell__button" id="shell__button__id">
         <div class="button__text">
@@ -74,26 +74,26 @@
             <div class="js-project__header project__header">
               <div class="js-project__title project__title has-text-effect">
                 <div class="inner">
-                  <span>Project Title</span>
+                  <span>Ant Pheromone Model</span>
                   </div>
                 </div>
                 <div class="js-project__description project__description has-text-effect" id="project-description-one">
                   <p>
-                    Since 2012, YouTube has hosted Brandcast, a spectacular live marketing event during Newfronts aimed at brands and advertisers. In 2020, Brandcast needed a socially-distanced makeover and Resn provided the perfect solution with its dynamic video-creation platform, Cake. The result was Brandcast Delivered, a personalized, creator-hosted video experience like no other.
-                    </p>
+                    Simulation of the foraging behaviour of ants using an agent-based model with stochastic and deterministic components of ant movement. This project aims to demonstrate ants’ ability to form effective pathways to and from food sources. In large part, the challenge of this project is modelling an accurate 2D diffusion grid.
+                  </p>
                   </div>
                 <div class="js-project__information project__information">
                   <div class="information__item">
-                    <h4>AGENCY + CLIENT</h4>
-                    <p> YouTube, Google</p>
+                    <h4>Language</h4>
+                    <p> Matlab</p>
                     </div>
                     <div class="information__item">
-                      <h4>RESN ROLE</h4>
-                      <p>Cake - Dynamic Video Platform, Creative and Production Partner, Development, Design, Project Management</p>
+                      <h4>Implements</h4>
+                      <p>Correlated Random Walk, 2D Diffusion Equations, Agent-based Model </p>
                       </div>
                       <div class="information__item">
                         <h4>DATE</h4>
-                        <p> June 2020</p>
+                        <p> February 2021</p>
                         </div>
                       </div>
                     </div>
@@ -102,7 +102,7 @@
                         <div class="js-video video video--project">
                           <div class="js-video__player video__player">
                             <video loop autoplay muted id="vid">
-                              <source type="video/mp4" src="https://player.vimeo.com/external/529711103.hd.mp4?s=6636cfa3cdc6fd05a18b46bd1c62cd83264aa733&profile_id=174">
+                              <source type="video/mp4" src="https://player.vimeo.com/external/535594913.hd.mp4?s=a0f908738b10d164c128e565f81edcc3ef46e4bb&profile_id=175">
                                 </video>
                               </div>
                             </div>
@@ -111,7 +111,7 @@
                             <div class="js-video video video--project">
                               <div class="js-video__player video__player">
                                 <video loop autoplay muted id="vid">
-                                  <source type="video/mp4" src="https://player.vimeo.com/external/529711103.hd.mp4?s=6636cfa3cdc6fd05a18b46bd1c62cd83264aa733&profile_id=174">
+                                  <source type="video/mp4" src="https://player.vimeo.com/external/535601258.hd.mp4?s=ff3c47cdd5126f05a9539642ea825f36378b185a&profile_id=175">
                                     </video>
                                   </div>
                                 </div>
@@ -119,35 +119,36 @@
                       <div class="project__headline" id="headline-one">
                         <div class="headline__divider"></div>
                         <div class="headline__title">
-                          <span>Personalised, with Pizza</span>
+                          <span>Foraging Technicalities</span>
                           </div>
                         <div class="js-body headline__body">
                           <p>
-                            When COVID-19 hit, YouTube needed to reimagine Brandcast for the age of quarantine. They envisioned a watch-from-home Brandcast video, delivered with pizza, where invitees could personalize their Brandcast story as easily as their pizza toppings. To turn the innovative concept into a reality, YouTube came to Resn and its dynamic video-creation platform, Cake.
-                          </p>
+                              When foraging for food, ants deposit a certain specific pheromone – pheromone A. When ants have found food and are returning to the colony, they deposit a second pheromone – pheromone B. When foraging, ants sense pheromone B and follow the trail in the direction of highest concentration as this typically leads towards food that an ant has found. The pheromone A plot (foragers) is shown above, whilst the pheromone B trails are shown below.
+                            </p>
                         </div>
 
                   </div>
                   <div class="project__headline" id="headline-two">
                     <div class="headline__divider"></div>
                     <div class="headline__title">
-                      <span>Personalised, with Pizza</span>
+                      <span>Emergent Behaviour</span>
                       </div>
                     <div class="js-body headline__body">
                       <p>
-                        When COVID-19 hit, YouTube needed to reimagine Brandcast for the age of quarantine. They envisioned a watch-from-home Brandcast video, delivered with pizza, where invitees could personalize their Brandcast story as easily as their pizza toppings. To turn the innovative concept into a reality, YouTube came to Resn and its dynamic video-creation platform, Cake.
-                      </p>
+                          Individuals are characterised by their state variables; velocity, position, current activity, direction of motion, antennae length and ant length. Only surface level characteristics have been programmed, meaning that these characteristics, and the
+                           movement equation described below, are sufficient to generate pheromone path forming behaviour.
+                        </p>
                     </div>
 
               </div>
               <div class="js-project__text project__text" id="text-one">
                 <div class="text__title">
-                  <h3>Choose-Your-Own Video</h3>
+                  <h3>Movement Equations</h3>
                   </div>
                   <div class="js-text__body text__body">
                     <p>
-                      Brandcast Delivered began with invitations for guests to visit a private link. Here, invitees could enter their names and select both pizza and video options from an à la carte menu. Video options included five content categories, including Food & Recipes and Sports, four YouTube creator hosts, such as Gordon Ramsay and Lilly Singh, and three musical tracks, from Tones And I, Dua Lipa, and Lizzo.
-                    </p>
+                      Timesteps are evaluated at discrete 0.5 second increments. At each time step, each agent evaluates the pheromone concentrations at its left and right antennae independently and compares, before altering its course towards the region of higher concentration. New movement vectors are offset by a stochastic component of ±20 degrees.
+                      </p>
                 </div>
                 </div>
 
