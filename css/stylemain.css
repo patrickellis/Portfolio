@@ -1960,8 +1960,9 @@ will-change: transform;
 .headline__links{
   font-size:14px !important;
   position:relative;
-left:calc(50% - 41px)
-}
+  left:calc(50% - 41px)
+  }
+
 .work__menu-list-btn .underline {
     position: absolute;
 
@@ -1976,6 +1977,10 @@ left:calc(50% - 41px)
 .work__menu-list-btn:hover .underline {
     transition:0.5s;
     opacity:1;
+}
+.left-block{
+  width:49.5%;
+  display:inline-block;
 }
 .work__menu-list-btn {
     cursor: pointer;
