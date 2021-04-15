@@ -97,7 +97,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="js-project__body project__body" id="project__body">
+                    <div class="js-project__body project__body2" id="project__body">
                       <div class="left-block">
                         <div class = "headline__links">
                           <a href = "https://github.com/patrickellis/AntModelling" target="_blank" class="js-work__menu--list-btn work__menu-list-btn">
@@ -191,11 +191,7 @@
                     </p>
                 </div>
                 </div>
-                <div class="project__headline" id="headline-three">
-                  <div class="headline__divider"></div>
 
-
-            </div>
 
         </div>
         <div class="project__footer" id = "trigger1">
@@ -219,25 +215,28 @@
 
 
     <script>
+    var prev = 0;
       $(function() {
+
       $('#js-rootnode').on("mousewheel", function() {
           //alert($('#js-rootnode').scrollTop());
           var menu_notif = document.getElementById("reveal1");
           var scrollval = $('#js-rootnode').scrollTop();
+
           if(document.body.clientWidth>2000){
-            x = 5440;
+            x = 4740;
           }
           else if(document.body.clientWidth>1450){
-            x = 4140;
+            x = 3640;
           }
           else if(document.body.clientWidth>1305){
-            x = 3740;
+            x = 3340;
           }
           else if(document.body.clientWidth>1150){
-            x = 3300;
+            x = 2800;
           }
           else if(document.body.clientWidth>980){
-            x = 2750;
+            x = 2450;
           }
           else if(document.body.clientWidth>599){
             x = 2100;
@@ -246,7 +245,7 @@
             x = 1200;
           }
           //alert(document.body.clientWidth);
-          if(scrollval >= x+500){
+          if(scrollval >= x+500&&scrollval > prev){
             menu_relocate('../work');
           }
           else if(scrollval >= x+380){
@@ -266,7 +265,7 @@
 
             menu_notif.style.opacity = "0.1";
           }
-
+          prev=scrollval;
 
 
       });
