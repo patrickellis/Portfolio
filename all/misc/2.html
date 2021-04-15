@@ -572,10 +572,28 @@
   }
   window.onresize = function() {
     adjust_categories();
+    //$('#video-one').center("#video_one","#project__body");
+    //$('#quicknav--up').arrowcenter("left",'#quicknav--up');
+    //$('#quicknav--down').arrowcenter("right",'#quicknav--down');
+    setTimeout(function(){
+      $('#js_work__overview').center("#project_one",window);
+    },50);
+    setTimeout(function(){
+      $('#js_work__overview').center("#project_one",window);
+    },100);
+    setTimeout(function(){
+      $('#js_work__overview').center("#project_one",window);
+    },200);
+    setTimeout(function(){
+      $('#js_work__overview').center("#project_one",window);
+    },500);
+    setTimeout(function(){
+      $('#js_work__overview').center("#project_one",window);
+    },1000);
   $('#js_work__overview').center();
   $('#quicknav--up').arrowcenter("left",'#quicknav--up');
   $('#quicknav--down').arrowcenter("right",'#quicknav--down');
-}
+  }
   </script>
   <script>
     cat_height = 56;
