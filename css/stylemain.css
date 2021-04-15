@@ -2592,7 +2592,7 @@ transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.09997, 0, 1);
   }
 }
 #first .overview__projectItem__poster{
-    background-image:url("../images/ant-photo.jpg");
+    background-image:url("../images/ant_photo_webp.webp");
 }
 #second .overview__projectItem__poster{
     background-image:url("../images/jane_street_webp.webp");

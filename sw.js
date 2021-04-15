@@ -9,6 +9,7 @@
       '/js/project_click_events.js',
       '/images/jane_street_webp.webp',
       '/images/neural_network_webp.webp',
+      '../images/ant_photo_webp.webp',
       '/all/menu.html',
       '/all/about.html',
       '/all/contact.html',
