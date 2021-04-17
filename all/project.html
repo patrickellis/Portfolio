@@ -468,12 +468,17 @@
       return $("#project_one").css({ 'left': s});
 
   }
+
   window.onresize = function() {
   $('#project_one').center("#project_one",window);
+  setTimeout(function(){
+    $('#project_one').center("#project_one",window);
+  },1000);
   //$('#video-one').center("#video_one","#project__body");
   //$('#quicknav--up').arrowcenter("left",'#quicknav--up');
   //$('#quicknav--down').arrowcenter("right",'#quicknav--down');
 }
+
   </script>
   <script>
     $( document ).ready(function(){
