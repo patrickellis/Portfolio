@@ -1,6 +1,9 @@
-- uses: lowlighter/metrics@latest
-  with:
-    # ... other options
-    template: classic
-    user: patrickellis # Optional if you're the owner of target repository and you're using your own personal token
-    repo: Personal-Website  # Repository name
+Personal Portfolio [![GitHub version](https://badge.fury.io/gh/patrickellis%2FPortfolio.svg)](https://badge.fury.io/gh/patrickellis%2FPortfolio)
+======
+## Technologies
+* Javascript
+* JQuery
+* Service Workers
+* HTML/CSS
+
+
