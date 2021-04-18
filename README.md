@@ -10,5 +10,5 @@ Personal Portfolio [![GitHub version](https://badge.fury.io/gh/patrickellis%2FPo
 
 This repository hosts the source files, images, and miscellaneous items relating to my personal Software Development projects. 
 
-<div style="text-align:center"><img src = "https://github.com/patrickellis/Portfolio/blob/master/images/docs/Menu.png" style="padding-top:100px; width:350px;height:350px;" width="650"></div>
+<div style="text-align:center"><img src = "https://github.com/patrickellis/Portfolio/blob/master/images/docs/Menu.png" style="padding-top:100px; width:350px;height:350px;" width="650" /></div>
 
