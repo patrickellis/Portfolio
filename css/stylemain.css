@@ -2118,6 +2118,12 @@ transform: translate3d(0px, 0px, 0px);
 #image-two-inner{
   background-image: url("https://www.wallpapers13.com/wp-content/uploads/2018/05/Natural-Landscape-River-Valley-Flowers-Sky-Mountain-Picture-For-Desktop-HD-Wallpaper-PC-Tablet-Mobile-1920x1080-915x515.jpg");
 }
+#image-three-inner{
+  background-image: url("../images/docs/Sentiment_Class_3.png");
+}
+#image-four-inner{
+  background-image: url("../images/docs/Sentiment_Class_2.png");
+}
 .project__videoloop .video__player video {
     position: absolute;
     left: 0;
@@ -2615,11 +2621,24 @@ transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.09997, 0, 1);
     height: 4603px;
   }
 }
+.image_sent{
+  background-image:url("../images/docs/Sentiment_Class_4.png");
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:100%;
+  width:80%;
+  height:100%;
+  margin:auto;
+}
+
 #first .overview__projectItem__poster{
     background-image:url("../images/ant_photo_webp.webp");
 }
 #second .overview__projectItem__poster{
     background-image:url("../images/jane_street_webp.webp");
+}
+#third .overview__projectItem__poster{
+    background-image:url("../images/NLP.webp");
 }
 #reveal1{
   opacity:0;

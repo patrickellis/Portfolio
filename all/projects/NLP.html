@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2KZ8F6FBDK"></script>
@@ -11,40 +10,17 @@
 </script>
   <title>Portfolio - Patrick Ellis</title>
   <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-  <link rel="stylesheet" href="../css/stylemain.css">
-  <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="This is the main page for my personal portfolio. My name is Patrick Ellis, please look around to view my projects."/>
-
+  <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.ico" />
+  <link rel="stylesheet" href="../../css/stylemain.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
 
 </head>
 <body onresize="resize()">
+
   <div id="large-header" class="large-header">
    <canvas id="animated-canvas"></canvas>
    </div>
-   <div class="shell2">
-   <div class="shell__button--menu2 shell__button2">
-       <div class="button__icon">
-         <svg>
-           <use xlink:href='#icon-temp-menu'>
-             <symbol id="icon-temp-menu" viewBox="0 0 20 16">
-               <g id="temp-menu-Page-2" fill-rule="evenodd">
-                 <g id="temp-menu-Artboard-Copy-3" transform="translate(-1390, -24)">
-                   <g id="temp-menu-noun_menu_93427" transform="translate(1390,24)">
-                     <rect id="temp-menu-Rectangle" x="0" y="0" width="22" height="2"></rect>
-                     <rect id="temp-menu-Rectangle" x="0" y="7" width="22" height="2"></rect>
-                     <rect id="temp-menu-Rectangle" x="0" y="14" width="22" height="2"></rect>
-                     </g>
-                   </g>
-                 </g>
-               </symbol>
-           </use>
-           </svg>
-           </div>
-       </div>
-       </div>
   <div class="js-shell shell">
     <div class="shell__button--drop shell__button"></div>
     <div class="shell__button--menu shell__button" id="shell__button--menu__js">
@@ -64,16 +40,16 @@
                   </g>
                 </symbol>
             </use>
-            </svg>
-            </div>
-            <span class="js-button__text button__text" id="button__text__js">Menu</span>
+          </svg>
         </div>
+        <span class="js-button__text button__text" id="button__text__js">Menu</span>
+      </div>
 
       <div class="shell__button--project shell__button" id="shell__button__id">
         <div class="button__text">
           <span class="js-close-project">Close Project</span>
           <span class="js-close-reel">Close Showreel</span>
-          <span class="js-close-overview" id="close_text">Close All Projects</span>
+          <span class="js-close-overview" id="close_text">Close Project</span>
           </div>
           <span class="button__divider"></span>
           </div>
@@ -93,146 +69,194 @@
             <span>
         </div>
         </div>
-
-      <div class="work__overview"id="overview_id" >
-        <main>
-        <div class="overview_header">
-          <span class="overview__filterLabel">Filter</span>
-            <div class="overview__categoryList">
-                <div class="categoryItem is-selected">
-                    <span class="has-text-effect" id="project-header"> All Projects
-                      <div class="dropdown-arrow-wrapper">
-                        <div class="arrow">
-                          <div class="arrow-top"></div>
-                          <div class="arrow-bottom"></div>
-                          </div>
-                        </div>
-                    </span>
-
-                </div>
-                <div class="categoryItem secondary">
-                    <span class="has-text-effect" id="first-cat"> Python </span>
-                </div>
-                <div class="categoryItem secondary">
-                    <span class="has-text-effect" id="second-cat"> C++ </span>
-                </div>
-                <div class="categoryItem secondary">
-                    <span class="has-text-effect" id="third-cat"> Misc </span>
-                </div>
-                <div class="categoryItem secondary">
-                    <span class="has-text-effect" id="fourth-cat"> Front End </span>
-                </div>
-            </div>
-        </div>
-        </main>
-        <div class="overview__projectList" id="js_work__overview">
-          <div class="overview__projectItem"id = "first">
-            <div class="overview__projectItem__inner" id="inner_one" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
-
-              <div class="overview__projectItem__poster" id="poster_one" data-tilt data-tilt-glare="true"></div>
-              <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
-                <h4>Ant Pheromone Model</h4>
-                <p>MATLAB</p>
-                </div>
-              </div>
-            </div>
-            <div class="overview__projectItem" data-tilt id = "second" onmouseover="mouseStatus(true);" onmouseout="mouseStatus(false);">
-              <div class="overview__projectItem__inner" id="inner_two" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
-                <div class="overview__projectItem__poster" id="poster_two"></div>
-                <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
-                  <h4>Jane Street Puzzles</h4>
-                  <p>C++, Python, PHP</p>
+        <div class = "projects js-projects is-enabled">
+          <div class="project" id="project_one">
+            <div class="js-project__header project__header">
+              <div class="js-project__title project__title has-text-effect">
+                <div class="inner">
+                  <span>Natural Language Processing</span>
                   </div>
                 </div>
-              </div>
-              <div class="overview__projectItem" id = "third">
-                <div class="overview__projectItem__inner" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
-                  <div class="overview__projectItem__poster" id="poster_three"></div>
-                  <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
-                    <h4>Natural Language Processing</h4>
-                    <p>Python, Jupyter</p>
+                <div class="js-project__description project__description has-text-effect" id="project-description-one">
+                  <p>
+                      I have developed several NLP projects purely out of interest in text processing and working with large volumes of text. These include processing large kaggle datasets and mining sentiment classification material. I have also developed a processing pipeline and visualisations for topic detection models, shown below.
+                    </p>
+                  </div>
+                <div class="js-project__information project__information">
+                  <div class="information__item">
+                    <h4>Language</h4>
+                    <p> Python</p>
                     </div>
-                  </div>
-                </div>
-                <div class="overview__projectItem" id = "fourth">
-                  <div class="overview__projectItem__inner" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
-                    <div class="overview__projectItem__poster"></div>
-                    <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
-                      <h4>Project Item Four</h4>
-                      <p>Subscript text</p>
+                    <div class="information__item">
+                      <h4>Implements</h4>
+                      <p>Pandas, SciPy, NumPy</p>
                       </div>
-                    </div>
-                  </div>
-                  <div class="overview__projectItem" id = "fifth">
-                    <div class="overview__projectItem__inner" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
-                      <div class="overview__projectItem__poster"></div>
-                      <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
-                        <h4>Project Item Five</h4>
-                        <p>Subscript text</p>
+                      <div class="information__item">
+                        <h4>DATE</h4>
+                        <p> December 2020</p>
                         </div>
                       </div>
                     </div>
-                    <div class="overview__projectItem" id = "sixth">
-                      <div class="overview__projectItem__inner" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
-                        <div class="overview__projectItem__poster"></div>
-                        <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
-                          <h4>Project Item Six</h4>
-                          <p>Subscript text</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="overview__projectItem" id = "seventh">
-                        <div class="overview__projectItem__inner" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
-                          <div class="overview__projectItem__poster"></div>
-                          <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
-                            <h4>Project Item Seven</h4>
-                            <p>Subscript text</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="overview__projectItem" id = "eighth">
-                          <div class="overview__projectItem__inner" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
-                            <div class="overview__projectItem__poster"></div>
-                            <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
-                              <h4>Project Item Eight</h4>
-                              <p>Subscript text</p>
+                    <div class="js-project__body project__body" id="project__body">
+                      <div class="js-project__videoloop project__videoloop" id="video-one">
+                        <div class="js-video video video--project">
+                          <div class="js-video__player video__player">
+                            <video loop autoplay muted id="vid">
+                              <source type="video/mp4" src="https://player.vimeo.com/external/538889255.hd.mp4?s=fbdf0874c14ffbbe7d5e404a6686ca45ef775894&profile_id=174&download=1">
+                                </video>
                               </div>
                             </div>
                           </div>
-                          <div class="overview__projectItem" id = "ninth">
-                            <div class="overview__projectItem__inner" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
-                              <div class="overview__projectItem__poster"></div>
-                              <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
-                                <h4>Project Item Nine</h4>
-                                <p>Subscript text</p>
+                          <div class="js-project__videoloop project__videoloop" id="video-two">
+                            <div class="js-video video video--project">
+                                <div class="image_sent"></div>
                                 </div>
                               </div>
-                            </div>
-                            <div class="overview__projectItem" id = "tenth">
-                              <div class="overview__projectItem__inner" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
-                              <div class="overview__projectItem__poster"></div>
-                              <div class="overview__projectItem__text" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
-                                <h4>Project Item Ten</h4>
-                                <p>Subscript text</p>
-                      </div>
+                      <div class="project__headline" id="headline-one">
+                        <div class="headline__divider"></div>
+                        <div class="headline__title">
+                          <span>Sentiment Classification</span>
+                          </div>
+                        <div class="js-body headline__body">
+                          <p>
+                            This Sentiment Classification project has been carried out on a kaggle dataset of over 120'000 movie reviews from Rotten Tomatoes. It has been trained to identify and accurately predict opinions in future text, labelling them in the range [0,1,...,5]. I am extending this to attribute tweets containing opinions on stocks to fluctuations in that associated stocks price, and to what extent social media can influence the stock market.
+                              </p>
+                        </div>
+
                   </div>
+                  <div class="project__headline" id="headline-two">
+                    <div class="headline__divider"></div>
+                    <div class="headline__title">
+                      <span>Document Retrieval</span>
+                      </div>
+                    <div class="js-body headline__body">
+                      <p>
+                          Project fully recreates a google-like search engine that implements Term Frequency, TF-IDF, PageRank and Pseudo-Relevance Feedback to retrieve documents from search queries.
+                        </p>
+                    </div>
+
               </div>
+              <div class="js-project__text project__text" id="text-one">
+                <div class="text__title">
+                  <h3>Model Evaluation</h3>
+                  </div>
+                  <div class="js-text__body text__body">
+                    <p>
+                      I wanted to thoroughly investigate the effective of each term-weighting scheme on quantitative heuristics including Precision, Recall, and F-measure. This investigation also goes into the intricacies of pre-processing techniques and why processes such as stemming have such a substancial impact on performance and algorithm optimisation.
+                        </p>
+                </div>
+                </div>
+
+              <div class="project__image" id="image-one">
+                <div class="project__image-el" id="image-three-inner"></div>
+              </div>
+              <div class="project__image" id="image-two">
+                <div class="project__image-el" id="image-four-inner"></div>
+              </div>
+              <div class="js-project__text project__text" id="text-two">
+                <div class="text__title">
+                  <h3>NLTK</h3>
+                  </div>
+                  <div class="js-text__body text__body">
+                    <p>
+                      NLTK is one of the many well known python library that implements document retrieval and text processing techniques. Whilst experience with popular libraries is important, and benchmarking model performance with such libraries was a key part of my development process, I wanted an opportunity to see how these systems work under the hood and implement my own solution.
+                        </p>
+                </div>
+                </div>
+                <div class="project__headline" id="headline-three">
+                  <div class="headline__divider"></div>
+                  <div class="headline__title">
+                    <span>Topic Detection</span>
+                    </div>
+                  <div class="js-body headline__body">
+                    <p>
+                      One of the most enjoyable NLP project I have been able to create thus far. A huge amount of time was spent learning and implementing hyperparameter optimisation techniques. This includes measuring the convergence of learning rates, iterations, passes, and K = number of topics. 
+                      </p>
+                  </div>
+
+            </div>
+
+        </div>
+        <div class="project__footer" id = "trigger1">
+          <div class="js-project__awards project__awards"></div>
+          <div class="js-project__launch project__launch">
+            <div class="project__scroll no-url" id = "reveal1">
+              <p>
+                <span class="text">SCROLL FOR MENU</span>
+                <span class="line"</span>
+              </p>
+            </div>
           </div>
-
+        </div>
       </div>
-    </div>
-    <div class="clearspace"></div>
-    </div>
+      </div>
+      </div>
+
+
+
+
+
+
+    <script>
+      $(function() {
+      $('#js-rootnode').on("mousewheel", function() {
+          //alert($('#js-rootnode').scrollTop());
+          var menu_notif = document.getElementById("reveal1");
+          var scrollval = $('#js-rootnode').scrollTop();
+          if(document.body.clientWidth>2000){
+            x = 5440;
+          }
+          else if(document.body.clientWidth>1450){
+            x = 4140;
+          }
+          else if(document.body.clientWidth>1305){
+            x = 3740;
+          }
+          else if(document.body.clientWidth>1150){
+            x = 3300;
+          }
+          else if(document.body.clientWidth>980){
+            x = 2750;
+          }
+          else if(document.body.clientWidth>599){
+            x = 2100;
+          }
+          else if(document.body.clientWidth>0){
+            x = 1200;
+          }
+          //alert(document.body.clientWidth);
+          if(scrollval >= x+500&&scrollval > prev){
+            menu_relocate('../work');
+          }
+          else if(scrollval >= x+380){
+            menu_notif.style.opacity = "1";
+          }
+          else if(scrollval >= x+280){
+            menu_notif.style.opacity = "0.6";
+          }
+          else if(scrollval >= x+180){
+            menu_notif.style.opacity = "0.6";
+          }
+          else if(scrollval >= x+100){
+
+            menu_notif.style.opacity = "0.3";
+          }
+          else if(scrollval >= x){
+
+            menu_notif.style.opacity = "0.1";
+          }
+
+
+
+      });
+  });
+</script>
   <script>
-
-    var proj = document.getElementsByClassName("overview__categoryList")[0];
-
-
     var scrolled=0;
+    var root = document.getElementById("js-rootnode");
+    root.style.opacity = "1";
+    $(document).ready(function(){
 
-    setTimeout(function(){
-
-      //largeHeader.style.opacity="1";
       document.body.style.opacity="1";
         $("#arrow--down").on("click" ,function(){
                     scrolled=scrolled+450;
@@ -248,7 +272,7 @@
     				        scrollTop:  scrolled
     				   });
     			});
-    }, 1);
+    });
 
 
 
@@ -326,23 +350,18 @@
 
     function menu_relocate(target){
       document.body.style.opacity="0";
-      var header = document.getElementById("large-header");
-      header.style.top = "400px";
       var rootnode = document.getElementById("js-rootnode");
-      var projects = document.getElementById("js_work__overview");
+
       rootnode.style.opacity=0;
       rootnode.style.MozTransition = "0.5s";
       rootnode.style.WebkitTransition  = "0.5s";
-      projects.style.opacity=0;
-      projects.style.top="1000px";
       var project_close = document.getElementById("shell__button__id");
       project_close.style.opacity=0;
       var menu = document.getElementById("shell__button--menu__js");
       menu.style.opacity = 1;
+
       var menu_text = document.getElementById("button__text__js");
 
-
-      //$(menu_text).toggleClass('visible');
       setTimeout(function(){
               window.location.replace(target);
         }, 150);
@@ -358,56 +377,17 @@
     $(header).toggleClass('opacity');
     $(menu).toggleClass('opacity');
     });
-
-
-    // MENU CLICK links
-    function dim_nav_text_and_bg(){
-      document.getElementById("large-header").style.opacity = "0";
-      document.getElementById("close_text").style.opacity = "0";
-    }
-    $("#first-cat").click(function(){
-      if(document.getElementsByClassName("secondary")[0].classList.contains("active")){
-        setTimeout(function(){
-                window.location.replace("../all/python/1");
-          }, 250);
-
-      }
-    });
-    $("#second-cat").click(function(){
-      if(document.getElementsByClassName("secondary")[0].classList.contains("active")){
-        setTimeout(function(){
-                window.location.replace("../all/cpp/1");
-          }, 250);
-      }
-    });
-    $("#third-cat").click(function(){
-      if(document.getElementsByClassName("secondary")[0].classList.contains("active")){
-        setTimeout(function(){
-                window.location.replace("../all/misc/1");
-          }, 250);
-      }
-    });
-    $("#fourth-cat").click(function(){
-      if(document.getElementsByClassName("secondary")[0].classList.contains("active")){
-
-        setTimeout(function(){
-                window.location.replace("../all/frontend/1");
-          }, 250);
-      }
-    });
-
-    //NAV LINKS
     $("#shell__button__id").click(function(){
-      menu_relocate("../all/menu");
+      menu_relocate("../work");
     });
     $("#button__text__js").click(function(){
-      menu_relocate("../all/menu");
+      menu_relocate("../menu");
     });
     $("#button__icon__id").click(function(){
-      menu_relocate("../all/menu");
+      menu_relocate("../menu");
     });
     $("#button__hitarea__js").click(function(){
-      menu_relocate("../all/menu");
+      menu_relocate("../menu");
     });
     $("#shell__button__id").on("mouseleave", function(){
       var body = document.body;
@@ -471,55 +451,33 @@
 
 
   }
-    jQuery.fn.center = function() {
+  //project_one
+    jQuery.fn.center = function(id,container) {
       var width = $( window ).width();
-      var overview_width = $("#js_work__overview").width();
+      var overview_width = $("#project_one").width();
       var diff = (width - overview_width) / 2;
       var percent = (diff / width) * 100;
       var s = '' + percent + '%';
-      var container = $(window);
-      //var top = -this.height() / 2;
+      var top = -this.height() / 2;
       var left = -this.width() / 2;
       //alert("s: "+s+", projectlist width: "+overview_width+", width: " +width);
-      return $("#overview_id").css({ 'left': s});
+      return $("#project_one").css({ 'left': s});
 
   }
   window.onresize = function() {
-
-    //$('#video-one').center("#video_one","#project__body");
-    //$('#quicknav--up').arrowcenter("left",'#quicknav--up');
-    //$('#quicknav--down').arrowcenter("right",'#quicknav--down');
-    setTimeout(function(){
-      $('#js_work__overview').center("#project_one",window);
-    },50);
-    setTimeout(function(){
-      $('#js_work__overview').center("#project_one",window);
-    },100);
-    setTimeout(function(){
-      $('#js_work__overview').center("#project_one",window);
-    },200);
-    setTimeout(function(){
-      $('#js_work__overview').center("#project_one",window);
-    },500);
-    setTimeout(function(){
-      $('#js_work__overview').center("#project_one",window);
-    },1000);
-  $('#js_work__overview').center();
-  $('#quicknav--up').arrowcenter("left",'#quicknav--up');
-  $('#quicknav--down').arrowcenter("right",'#quicknav--down');
+  $('#project_one').center("#project_one",window);
+  //$('#video-one').center("#video_one","#project__body");
+  //$('#quicknav--up').arrowcenter("left",'#quicknav--up');
+  //$('#quicknav--down').arrowcenter("right",'#quicknav--down');
 }
   </script>
-  <script src="../js/project_click_events.js"></script>
   <script>
-    setTimeout(function(){
-      setTimeout(function(){
-        document.getElementsByClassName("overview__categoryList")[0].style.overflow = "hidden";
-      },1000);
+    $( document ).ready(function(){
       var canvas = document.getElementById("large-header");
       var projects = document.getElementById("shell__button__id");
       var static = document.getElementById("static");
       static.style.opacity=0;
-
+      document.body.style.opacity=1;
       canvas.style.opacity=1;
       projects.style.opacity = 1;
 
@@ -537,10 +495,9 @@
       //var body = document.body;
       //body.style.opacity=1;
       var overview = document.getElementById("js_work__overview");
-      overview.style.top = "0px";
       var header = document.getElementById("project-header");
       header.style.top = "0px";
-
+      overview.style.top = "0px";
       var rootnode = document.getElementById("js-rootnode");
       rootnode.style.opacity = 1;
       var elements = document.getElementsByClassName("secondary");
@@ -564,35 +521,17 @@
         el.style.paddingBottom = o;
 
       }
-    }, 1);
-    var canCall = false;
-
-
-    proj.style.height="20000px";
-    setTimeout(function(){
-            var height = document.getElementsByClassName('secondary')[0].style.height;
-            proj.style.height=height;
-            canCall = true;
-      }, 1000);
-
+    });
+    var canCall = true;
     $('.is-selected .has-text-effect').on('click', function(){
+      //$(this).toggleClass('clicked');
+      var arrow = document.getElementById("arrow");
       if(!canCall){
         return;
       }
 
-      var proj = document.getElementsByClassName("overview__categoryList")[0];
-      var work_overview = document.getElementsByClassName("overview__projectList")[0];
-      $(work_overview).toggleClass('active');
-      if(proj.classList.contains("active")){
-        setTimeout(function(){
-          $(proj).toggleClass('active');
-        },500);
-      }
-      else{
-        $(proj).toggleClass('active');
-      }
-
-      var arrow = document.getElementById("arrow");
+      //arrow.classList.add("active");
+      //arrow.css("transform","rotate(45deg)");
       var elements = document.getElementsByClassName("secondary");
       for (var i = 0, len = elements.length; i < len; i++) {
         var id;
@@ -620,8 +559,13 @@
           var offset = 20 + (i * 20);
           var o = offset.toString() + "px";
           el.style.paddingBottom = o;
+
+
+
+          //elements[i].style.bottom=o;
         }
         $(elements[i]).toggleClass('active');
+    // elements[i].style ...
       }
       var uparrow = document.getElementsByClassName("quicknav__arrow--up")[0];
       var downarrow = document.getElementsByClassName("quicknav__arrow--down")[0];
@@ -641,18 +585,27 @@
             $(downarrow).toggleClass('active-two');
           },500);
         }
+
       }
+
+      //$(uparrow).toggleClass('active-two');
       var e =  document.getElementsByClassName("overview__projectItem");
       var p = document.getElementsByClassName("overview__projectItem__poster");
 
       for (var i = 0, len = e.length; i < len; i++) {
+
+
         $(e[i]).toggleClass('active');
         $(p[i]).toggleClass('active');
+
       }
+      //var wo = document.getElementById("overview_id");
+      //$(wo).toggleClass('active');
       canCall = false;
       setTimeout(function(){
             canCall = true;
-        }, 500);
+        }, 100);
+
     });
 
 
@@ -735,7 +688,6 @@ Inertial.prototype._Init = function(){
     $(scroller).on('mousewheel', function(event, delta, deltaX, deltaY){
           event.preventDefault();
           _this.performScroll(event);
-
     });
 }
 
@@ -861,7 +813,7 @@ var smoothScroller = new Inertial();
 <script>
   ( function( $ ) {
 
-
+	"use strict";
 
   $(".overview__projectItem__poster").tilt({
     maxTilt: 15,
