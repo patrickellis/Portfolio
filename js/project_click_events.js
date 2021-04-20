@@ -6,5 +6,5 @@ $("#second").click(function(){
   menu_relocate("../all/projects/janestreet-puzzles");
 });
 $("#third").click(function(){
-  menu_relocate("../all/projects/NLP");
+  menu_relocate("../all/projects/nlp");
 });
