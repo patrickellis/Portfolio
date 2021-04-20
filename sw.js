@@ -34,6 +34,7 @@
       '/all/frontend/2.html',
       '/all/frontend/3.html',
       '/all/frontend/4.html',
+      '/all/projects/NLP.html',
       '/all/projects/janestreet-puzzles.html',
       '/all/projects/project.html',
       '/fonts/Work-Sans-Light.ttf.eot',
