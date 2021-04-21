@@ -36,20 +36,7 @@
       '/all/frontend/4.html',
       '/all/projects/nlp.html',
       '/all/projects/janestreet-puzzles.html',
-      '/all/projects/project.html',
-      '/fonts/Work-Sans-Light.ttf.eot',
-      '/fonts/Work-Sans-Light.ttf.svg',
-      '/fonts/Work-Sans-Light.ttf.woff',
-      '/fonts/work-sans-v9-latin-200.eot',
-      '/fonts/work-sans-v9-latin-200.woff2',
-      '/fonts/work-sans-v9-latin-200.woff',
-      '/fonts/work-sans-v9-latin-200.ttf',
-      '/fonts/work-sans-v9-latin-200.svg',
-      '/fonts/work-sans-v9-latin-500.eot',
-      '/fonts/work-sans-v9-latin-500.woff2',
-      '/fonts/work-sans-v9-latin-500.woff',
-      '/fonts/work-sans-v9-latin-500.ttf',
-      '/fonts/work-sans-v9-latin-500.svg'
+      '/all/projects/project.html'
     ];
 
     // Perform install steps
