@@ -135,7 +135,7 @@
                 </div>
               </div>
             </div>
-        
+
             <div class="overview__projectItem" data-tilt id = "second" onmouseover="mouseStatus(true);" onmouseout="mouseStatus(false);">
               <div class="overview__projectItem__inner" id="inner_two" style="transform:translate3d(0px,0px,0px);cursor:pointer;">
                 <div class="overview__projectItem__poster" id="poster_two"></div>
@@ -325,6 +325,7 @@
     });
 
     function menu_relocate(target){
+
       document.body.style.opacity="0";
       var header = document.getElementById("large-header");
       header.style.top = "400px";
@@ -336,6 +337,8 @@
       projects.style.opacity=0;
       projects.style.top="1000px";
       var project_close = document.getElementById("shell__button__id");
+      project_close.style.transition = "0.2s";
+    
       project_close.style.opacity=0;
       var menu = document.getElementById("shell__button--menu__js");
       menu.style.opacity = 1;
