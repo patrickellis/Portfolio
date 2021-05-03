@@ -395,6 +395,10 @@ html, body
 	-webkit-transition: 0.5s;
 	transition-timing-function: ease-in;
 }
+.ribbon{
+
+}
+
 #menu{
   opacity:0;
 }
