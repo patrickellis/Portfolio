@@ -97,7 +97,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="js-project__body project__body" id="project__body">
+                    <div class="js-project__body project__body3" id="project__body">
                       <div class="js-project__videoloop project__videoloop" id="video-one">
                         <div class="js-video video video--project">
                           <div class="js-video__player video__player">
@@ -111,7 +111,7 @@
                             <div class="js-video video video--project">
                               <div class="js-video__player video__player">
                                 <video loop autoplay muted id="vid">
-                                  <source type="video/mp4" src="https://player.vimeo.com/external/535601258.hd.mp4?s=ff3c47cdd5126f05a9539642ea825f36378b185a&profile_id=175">
+                                  <source type="video/mp4" src="https://player.vimeo.com/external/544448510.hd.mp4?s=54a5dee3d891aa00c5119daa671f7cd6645737f8&profile_id=175">
                                     </video>
                                   </div>
                                 </div>
@@ -119,11 +119,11 @@
                       <div class="project__headline" id="headline-one">
                         <div class="headline__divider"></div>
                         <div class="headline__title">
-                          <span>Foraging Technicalities</span>
+                          <span>Puzzle Solving</span>
                           </div>
                         <div class="js-body headline__body">
                           <p>
-                              When foraging for food, ants deposit a certain specific pheromone – pheromone A. When ants have found food and are returning to the colony, they deposit a second pheromone – pheromone B. When foraging, ants sense pheromone B and follow the trail in the direction of highest concentration as this typically leads towards food that an ant has found. The pheromone A plot (foragers) is shown above, whilst the pheromone B trails are shown below.
+                             I wanted a practical use for the program other than playing versus AI programs and other players, so I adapted the use case to be able to begin playing from any position – assuming it is our turn to play. This means that the bot can solve puzzles dynamically on almost any website.
                             </p>
                         </div>
 
@@ -131,23 +131,22 @@
                   <div class="project__headline" id="headline-two">
                     <div class="headline__divider"></div>
                     <div class="headline__title">
-                      <span>Emergent Behaviour</span>
+                      <span>Artificial Intelligence</span>
                       </div>
                     <div class="js-body headline__body">
                       <p>
-                          Individuals are characterised by their state variables; velocity, position, current activity, direction of motion, antennae length and ant length. Only surface level characteristics have been programmed, meaning that these characteristics, and the
-                           movement equation described below, are sufficient to generate pheromone path forming behaviour.
+                        ChessAlgo involves a sequential pre-processing pipeline. The first step involves locating the board on the screen, done through (relatively) straightforward gradient analysis. The second step uses a neural network trained on many chessboard images to convert an image of a chess board to its string representation to be passed to a chess engine for analysis.
                         </p>
                     </div>
 
               </div>
               <div class="js-project__text project__text" id="text-one">
                 <div class="text__title">
-                  <h3>Movement Equations</h3>
+                  <h3>Why Neural Networks?</h3>
                   </div>
                   <div class="js-text__body text__body">
                     <p>
-                      Timesteps are evaluated at discrete 0.5 second increments. At each time step, each agent evaluates the pheromone concentrations at its left and right antennae independently and compares, before altering its course towards the region of higher concentration. New movement vectors are offset by a stochastic component of ±20 degrees.
+                      I’m always searching for potential use-cases for technologies that I’d like to put to use. In this case, a neural network is fairly overkill for the application. However, it came with a fantastic advantage that the program then works on almost any chess site and any themed chess-set. All that was required was to train it on more images using different colored boards, pieces, etc.
                       </p>
                 </div>
                 </div>
@@ -182,28 +181,28 @@
           var menu_notif = document.getElementById("reveal1");
           var scrollval = $('#js-rootnode').scrollTop();
           if(document.body.clientWidth>2000){
-            x = 5440;
+            x = 3640;
           }
           else if(document.body.clientWidth>1450){
-            x = 4140;
+            x = 3040;
           }
           else if(document.body.clientWidth>1305){
-            x = 3740;
+            x = 2500;
           }
           else if(document.body.clientWidth>1150){
-            x = 3300;
+            x = 2150;
           }
           else if(document.body.clientWidth>980){
-            x = 2750;
+            x = 1550;
           }
           else if(document.body.clientWidth>599){
-            x = 2100;
-          }
-          else if(document.body.clientWidth>0){
             x = 1200;
           }
+          else if(document.body.clientWidth>0){
+            x = 800;
+          }
           //alert(document.body.clientWidth);
-          if(scrollval >= x+500&&scrollval > prev){
+          if(scrollval >= x+500){
             menu_relocate('../work');
           }
           else if(scrollval >= x+380){
