@@ -8,3 +8,6 @@ $("#second").click(function(){
 $("#third").click(function(){
   menu_relocate("../all/projects/nlp");
 });
+$("#fourth").click(function(){
+  menu_relocate("../all/projects/chessalgo");
+});
