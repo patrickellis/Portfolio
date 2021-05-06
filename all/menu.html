@@ -104,7 +104,7 @@
   //});
   window.addEventListener('DOMContentLoaded', (event) =>
 {
-	const numOfRibbons = 9;
+	const numOfRibbons = 7;
 	const animationDuration = 300; // in seconds
 
 	const ribbonContainer = document.querySelector('.ribbon-container');
@@ -122,7 +122,7 @@
 		////ribbon.style.top    = `${(0 - ribbonHeight / 2) + Math.random()*100}vmax`;
 
 		//// 20% variance between different elements to help split up parallel lines
-		ribbon.style.animationDuration  = (Math.random()*(animationDuration) +(animationDuration*0.1)).toString() + 's';
+		ribbon.style.animationDuration  = (Math.random()*(animationDuration) +(animationDuration*0.3)).toString() + 's';
   //  ribbon.style.animationDuration  = (Math.random()*(animationDuration) +(animationDuration*0.1)).toString() + 's';
 
 		//// Start the animation from any point in its duration
