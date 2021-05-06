@@ -200,7 +200,19 @@
 
 
 
-
+      <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js').then(function(registration) {
+              // Registration was successful
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+              // registration failed :(
+              console.log('ServiceWorker registration failed: ', err);
+            });
+          });
+        }
+        </script>
     <script>
       $(function() {
       $('#js-rootnode').on("mousewheel", function() {
@@ -620,19 +632,7 @@
 
 
 </script>
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('/sw.js').then(function(registration) {
-        // Registration was successful
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      }, function(err) {
-        // registration failed :(
-        console.log('ServiceWorker registration failed: ', err);
-      });
-    });
-  }
-  </script>
+
 <script>
   //Mousewheel plugin
 (function(d){"function"===typeof define&&define.amd?define(["jquery"],d):"object"===typeof exports?module.exports=d:d(jQuery)})(function(d){function l(a){var b=a||window.event,k=r.call(arguments,1),f=0,e=0,c=0,g=0,l=0,n=0;a=d.event.fix(b);a.type="mousewheel";"detail"in b&&(c=-1*b.detail);"wheelDelta"in b&&(c=b.wheelDelta);"wheelDeltaY"in b&&(c=b.wheelDeltaY);"wheelDeltaX"in b&&(e=-1*b.wheelDeltaX);"axis"in b&&b.axis===b.HORIZONTAL_AXIS&&(e=-1*c,c=0);f=0===c?e:c;"deltaY"in b&&(f=c=-1*b.deltaY);"deltaX"in
