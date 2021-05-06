@@ -113,7 +113,7 @@ html, body
 
 		Making sure we have good performance on our background means we have that budget to spare to spend on other effects.
 	*/
- 	mix-blend-mode:multiply;
+ 	mix-blend-mode:normal;
 	animation: 60s spin linear infinite;
   transition: 2s;
 	-moz-transition: 2s;
