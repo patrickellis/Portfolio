@@ -102,7 +102,7 @@ html, body
 {
   bottom:1000px;
 	position: absolute;
-	background-color: rgba(5, 5, 5,0.35);
+	background-color: rgba(0, 0, 0,0.4);
 	/*
 		Multiply looks slightly better but has a performance hit
 		Will need to be tested on multiple devices. Powerful to weak, large viewports to small viewports.
@@ -113,7 +113,7 @@ html, body
 
 		Making sure we have good performance on our background means we have that budget to spare to spend on other effects.
 	*/
- 	mix-blend-mode:normal;
+ 	mix-blend-mode:lighten;
 	animation: 60s spin linear infinite;
   transition: 2s;
 	-moz-transition: 2s;
