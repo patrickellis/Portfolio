@@ -36,6 +36,7 @@
       '/all/frontend/4.html',
       '/all/projects/nlp.html',
       '/all/projects/chessalgo.html',
+      '/all/projects/antcolony.html',
       '/all/projects/janestreet-puzzles.html',
       '/all/projects/project.html',
       '/fonts/Work-Sans-Light.ttf.eot',

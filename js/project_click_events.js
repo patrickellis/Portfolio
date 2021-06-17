@@ -1,6 +1,6 @@
 
 $("#first").click(function(){
-  menu_relocate("../all/projects/project");
+  menu_relocate("../all/projects/antcolony");
 });
 $("#second").click(function(){
   menu_relocate("../all/projects/janestreet-puzzles");
